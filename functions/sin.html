@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sin</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+
+<h1>sin( <i>z</i> )</h1>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Sine">sine</a> of <i>z</i>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( sin(z).series(z,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+show( 'sin( 0 ) = ' + str( sin(0) ) )
+show( 'sin( 1/2 pi ) = ' + str( sin(pi/2) ) )
+show( 'sin( pi ) = ' + str( sin(pi) ) )
+show( 'sin( 3/2 pi ) = ' + str( sin(3*pi/2) ) )
+show( 'sin( 2 pi ) = ' + str( sin(2*pi) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="cos.html">cos</a> &nbsp; <a href="tan.html">tan</a> &nbsp; <a href="cot.html">cot</a> &nbsp; <a href="sec.html">sec</a> &nbsp; <a href="csc.html">csc</a></p>
+
+</body>
