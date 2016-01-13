@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>exp</title>
+<title>ln</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -11,7 +11,7 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p><b> exp( <i>z</i> ) </b> is the exponential of <i>z</i> in SageMath.</p>
+<p><b> ln( <i>z</i> ) </b> is the natural logarithm of <i>z</i> in SageMath. It is an alias of <a href="log.html">log</a> and the inverse of <a href="exp.html">exp</a>.</p>
 
 <p>Plot on the real axis:</p>
 
@@ -19,18 +19,18 @@
 <script type="text/x-sage">
 
 var('x')
-show( plot( exp(x), x, -2, 2, figsize=[4.5,2], rgbcolor=(0,.5,1) ) + point([0,0],size=0) )
+show( plot( ln(x), x, 0, 2, figsize=[4.5,2], rgbcolor=(0,.5,1) ) + point([0,0],size=0) )
 
 </script>
 </div>
 
-<p>Series expansion about the origin:</p>
+<p>Series expansion about unity:</p>
 
 <div class="sage">
 <script type="text/x-sage">
 
 var('z')
-show( exp(z).series(z,5) )
+show( ln(z-1).series(z,4) )
 
 </script>
 </div>
@@ -40,15 +40,15 @@ show( exp(z).series(z,5) )
 <div class="sage">
 <script type="text/x-sage">
 
-pretty_print( html( '$\exp(-oo) = %s$' % exp(-oo) ) )
-pretty_print( html( '$\exp(0) = %s$' % exp(0) ) )
-pretty_print( html( '$\exp(1) = %s$' % exp(1) ) )
-pretty_print( html( '$\exp(oo) = %s$' % exp(oo) ) )
+pretty_print( html( '$\ln(0) = %s$' % ln(0) ) )
+pretty_print( html( '$\ln(1) = %s$' % ln(1) ) )
+pretty_print( html( '$\ln(e) = %s$' % ln(e) ) )
+pretty_print( html( '$\ln(oo) = %s$' % ln(oo) ) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="ln.html">ln</a> &nbsp; <a href="log.html">log</a></p>
+<p>Related functions: &nbsp; <a href="log.html">log</a> &nbsp; <a href="exp.html">exp</a></p>
 
 <p>Function family: <a href="../functions.html#logarithmic">exponential and logarithmic functions</a></p>
 
