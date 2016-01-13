@@ -12,7 +12,7 @@
 <script src="../setup.js"></script>
 
 
-<p><b> sin( <i>z</i> ) </b> is the sine of <i>z</i> in SageMath
+<p><b> cos( <i>z</i> ) </b> is the cosine of <i>z</i> in SageMath
 (<a href="" target="_blank">function details</a>)</p>
 
 <p>Plot on the real axis:</p>
@@ -21,7 +21,7 @@
 <script type="text/x-sage">
 
 var('x')
-show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+show( plot( cos(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 </script>
 </div>
@@ -32,7 +32,7 @@ show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 <script type="text/x-sage">
 
 var('z')
-show( sin(z).series(z,6) )
+show( cos(z).series(z,5) )
 
 </script>
 </div>
@@ -42,15 +42,15 @@ show( sin(z).series(z,6) )
 <div class="sage">
 <script type="text/x-sage">
 
-pretty_print( html( '$\sin(0) = %s$' % sin(0) ) )
-pretty_print( html( '$\sin( \\frac{\pi}{2} ) = %s$' % sin(pi/2) ) )
-pretty_print( html( '$\sin(\pi) = %s$' % sin(pi) ) )
-pretty_print( html( '$\sin( \\frac{3\pi}{2} ) = %s$' % sin(3*pi/2) ) )
-pretty_print( html( '$\sin(2\pi) = %s$' % sin(2*pi) ) )
+pretty_print( html( '$\cos(0) = %s$' % cos(0) ) )
+pretty_print( html( '$\cos( \\frac{\pi}{2} ) = %s$' % cos(pi/2) ) )
+pretty_print( html( '$\cos(\pi) = %s$' % cos(pi) ) )
+pretty_print( html( '$\cos( \\frac{3\pi}{2} ) = %s$' % cos(3*pi/2) ) )
+pretty_print( html( '$\cos(2\pi) = %s$' % cos(2*pi) ) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="cos.html">cos</a> &nbsp; <a href="tan.html">tan</a> &nbsp; <a href="cot.html">cot</a> &nbsp; <a href="sec.html">sec</a> &nbsp; <a href="csc.html">csc</a></p>
+<p>Related functions: &nbsp; <a href="sin.html">sin</a> &nbsp; <a href="tan.html">tan</a> &nbsp; <a href="cot.html">cot</a> &nbsp; <a href="sec.html">sec</a> &nbsp; <a href="csc.html">csc</a></p>
 
 </body>

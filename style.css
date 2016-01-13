@@ -12,14 +12,13 @@ h1 {
 	font-size: medium;
 	font-weight: bold;
 	text-decoration: none;
-	color: rgb(0,127,255)
 
 }
 
 a:link, a:visited {
 
 	color: rgb(255,45,85);
-	text-decoration: none
+	text-decoration: none;
 	
 }
 
@@ -32,6 +31,7 @@ a:link, a:visited {
 
 .sagecell_sessionOutput {
 
-	border-color: black !important
+	border-color: black !important;
+	text-align: center;
 
 }
