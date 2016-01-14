@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>arcsec</title>
+<title>acsc</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -11,7 +11,7 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p><b> arcsec( <i>z</i> ) </b> is the inverse secant of <i>z</i> in SageMath. It is an alias of <a href="asec.html">asec</a>.</p>
+<p><b> acsc( <i>z</i> ) </b> is the inverse cosecant of <i>z</i> in SageMath. It is an alias of <a href="arccsc.html">arccsc</a>.</p>
 
 <p>Plot on the real axis:</p>
 
@@ -19,8 +19,8 @@
 <script type="text/x-sage">
 
 var('x')
-p1 = plot( arcsec(x), x, -5, -1, figsize=[4.5,2], rgbcolor=(0,.5,1) )
-p2 = plot( arcsec(x), x, 1, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) )
+p1 = plot( acsc(x), x, -5, -1, figsize=[4.5,2], rgbcolor=(0,.5,1) )
+p2 = plot( acsc(x), x, 1, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) )
 show( p1 + p2 + point([0,0],size=0) )
 
 </script>
@@ -34,7 +34,7 @@ show( p1 + p2 + point([0,0],size=0) )
 # series command returns indeterminate expression
 
 var('w')
-show( arcsec(1+w^2).taylor(w,0,6) )
+show( acsc(1+w^2).taylor(w,0,6) )
 
 </script>
 </div>
@@ -44,15 +44,15 @@ show( arcsec(1+w^2).taylor(w,0,6) )
 <div class="sage">
 <script type="text/x-sage">
 
-pretty_print( html( 'arcsec$(-oo) = %s$' % arcsec(-oo) ) )
-pretty_print( html( 'arcsec$(-1) = %s$' % arcsec(-1) ) )
-pretty_print( html( 'arcsec$(1) = %s$' % arcsec(1) ) )
-pretty_print( html( 'arcsec$(oo) = %s$' % arcsec(oo) ) )
+pretty_print( html( 'acsc$(-oo) = %s$' % acsc(-oo) ) )
+pretty_print( html( 'acsc$(-1) = %s$' % acsc(-1) ) )
+pretty_print( html( 'acsc$(1) = %s$' % acsc(1) ) )
+pretty_print( html( 'acsc$(oo) = %s$' % acsc(oo) ) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="sec.html">sec</a> &nbsp; <a href="asec.html">asec</a></p>
+<p>Related functions: &nbsp; <a href="csc.html">csc</a> &nbsp; <a href="arccsc.html">arccsc</a></p>
 
 <p>Function category: <a href="../functions.html#circular">circular functions</a></p>
 
