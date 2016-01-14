@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cosh</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+
+<p><b> cosh( <i>z</i> ) </b> is the hyperbolic cosine of <i>z</i> in SageMath. It is defined by</p>
+
+\[ \cosh z = \frac{ e^z + e^{-z} }{ 2 } \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+show( plot( cosh(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( cosh(z).series(z,5) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( '$\cosh(-oo) = %s$' % cosh(-oo) ) )
+pretty_print( html( '$\cosh(0) = %s$' % cosh(0) ) )
+pretty_print( html( '$\cosh(oo) = %s$' % cosh(oo) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="sinh.html">sinh</a> &nbsp; <a href="sech.html">sech</a> &nbsp; <a href="arccosh.html">arccosh</a> &nbsp; <a href="acosh.html">acosh</a></p>
+
+<p>Function category: <a href="../functions.html#hyperbolic">hyperbolic functions</a></p>
+
+</body>
