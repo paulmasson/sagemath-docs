@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>acot</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> acot( <i>z</i> ) </b> is the inverse cotangent of <i>z</i> in SageMath. It is an alias of <a href="arccot.html">arccot</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+show( plot( acot(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) + point([0,0],size=0) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( acot(z).series(z,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( 'acot$(-oo) = %s$' % acot(-oo) ) )
+pretty_print( html( 'acot$(-1) = %s$' % acot(-1) ) )
+pretty_print( html( 'acot$(0) = %s$' % acot(0) ) )
+pretty_print( html( 'acot$(1) = %s$' % acot(1) ) )
+pretty_print( html( 'acot$(oo) = %s$' % acot(oo) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="cot.html">cot</a> &nbsp; <a href="arccot.html">arccot</a></p>
+
+<p>Function category: <a href="../functions.html#circular">circular functions</a></p>
+
+</body>

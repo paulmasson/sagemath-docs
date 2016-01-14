@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>arctan</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> arctan( <i>z</i> ) </b> is the inverse tangent of <i>z</i> in SageMath. It is an alias of <a href="atan.html">atan</a>.</p>
+
+<p>To account for the quadrant in which an inverse tangent is evaluated use <a href="arctan2.html">arctan2</a> or <a href="atan2.html">atan2</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+show( plot( arctan(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( arctan(z).series(z,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( '$\\arctan(-oo) = %s$' % arctan(-oo) ) )
+pretty_print( html( '$\\arctan(-1) = %s$' % arctan(-1) ) )
+pretty_print( html( '$\\arctan(0) = %s$' % arctan(0) ) )
+pretty_print( html( '$\\arctan(1) = %s$' % arctan(1) ) )
+pretty_print( html( '$\\arctan(oo) = %s$' % arctan(oo) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="tan.html">tan</a> &nbsp; <a href="atan.html">atan</a></p>
+
+<p>Function category: <a href="../functions.html#circular">circular functions</a></p>
+
+</body>
