@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>coth</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> coth( <i>z</i> ) </b> is the hyperbolic cotangent of <i>z</i> in SageMath. It is defined by</p>
+
+\[ \coth z = \frac{ \cosh z }{ \sinh z } \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+( show( plot( coth(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1),
+		ymin=-5, ymax=5, detect_poles=True ) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+# .series() cannot handle singularity at origin
+
+var('z')
+show( coth(z).taylor(z,0,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( '$\coth(-oo) = %s$' % coth(-oo) ) )
+pretty_print( html( '$\coth(0) = %s$' % limit( coth(x), x=0 ) ) )
+pretty_print( html( '$\coth(oo) = %s$' % coth(oo) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="tanh.html">tanh</a> &nbsp; <a href="arccoth.html">arccoth</a> &nbsp; <a href="acoth.html">acoth</a></p>
+
+<p>Function category: <a href="../functions.html#hyperbolic">hyperbolic functions</a></p>
+
+</body>

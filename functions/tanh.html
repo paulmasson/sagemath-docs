@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>tanh</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> tanh( <i>z</i> ) </b> is the hyperbolic tangent of <i>z</i> in SageMath. It is defined by</p>
+
+\[ \tanh z = \frac{ \sinh z }{ \cosh z } \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+show( plot( tanh(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( tanh(z).series(z,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( '$\\tanh(-oo) = %s$' % tanh(-oo) ) )
+pretty_print( html( '$\\tanh(0) = %s$' % tanh(0) ) )
+pretty_print( html( '$\\tanh(oo) = %s$' % tanh(oo) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="coth.html">coth</a> &nbsp; <a href="arctanh.html">arctanh</a> &nbsp; <a href="atanh.html">atanh</a></p>
+
+<p>Function : <a href="../functions.html#hyperbolic">hyperbolic functions</a></p>
+
+</body>
