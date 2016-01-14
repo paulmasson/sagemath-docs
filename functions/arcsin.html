@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>sin</title>
+<title>arcsin</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -11,8 +11,7 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-
-<p><b> sin( <i>z</i> ) </b> is the sine of <i>z</i> in SageMath.</p>
+<p><b> arcsin( <i>z</i> ) </b> is the inverse sine of <i>z</i> in SageMath. It is an alias of <a href="asin.html">asin</a>.</p>
 
 <p>Plot on the real axis:</p>
 
@@ -20,7 +19,7 @@
 <script type="text/x-sage">
 
 var('x')
-show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+show( plot( arcsin(x), x, -1, 1, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 </script>
 </div>
@@ -31,7 +30,7 @@ show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 <script type="text/x-sage">
 
 var('z')
-show( sin(z).series(z,6) )
+show( arcsin(z).series(z,6) )
 
 </script>
 </div>
@@ -41,16 +40,14 @@ show( sin(z).series(z,6) )
 <div class="sage">
 <script type="text/x-sage">
 
-pretty_print( html( '$\sin(0) = %s$' % sin(0) ) )
-pretty_print( html( '$\sin( \\frac{\pi}{2} ) = %s$' % sin(pi/2) ) )
-pretty_print( html( '$\sin(\pi) = %s$' % sin(pi) ) )
-pretty_print( html( '$\sin( \\frac{3\pi}{2} ) = %s$' % sin(3*pi/2) ) )
-pretty_print( html( '$\sin(2\pi) = %s$' % sin(2*pi) ) )
+pretty_print( html( '$\\arcsin(-1) = %s$' % arcsin(-1) ) )
+pretty_print( html( '$\\arcsin(0) = %s$' % arcsin(0) ) )
+pretty_print( html( '$\\arcsin(1) = %s$' % arcsin(1) ) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="cos.html">cos</a> &nbsp; <a href="csc.html">csc</a> &nbsp; <a href="arcsin.html">arcsin</a> &nbsp; <a href="asin.html">asin</a></p>
+<p>Related functions: &nbsp; <a href="sin.html">sin</a> &nbsp; <a href="asin.html">asin</a></p>
 
 <p>Function family: <a href="../functions.html#circular">circular functions</a></p>
 
