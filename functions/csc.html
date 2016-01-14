@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>csc</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+
+<p><b> csc( <i>z</i> ) </b> is the cosecant of <i>z</i> in SageMath. It is the reciprocal of sine, defined by</p>
+
+\[ \csc z = \frac{ 1 }{ \sin z } \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+( show( plot( csc(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1),
+		ymin=-5, ymax=5, detect_poles=True ) ) )
+
+</script>
+</div>
+
+<p>Series expansion about half of &pi;:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( csc(z-pi/2).series(z,5) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( '$\csc(0) = %s$' % limit( csc(x), x=0 ) ) )
+pretty_print( html( '$\csc( \\frac{\pi}{2} ) = %s$' % csc(pi/2) ) )
+pretty_print( html( '$\csc(\pi) = %s$' % limit( csc(x), x=pi ) ) )
+pretty_print( html( '$\csc( \\frac{3\pi}{2} ) = %s$' % csc(3*pi/2) ) )
+pretty_print( html( '$\csc(2\pi) = %s$' % limit( csc(x), x=2*pi ) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="sin.html">sin</a> &nbsp; <a href="arccsc.html">arccsc</a> &nbsp; <a href="acsc.html">acsc</a></p>
+
+<p>Function family: <a href="../functions.html#trigonometric">trigonometric functions</a></p>
+
+</body>

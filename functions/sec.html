@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sec</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+
+<p><b> sec( <i>z</i> ) </b> is the secant of <i>z</i> in SageMath. It is the reciprocal of cosine, defined by</p>
+
+\[ \sec z = \frac{ 1 }{ \cos z } \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+( show( plot( sec(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1),
+		ymin=-5, ymax=5, detect_poles=True ) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( sec(z).series(z,5) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( '$\sec(0) = %s$' % sec(0) ) )
+pretty_print( html( '$\sec( \\frac{\pi}{2} ) = %s$' % limit( sec(x), x=pi/2 ) ) )
+pretty_print( html( '$\sec(\pi) = %s$' % sec(pi) ) )
+pretty_print( html( '$\sec( \\frac{3\pi}{2} ) = %s$' % limit( sec(x), x=3*pi/2 ) ) )
+pretty_print( html( '$\sec(2\pi) = %s$' % sec(2*pi) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="cos.html">cos</a> &nbsp; <a href="arcsec.html">arcsec</a> &nbsp; <a href="asec.html">asec</a></p>
+
+<p>Function family: <a href="../functions.html#trigonometric">trigonometric functions</a></p>
+
+</body>

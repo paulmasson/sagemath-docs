@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cot</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> cot( <i>z</i> ) </b> is the cotangent of <i>z</i> in SageMath. It is defined by</p>
+
+\[ \cot z = \frac{ \cos z }{ \sin z } \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+( show( plot( cot(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1),
+		ymin=-5, ymax=5, detect_poles=True ) ) )
+
+</script>
+</div>
+
+<p>Series expansion about half of &pi;:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( cot(z-pi/2).series(z,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( '$\cot(0) = %s$' % limit( cot(x), x=0 ) ) )
+pretty_print( html( '$\cot( \\frac{\pi}{2} ) = %s$' % cot(pi/2) ) )
+pretty_print( html( '$\cot(\pi) = %s$' % limit( cot(x), x=pi ) ) )
+pretty_print( html( '$\cot( \\frac{3\pi}{2} ) = %s$' % cot(3*pi/2) ) )
+pretty_print( html( '$\cot(2\pi) = %s$' % limit( cot(x), x=2*pi ) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="tan.html">tan</a> &nbsp; <a href="arccot.html">arccot</a> &nbsp; <a href="acot.html">acot</a></p>
+
+<p>Function family: <a href="../functions.html#trigonometric">trigonometric functions</a></p>
+
+</body>
