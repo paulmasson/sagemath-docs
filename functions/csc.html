@@ -28,13 +28,13 @@ var('x')
 </script>
 </div>
 
-<p>Series expansion about half of &pi;:</p>
+<p>Series expansion in \( w = z - \frac{ \pi }{ 2 } \):</p>
 
 <div class="sage">
 <script type="text/x-sage">
 
-var('z')
-show( csc(z-pi/2).series(z,5) )
+var('w')
+show( csc(w+pi/2).series(w,5) )
 
 </script>
 </div>

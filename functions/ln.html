@@ -24,13 +24,13 @@ show( plot( ln(x), x, 0, 2, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 </script>
 </div>
 
-<p>Series expansion about unity:</p>
+<p>Series expansion in \( w = z - 1 \):</p>
 
 <div class="sage">
 <script type="text/x-sage">
 
-var('z')
-show( ln(z-1).series(z,4) )
+var('w')
+show( ln(w+1).series(w,4) )
 
 </script>
 </div>
