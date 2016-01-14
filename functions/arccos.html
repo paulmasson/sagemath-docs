@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>arccos</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> arccos( <i>z</i> ) </b> is the inverse cosine of <i>z</i> in SageMath. It is an alias of <a href="acos.html">acos</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+show( plot( arccos(x), x, -1, 1, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( arccos(z).series(z,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( '$\\arccos(-1) = %s$' % arccos(-1) ) )
+pretty_print( html( '$\\arccos(0) = %s$' % arccos(0) ) )
+pretty_print( html( '$\\arccos(1) = %s$' % arccos(1) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="cos.html">cos</a> &nbsp; <a href="acos.html">acos</a></p>
+
+<p>Function family: <a href="../functions.html#circular">circular functions</a></p>
+
+</body>

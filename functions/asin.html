@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>asin</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> asin( <i>z</i> ) </b> is the inverse sine of <i>z</i> in SageMath. It is an alias of <a href="arcsin.html">arcsin</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('x')
+show( plot( asin(x), x, -1, 1, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( asin(z).series(z,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( 'asin$(-1) = %s$' % asin(-1) ) )
+pretty_print( html( 'asin$(0) = %s$' % asin(0) ) )
+pretty_print( html( 'asin$(1) = %s$' % asin(1) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="sin.html">sin</a> &nbsp; <a href="arcsin.html">arcsin</a></p>
+
+<p>Function family: <a href="../functions.html#circular">circular functions</a></p>
+
+</body>
