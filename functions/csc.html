@@ -12,7 +12,7 @@
 <script src="../setup.js"></script>
 
 
-<p><b> csc( <i>z</i> ) </b> is the cosecant of <i>z</i> in SageMath. It is the reciprocal of sine, defined by</p>
+<p><b> csc( <i>z</i> ) </b> is the cosecant of <i>z</i> in SageMath. It is the reciprocal of sine:</p>
 
 \[ \csc z = \frac{ 1 }{ \sin z } \]
 
@@ -28,13 +28,13 @@ var('x')
 </script>
 </div>
 
-<p>Series expansion in \( w = z - \frac{ \pi }{ 2 } \):</p>
+<p>Series expansion about the origin:</p>
 
 <div class="sage">
 <script type="text/x-sage">
 
-var('w')
-show( csc(w+pi/2).series(w,5) )
+var('z')
+show( maxima( csc(z) ).taylor(z,0,7) )
 
 </script>
 </div>

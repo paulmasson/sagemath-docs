@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>cosh</title>
+<title>sech</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -12,9 +12,9 @@
 <script src="../setup.js"></script>
 
 
-<p><b> cosh( <i>z</i> ) </b> is the hyperbolic cosine of <i>z</i> in SageMath. It is defined by</p>
+<p><b> sech( <i>z</i> ) </b> is the hyperbolic secant of <i>z</i> in SageMath. It is the reciprocal of the hyperbolic cosine:</p>
 
-\[ \cosh z = \frac{ e^z + e^{-z} }{ 2 } \]
+\[ \rm{sech} \: z = \frac{ 1 }{ \cosh z } \]
 
 <p>Plot on the real axis:</p>
 
@@ -22,7 +22,7 @@
 <script type="text/x-sage">
 
 var('x')
-show( plot( cosh(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+show( plot( sech(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 </script>
 </div>
@@ -33,7 +33,7 @@ show( plot( cosh(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 <script type="text/x-sage">
 
 var('z')
-show( maxima( cosh(z) ).taylor(z,0,7) )
+show( maxima( sech(z) ).taylor(z,0,7) )
 
 </script>
 </div>
@@ -43,14 +43,14 @@ show( maxima( cosh(z) ).taylor(z,0,7) )
 <div class="sage">
 <script type="text/x-sage">
 
-pretty_print( html( '$\cosh(-oo) = %s$' % cosh(-oo) ) )
-pretty_print( html( '$\cosh(0) = %s$' % cosh(0) ) )
-pretty_print( html( '$\cosh(oo) = %s$' % cosh(oo) ) )
+pretty_print( html( 'sech$(-oo) = %s$' % sech(-oo) ) )
+pretty_print( html( 'sech$(0) = %s$' % sech(0) ) )
+pretty_print( html( 'sech$(oo) = %s$' % sech(oo) ) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="sinh.html">sinh</a> &nbsp; <a href="sech.html">sech</a> &nbsp; <a href="arccosh.html">arccosh</a> &nbsp; <a href="acosh.html">acosh</a></p>
+<p>Related functions: &nbsp; <a href="cosh.html">cosh</a> &nbsp; <a href="arcsech.html">arcsech</a> &nbsp; <a href="asech.html">asech</a></p>
 
 <p>Function category: <a href="../functions.html#hyperbolic">hyperbolic functions</a></p>
 

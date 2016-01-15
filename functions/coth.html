@@ -32,10 +32,8 @@ var('x')
 <div class="sage">
 <script type="text/x-sage">
 
-# .series() cannot handle singularity at origin
-
 var('z')
-show( coth(z).taylor(z,0,6) )
+show( maxima( coth(z) ).taylor(z,0,7) )
 
 </script>
 </div>

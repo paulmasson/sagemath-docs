@@ -30,7 +30,7 @@ show( plot( , x, , , figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 <script type="text/x-sage">
 
 var('z')
-show( .series(z,5) )
+show( maxima( (z) ).taylor(z,0,7) )
 
 </script>
 </div>

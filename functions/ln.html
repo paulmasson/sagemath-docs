@@ -24,13 +24,13 @@ show( plot( ln(x), x, 0, 2, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 </script>
 </div>
 
-<p>Series expansion in \( w = z - 1 \):</p>
+<p>Series expansion about unity:</p>
 
 <div class="sage">
 <script type="text/x-sage">
 
-var('w')
-show( ln(w+1).series(w,4) )
+var('z')
+show( maxima( ln(z) ).taylor(z,1,5) )
 
 </script>
 </div>

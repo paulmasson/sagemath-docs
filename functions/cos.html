@@ -31,7 +31,7 @@ show( plot( cos(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 <script type="text/x-sage">
 
 var('z')
-show( cos(z).series(z,5) )
+show( maxima( cos(z) ).taylor(z,0,7) )
 
 </script>
 </div>

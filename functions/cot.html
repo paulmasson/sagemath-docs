@@ -27,13 +27,13 @@ var('x')
 </script>
 </div>
 
-<p>Series expansion in \( w = z - \frac{ \pi }{ 2 } \):</p>
+<p>Series expansion about the origin:</p>
 
 <div class="sage">
 <script type="text/x-sage">
 
-var('w')
-show( cot(w+pi/2).series(w,6) )
+var('z')
+show( maxima( cot(z) ).taylor(z,0,7) )
 
 </script>
 </div>

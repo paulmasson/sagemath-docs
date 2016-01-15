@@ -12,7 +12,7 @@
 <script src="../setup.js"></script>
 
 
-<p><b> sec( <i>z</i> ) </b> is the secant of <i>z</i> in SageMath. It is the reciprocal of cosine, defined by</p>
+<p><b> sec( <i>z</i> ) </b> is the secant of <i>z</i> in SageMath. It is the reciprocal of cosine:</p>
 
 \[ \sec z = \frac{ 1 }{ \cos z } \]
 
@@ -34,7 +34,7 @@ var('x')
 <script type="text/x-sage">
 
 var('z')
-show( sec(z).series(z,5) )
+show( maxima( sec(z) ).taylor(z,0,7) )
 
 </script>
 </div>
