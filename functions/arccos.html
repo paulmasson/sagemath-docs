@@ -29,7 +29,7 @@ show( plot( arccos(x), x, -1, 1, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 <script type="text/x-sage">
 
 var('z')
-show( arccos(z).series(z,6) )
+show( maxima( arccos(z) ).taylor(z,0,7) )
 
 </script>
 </div>
