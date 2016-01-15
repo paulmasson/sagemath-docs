@@ -18,19 +18,18 @@
 <div class="sage">
 <script type="text/x-sage">
 
-var('x')
 show( plot( acot(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) + point([0,0],size=0) )
 
 </script>
 </div>
 
-<p>Series expansion about the origin:</p>
+<p>Series expansion about infinity:</p>
 
 <div class="sage">
 <script type="text/x-sage">
 
 var('z')
-show( acot(z).series(z,6) )
+show( maxima( acot(z) ).taylor(z,oo,7) )
 
 </script>
 </div>

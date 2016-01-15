@@ -18,7 +18,6 @@
 <div class="sage">
 <script type="text/x-sage">
 
-var('x')
 p1 = plot( acsc(x), x, -5, -1, figsize=[4.5,2], rgbcolor=(0,.5,1) )
 p2 = plot( acsc(x), x, 1, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) )
 show( p1 + p2 + point([0,0],size=0) )
@@ -26,15 +25,13 @@ show( p1 + p2 + point([0,0],size=0) )
 </script>
 </div>
 
-<p>Series expansion in \( w = \sqrt{ z - 1 } \):</p>
+<p>Series expansion about unity:</p>
 
 <div class="sage">
 <script type="text/x-sage">
 
-# .series() returns indeterminate expression
-
-var('w')
-show( acsc(1+w^2).taylor(w,0,6) )
+var('z')
+show( maxima( acsc(z) ).taylor(z,1,3) )
 
 </script>
 </div>
