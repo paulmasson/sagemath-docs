@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>acsch</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> acsch( <i>z</i> ) </b> is the inverse hyperbolic cosecant of <i>z</i> in SageMath. It is an alias of <a href="arccsch.html">arccsch</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+( show( plot( acsch(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1),
+		ymin=-5, ymax=5, detect_poles=True ) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( maxima( acsch(z) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( 'acsch$(-oo) = %s$' % acsch(-oo) ) )
+pretty_print( html( 'acsch$(0) = %s$' % acsch(0) ) )
+pretty_print( html( 'acsch$(oo) = %s$' % acsch(oo) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="csch.html">csch</a> &nbsp; <a href="arccsch.html">arccsch</a></p>
+
+<p>Function category: <a href="../functions.html#hyperbolic">hyperbolic functions</a></p>
+
+</body>

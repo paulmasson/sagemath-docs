@@ -11,4 +11,4 @@ http://jaanga.github.io/demo/pm/get-sage-function-names/get-sage-function-names-
 
 * arccot/acot, arcsec/asec and arccsc/acsc do not evaluate exactly for special values
 
-* Ditto for most hyperbolic functions
+* Ditto for a slew of hyperbolic functions

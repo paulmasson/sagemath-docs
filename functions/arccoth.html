@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>arccoth</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> arccoth( <i>z</i> ) </b> is the inverse hyperbolic cotangent of <i>z</i> in SageMath. It is an alias of <a href="acoth.html">acoth</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+p1 = plot( arccoth(x), x, -5, -1, figsize=[4.5,2], rgbcolor=(0,.5,1) )
+p2 = plot( arccoth(x), x, 1, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) )
+show( p1 + p2 )
+
+</script>
+</div>
+
+<p>Series expansion about unity:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( maxima( arccoth(z) ).taylor(z,1,3) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( 'arccoth$(-oo) = %s$' % arccoth(-oo) ) )
+pretty_print( html( 'arccoth$(-1) = %s$' % arccoth(-1) ) )
+pretty_print( html( 'arccoth$(1) = %s$' % arccoth(1) ) )
+pretty_print( html( 'arccoth$(oo) = %s$' % arccoth(oo) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="coth.html">coth</a> &nbsp; <a href="acoth.html">acoth</a></p>
+
+<p>Function category: <a href="../functions.html#hyperbolic">hyperbolic functions</a></p>
+
+</body>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>arctanh</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p><b> arctanh( <i>z</i> ) </b> is the inverse hyperbolic tangent of <i>z</i> in SageMath. It is an alias of <a href="atanh.html">atanh</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+show( plot( arctanh(x), x, -1, 1, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+var('z')
+show( maxima( arctanh(z) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sage">
+<script type="text/x-sage">
+
+pretty_print( html( 'arctanh$(-1) = %s$' % arctanh(-1) ) )
+pretty_print( html( 'arctanh$(0) = %s$' % arctanh(0) ) )
+pretty_print( html( 'arctanh$(1) = %s$' % arctanh(1) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="tanh.html">tanh</a> &nbsp; <a href="atanh.html">atanh</a></p>
+
+<p>Function category: <a href="../functions.html#hyperbolic">hyperbolic functions</a></p>
+
+</body>
