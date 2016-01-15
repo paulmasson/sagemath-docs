@@ -18,7 +18,9 @@
 <div class="sage">
 <script type="text/x-sage">
 
-show( plot( acot(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) + point([0,0],size=0) )
+p1 = plot( acot(x) - pi, x, -5, 0, figsize=[4.5,2], rgbcolor=(0,.5,1) )
+p2 = plot( acot(x), x, 0, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) )
+show( p1 + p2 )
 
 </script>
 </div>
