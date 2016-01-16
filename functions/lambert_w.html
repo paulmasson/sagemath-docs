@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lambert_w</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> lambert_w( [ <i>n</i> , ] <i>z</i> ) </p>
+
+<p>The Lambert W function of <i>z</i> in SageMath. Defined implicitly by</p>
+
+\[ z = W(z) e^{ W(z)} \]
+
+<p>The optional argument <i>n</i> specifies the branch. Defaults to the principle branch <i>n</i>&nbsp;=&nbsp;0 if omitted.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( lambert_w(x), x, -1/e, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z')
+show( maxima( lambert_w(z) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+pretty_print( html( '$ W(-\\frac{1}{e}) = %s$' % lambert_w(-1/e) ) )
+pretty_print( html( '$ W(0) = %s$' % lambert_w(0) ) )
+pretty_print( html( '$ W(e) = %s$' % lambert_w(e) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="exp.html">exp</a></p>
+
+<p>Function category: <a href="../functions.html#logarithmic">logarithmic functions</a></p>
+
+</body>
