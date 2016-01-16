@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dilog</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> dilog( <i>z</i> ) </p>
+
+<p>The dilogarithm of <i>z</i> in SageMath. Alias of <a href="polylog.html">polylog(2,<i>z</i>)</a>. Defined by</p>
+
+\[ \operatorname{Li}_2(z) = \sum_{k=1}^{\infty} \frac{z^k}{k^2} \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( dilog(x), x, -5, 1, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z k')
+show( sum( z^k/k^2, k, 1, 5 ) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+pretty_print( html( '$\operatorname{Li}_2(0) = %s$' % dilog(0) ) )
+pretty_print( html( '$\operatorname{Li}_2(\\frac{1}{2}) = %s$' % dilog(1/2) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="polylog.html">polylog</a></p>
+
+<p>Function category: <a href="../functions.html#logarithmic">logarithmic functions</a></p>
+
+</body>

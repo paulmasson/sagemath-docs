@@ -15,14 +15,17 @@
 
 <p>The polylogarithm of order <i>n</i> of <i>z</i> in SageMath. Defined by</p>
 
-\[ \operatorname{Li}_n(z) = \]
+\[ \operatorname{Li}_n(z) = \sum_{k=1}^{\infty} \frac{z^k}{k^n} \]
 
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( plot( polylog(1,x), x, 0, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+@interact
+def fun( n=slider(1,10,step_size=1,default=2) ):
+
+  show( plot( polylog(n,x), x, -5, 1, figsize=[4,2], rgbcolor=(0,.5,1) ) )
 
 </script>
 </div>
@@ -32,8 +35,11 @@ show( plot( polylog(1,x), x, 0, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-var('z')
-show( maxima( (z) ).taylor(z,0,7) )
+@interact
+def fun( n=slider(1,10,step_size=1,default=2) ):
+
+  var('z k')
+  show( sum( z^k/k^n, k, 1, 5 ) )
 
 </script>
 </div>
@@ -43,13 +49,16 @@ show( maxima( (z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\operatorname{Li}_n (1,0) = %s$' % polylog(1,0) ) )
+pretty_print( html( '$\operatorname{Li}_n(0) = %s$' % polylog(1,0) ) )
+pretty_print( html( '$\operatorname{Li}_1(\\frac{1}{2}) = %s$' % polylog(1,1/2) ) )
+pretty_print( html( '$\operatorname{Li}_2(\\frac{1}{2}) = %s$' % polylog(2,1/2) ) )
+pretty_print( html( '$\operatorname{Li}_3(\\frac{1}{2}) = %s$' % polylog(3,1/2) ) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href=".html"></a></p>
+<p>Related functions: &nbsp; <a href="dilog.html">dilog</a></p>
 
-<p>Function category: <a href="../functions.html#"> functions</a></p>
+<p>Function category: <a href="../functions.html#logarithmic">logarithmic functions</a></p>
 
 </body>
