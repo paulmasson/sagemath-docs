@@ -12,13 +12,15 @@
 <script src="../setup.js"></script>
 
 
-<p><b> cosh( <i>z</i> ) </b> is the hyperbolic cosine of <i>z</i> in SageMath. It is defined by</p>
+<p class="sagemath"> cosh( <i>z</i> ) </p>
+
+<p>The hyperbolic cosine of <i>z</i> in SageMath. Defined by</p>
 
 \[ \cosh z = \frac{ e^z + e^{-z} }{ 2 } \]
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 show( plot( cosh(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
@@ -28,7 +30,7 @@ show( plot( cosh(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -39,7 +41,7 @@ show( maxima( cosh(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( '$\cosh(-oo) = %s$' % cosh(-oo) ) )

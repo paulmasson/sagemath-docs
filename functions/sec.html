@@ -12,13 +12,15 @@
 <script src="../setup.js"></script>
 
 
-<p><b> sec( <i>z</i> ) </b> is the secant of <i>z</i> in SageMath. It is the reciprocal of cosine:</p>
+<p class="sagemath"> sec( <i>z</i> ) </p>
+
+<p>The secant of <i>z</i> in SageMath. The reciprocal of cosine:</p>
 
 \[ \sec z = \frac{ 1 }{ \cos z } \]
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 ( show( plot( sec(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1),
@@ -29,7 +31,7 @@
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -40,7 +42,7 @@ show( maxima( sec(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( '$\sec(0) = %s$' % sec(0) ) )

@@ -11,13 +11,15 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p><b> atan( <i>z</i> ) </b> is the inverse tangent of <i>z</i> in SageMath. It is an alias of <a href="arctan.html">arctan</a>.</p>
+<p class="sagemath"> atan( <i>z</i> ) </p>
+
+<p>The inverse tangent of <i>z</i> in SageMath. An alias of <a href="arctan.html">arctan</a>.</p>
 
 <p>To account for the quadrant in which an inverse tangent is evaluated use <a href="arctan2.html">arctan2</a> or <a href="atan2.html">atan2</a>.</p>
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 show( plot( atan(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
@@ -27,7 +29,7 @@ show( plot( atan(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -38,7 +40,7 @@ show( maxima( atan(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( 'atan$(-oo) = %s$' % atan(-oo) ) )

@@ -11,13 +11,15 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p><b> tanh( <i>z</i> ) </b> is the hyperbolic tangent of <i>z</i> in SageMath. It is defined by</p>
+<p class="sagemath"> tanh( <i>z</i> ) </p>
+
+<p>The hyperbolic tangent of <i>z</i> in SageMath. Defined by</p>
 
 \[ \tanh z = \frac{ \sinh z }{ \cosh z } \]
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 show( plot( tanh(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
@@ -27,7 +29,7 @@ show( plot( tanh(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -38,7 +40,7 @@ show( maxima( tanh(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( '$\\tanh(-oo) = %s$' % tanh(-oo) ) )

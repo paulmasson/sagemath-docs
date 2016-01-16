@@ -11,13 +11,15 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p><b> tan( <i>z</i> ) </b> is the tangent of <i>z</i> in SageMath. It is defined by</p>
+<p class="sagemath"> tan( <i>z</i> ) </p>
+
+<p>The tangent of <i>z</i> in SageMath. Defined by</p>
 
 \[ \tan z = \frac{ \sin z }{ \cos z } \]
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 ( show( plot( tan(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1),
@@ -28,7 +30,7 @@
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -39,7 +41,7 @@ show( maxima( tan(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( '$\\tan(0) = %s$' % limit( tan(x), x=0 ) ) )

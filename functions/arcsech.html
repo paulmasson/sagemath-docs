@@ -11,11 +11,13 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p><b> arcsech( <i>z</i> ) </b> is the inverse hyperbolic secant of <i>z</i> in SageMath. It is an alias of <a href="asech.html">asech</a>.</p>
+<p class="sagemath"> arcsech( <i>z</i> ) </p>
+
+<p>The inverse hyperbolic secant of <i>z</i> in SageMath. An alias of <a href="asech.html">asech</a>.</p>
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 show( plot( arcsech(x), x, 0, 1, figsize=[4.5,2], rgbcolor=(0,.5,1), ymax=5 ) + point([0,0],size=0) )
@@ -25,7 +27,7 @@ show( plot( arcsech(x), x, 0, 1, figsize=[4.5,2], rgbcolor=(0,.5,1), ymax=5 ) + 
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -36,7 +38,7 @@ show( maxima( arcsech(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( 'arcsech$(0) = %s$' % arcsech(0) ) )

@@ -12,13 +12,15 @@
 <script src="../setup.js"></script>
 
 
-<p><b> csch( <i>z</i> ) </b> is the hyperbolic cosecant of <i>z</i> in SageMath. It is the reciprocal of the hyperbolic sine:</p>
+<p class="sagemath"> csch( <i>z</i> ) </p>
+
+<p>The hyperbolic cosecant of <i>z</i> in SageMath. The reciprocal of the hyperbolic sine:</p>
 
 \[ \rm{csch} \: z = \frac{ 1 }{ \sinh z } \]
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 ( show( plot( csch(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1),
@@ -29,7 +31,7 @@
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -40,7 +42,7 @@ show( maxima( csch(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( 'csch$(-oo) = %s$' % csch(-oo) ) )

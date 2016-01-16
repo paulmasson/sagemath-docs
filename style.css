@@ -11,7 +11,6 @@ h1 {
 
 	font-size: medium;
 	font-weight: bold;
-	text-decoration: none;
 	color: rgb(0,127,255);
 
 }
@@ -23,7 +22,14 @@ a:link, a:visited {
 	
 }
 
-.sage {
+.sagemath {
+
+	font-size: large;
+	font-weight: bold;
+
+}
+
+.sagemathcell {
 
 	width: 5in;
 	margin: auto;

@@ -12,11 +12,13 @@
 <script src="../setup.js"></script>
 
 
-<p><b> sin( <i>z</i> ) </b> is the sine of <i>z</i> in SageMath.</p>
+<p class="sagemath"> sin( <i>z</i> ) </p>
+
+<p>The sine of <i>z</i> in SageMath.</p>
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
@@ -26,7 +28,7 @@ show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -37,7 +39,7 @@ show( maxima( sin(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( '$\sin(0) = %s$' % sin(0) ) )

@@ -12,13 +12,15 @@
 <script src="../setup.js"></script>
 
 
-<p><b> sech( <i>z</i> ) </b> is the hyperbolic secant of <i>z</i> in SageMath. It is the reciprocal of the hyperbolic cosine:</p>
+<p class="sagemath"> sech( <i>z</i> ) </p>
+
+<p>The hyperbolic secant of <i>z</i> in SageMath. The reciprocal of the hyperbolic cosine:</p>
 
 \[ \rm{sech} \: z = \frac{ 1 }{ \cosh z } \]
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 show( plot( sech(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
@@ -28,7 +30,7 @@ show( plot( sech(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -39,7 +41,7 @@ show( maxima( sech(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( 'sech$(-oo) = %s$' % sech(-oo) ) )

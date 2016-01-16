@@ -1,6 +1,6 @@
 sagecell.makeSagecell( {
 
-	inputLocation: '.sage',
+	inputLocation: '.sagemathcell',
 	autoeval: true,
 	hide: ['editor','evalButton','permalink']
 

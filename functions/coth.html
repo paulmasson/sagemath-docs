@@ -11,13 +11,15 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p><b> coth( <i>z</i> ) </b> is the hyperbolic cotangent of <i>z</i> in SageMath. It is defined by</p>
+<p class="sagemath"> coth( <i>z</i> ) </p>
+
+<p>The hyperbolic cotangent of <i>z</i> in SageMath. Defined by</p>
 
 \[ \coth z = \frac{ \cosh z }{ \sinh z } \]
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 ( show( plot( coth(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1),
@@ -28,7 +30,7 @@
 
 <p>Series expansion about the origin:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -39,7 +41,7 @@ show( maxima( coth(z) ).taylor(z,0,7) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( '$\coth(-oo) = %s$' % coth(-oo) ) )

@@ -11,11 +11,13 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p><b> ln( <i>z</i> ) </b> is the natural logarithm of <i>z</i> in SageMath. It is an alias of <a href="log.html">log</a> and the inverse of <a href="exp.html">exp</a>.</p>
+<p class="sagemath"> ln( <i>z</i> ) </p>
+
+<p>The natural logarithm of <i>z</i> in SageMath. An alias of <a href="log.html">log</a>. The inverse of <a href="exp.html">exp</a>.</p>
 
 <p>Plot on the real axis:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 show( plot( ln(x), x, 0, 2, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
@@ -25,7 +27,7 @@ show( plot( ln(x), x, 0, 2, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 <p>Series expansion about unity:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z')
@@ -36,7 +38,7 @@ show( maxima( ln(z) ).taylor(z,1,5) )
 
 <p>Special values:</p>
 
-<div class="sage">
+<div class="sagemathcell">
 <script type="text/x-sage">
 
 pretty_print( html( '$\ln(0) = %s$' % ln(0) ) )
