@@ -42,9 +42,9 @@ show( maxima( arccsch(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\operatorname{arccsch}(-oo) = %s$' % arccsch(-oo) ) )
-pretty_print( html( '$\operatorname{arccsch}(0) = %s$' % arccsch(0) ) )
-pretty_print( html( '$\operatorname{arccsch}(oo) = %s$' % arccsch(oo) ) )
+show( arccsch(-oo,hold=True), '=', arccsch(-oo) )
+show( arccsch(0,hold=True), '=', arccsch(0) )
+show( arccsch(oo,hold=True), '=', arccsch(oo) )
 
 </script>
 </div>

@@ -41,9 +41,9 @@ show( maxima( arccosh(z) ).taylor(z,1,3) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\operatorname{arccosh}(0) = %s$' % arccosh(0) ) )
-pretty_print( html( '$\operatorname{arccosh}(1) = %s$' % arccosh(1) ) )
-pretty_print( html( '$\operatorname{arccosh}(oo) = %s$' % arccosh(oo) ) )
+show( arccosh(0,hold=True), '=', arccosh(0) )
+show( arccosh(1,hold=True), '=', arccosh(1) )
+show( arccosh(oo,hold=True), '=', arccosh(oo) )
 
 </script>
 </div>

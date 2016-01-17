@@ -41,9 +41,9 @@ show( maxima( arcsech(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\operatorname{arcsech}(0) = %s$' % arcsech(0) ) )
-pretty_print( html( '$\operatorname{arcsech}(1) = %s$' % arcsech(1) ) )
-pretty_print( html( '$\operatorname{arcsech}(oo) = %s$' % arcsech(oo) ) )
+show( arcsech(0,hold=True), '=', arcsech(0) )
+show( arcsech(1,hold=True), '=', arcsech(1) )
+show( arcsech(oo,hold=True), '=', arcsech(oo) )
 
 </script>
 </div>
