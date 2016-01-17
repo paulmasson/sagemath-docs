@@ -42,11 +42,11 @@ show( maxima( cos(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\cos(0) = %s$' % cos(0) ) )
-pretty_print( html( '$\cos( \\frac{\pi}{2} ) = %s$' % cos(pi/2) ) )
-pretty_print( html( '$\cos(\pi) = %s$' % cos(pi) ) )
-pretty_print( html( '$\cos( \\frac{3\pi}{2} ) = %s$' % cos(3*pi/2) ) )
-pretty_print( html( '$\cos(2\pi) = %s$' % cos(2*pi) ) )
+show( cos(0,hold=True), '=', cos(0) )
+show( cos(pi/2,hold=True), '=', cos(pi/2) )
+show( cos(pi,hold=True), '=', cos(pi) )
+show( cos(3*pi/2,hold=True), '=', cos(3*pi/2) )
+show( cos(2*pi,hold=True), '=', cos(2*pi) )
 
 </script>
 </div>

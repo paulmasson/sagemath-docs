@@ -45,9 +45,9 @@ show( maxima( lambert_w(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$ W(-\\frac{1}{e}) = %s$' % lambert_w(-1/e) ) )
-pretty_print( html( '$ W(0) = %s$' % lambert_w(0) ) )
-pretty_print( html( '$ W(e) = %s$' % lambert_w(e) ) )
+show( lambert_w(-1/e,hold=True), '=', lambert_w(-1/e) ) # display bug!
+show( lambert_w(0,hold=True), '=', lambert_w(0) )
+show( lambert_w(e,hold=True), '=', lambert_w(e) )
 
 </script>
 </div>

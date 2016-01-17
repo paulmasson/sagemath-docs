@@ -42,11 +42,11 @@ show( maxima( sin(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\sin(0) = %s$' % sin(0) ) )
-pretty_print( html( '$\sin( \\frac{\pi}{2} ) = %s$' % sin(pi/2) ) )
-pretty_print( html( '$\sin(\pi) = %s$' % sin(pi) ) )
-pretty_print( html( '$\sin( \\frac{3\pi}{2} ) = %s$' % sin(3*pi/2) ) )
-pretty_print( html( '$\sin(2\pi) = %s$' % sin(2*pi) ) )
+show( sin(0,hold=True), '=', sin(0) )
+show( sin(pi/2,hold=True), '=', sin(pi/2) )
+show( sin(pi,hold=True), '=', sin(pi) )
+show( sin(3*pi/2,hold=True), '=', sin(3*pi/2) )
+show( sin(2*pi,hold=True), '=', sin(2*pi) )
 
 </script>
 </div>

@@ -41,10 +41,9 @@ show( maxima( exp(z) ).taylor(z,0,6) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\exp(-oo) = %s$' % exp(-oo) ) )
-pretty_print( html( '$\exp(0) = %s$' % exp(0) ) )
-pretty_print( html( '$\exp(1) = %s$' % exp(1) ) )
-pretty_print( html( '$\exp(oo) = %s$' % exp(oo) ) )
+show( exp(-oo,hold=True), '=', exp(-oo) )
+show( exp(0,hold=True), '=', exp(0) )
+show( exp(oo,hold=True), '=', exp(oo) )
 
 </script>
 </div>

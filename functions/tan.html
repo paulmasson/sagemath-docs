@@ -44,11 +44,11 @@ show( maxima( tan(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\\tan(0) = %s$' % limit( tan(x), x=0 ) ) )
-pretty_print( html( '$\\tan( \\frac{\pi}{2} ) = %s$' % tan(pi/2) ) )
-pretty_print( html( '$\\tan(\pi) = %s$' % limit( tan(x), x=pi ) ) )
-pretty_print( html( '$\\tan( \\frac{3\pi}{2} ) = %s$' % tan(3*pi/2) ) )
-pretty_print( html( '$\\tan(2\pi) = %s$' % limit( tan(x), x=2*pi ) ) )
+show( tan(0,hold=True), '=', tan(0) )
+show( tan(pi/2,hold=True), '=', tan(pi/2) )
+show( tan(pi,hold=True), '=', tan(pi) )
+show( tan(3*pi/2,hold=True), '=', tan(3*pi/2) )
+show( tan(2*pi,hold=True), '=', tan(2*pi) )
 
 </script>
 </div>

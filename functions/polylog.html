@@ -49,10 +49,10 @@ def fun( n=slider(1,10,step_size=1,default=2) ):
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\operatorname{Li}_n(0) = %s$' % polylog(1,0) ) )
-pretty_print( html( '$\operatorname{Li}_1(\\frac{1}{2}) = %s$' % polylog(1,1/2) ) )
-pretty_print( html( '$\operatorname{Li}_2(\\frac{1}{2}) = %s$' % polylog(2,1/2) ) )
-pretty_print( html( '$\operatorname{Li}_3(\\frac{1}{2}) = %s$' % polylog(3,1/2) ) )
+show( polylog(1,0,hold=True), '=', polylog(1,0) )
+show( polylog(1,1/2,hold=True), '=', polylog(1,1/2) )
+show( polylog(2,1/2,hold=True), '=', polylog(2,1/2) )
+show( polylog(3,1/2,hold=True), '=', polylog(3,1/2) )
 
 </script>
 </div>
