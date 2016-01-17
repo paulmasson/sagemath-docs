@@ -45,11 +45,11 @@ show( maxima( csc(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\csc(0) = %s$' % limit( csc(x), x=0 ) ) )
-pretty_print( html( '$\csc( \\frac{\pi}{2} ) = %s$' % csc(pi/2) ) )
-pretty_print( html( '$\csc(\pi) = %s$' % limit( csc(x), x=pi ) ) )
-pretty_print( html( '$\csc( \\frac{3\pi}{2} ) = %s$' % csc(3*pi/2) ) )
-pretty_print( html( '$\csc(2\pi) = %s$' % limit( csc(x), x=2*pi ) ) )
+show( csc(0,hold=True), '=', limit( csc(x), x=0 ) )
+show( csc(pi/2,hold=True), '=', csc(pi/2) )
+show( csc(pi,hold=True), '=', limit( csc(x), x=pi ) )
+show( csc(3*pi/2,hold=True), '=', csc(3*pi/2) )
+show( csc(2*pi,hold=True), '=', limit( csc(x), x=2*pi ) )
 
 </script>
 </div>

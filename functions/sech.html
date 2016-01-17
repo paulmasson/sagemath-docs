@@ -44,9 +44,9 @@ show( maxima( sech(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\operatorname{sech}(-oo) = %s$' % sech(-oo) ) )
-pretty_print( html( '$\operatorname{sech}(0) = %s$' % sech(0) ) )
-pretty_print( html( '$\operatorname{sech}(oo) = %s$' % sech(oo) ) )
+show( sech(-oo,hold=True), '=', sech(-oo) )
+show( sech(0,hold=True), '=', sech(0) )
+show( sech(oo,hold=True), '=', sech(oo) )
 
 </script>
 </div>

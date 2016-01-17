@@ -45,11 +45,11 @@ show( maxima( sec(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\sec(0) = %s$' % sec(0) ) )
-pretty_print( html( '$\sec( \\frac{\pi}{2} ) = %s$' % limit( sec(x), x=pi/2 ) ) )
-pretty_print( html( '$\sec(\pi) = %s$' % sec(pi) ) )
-pretty_print( html( '$\sec( \\frac{3\pi}{2} ) = %s$' % limit( sec(x), x=3*pi/2 ) ) )
-pretty_print( html( '$\sec(2\pi) = %s$' % sec(2*pi) ) )
+show( sec(0,hold=True), '=', sec(0) )
+show( sec(pi/2,hold=True), '=', limit( sec(x), x=pi/2 ) )
+show( sec(pi,hold=True), '=', sec(pi) )
+show( sec(3*pi/2,hold=True), '=', limit( sec(x), x=3*pi/2 ) )
+show( sec(2*pi,hold=True), '=', sec(2*pi) )
 
 </script>
 </div>

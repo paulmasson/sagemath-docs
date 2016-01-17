@@ -44,9 +44,9 @@ show( maxima( cosh(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\cosh(-oo) = %s$' % cosh(-oo) ) )
-pretty_print( html( '$\cosh(0) = %s$' % cosh(0) ) )
-pretty_print( html( '$\cosh(oo) = %s$' % cosh(oo) ) )
+show( cosh(-oo,hold=True), '=', cosh(-oo) )
+show( cosh(0,hold=True), '=', cosh(0) )
+show( cosh(oo,hold=True), '=', cosh(oo) )
 
 </script>
 </div>

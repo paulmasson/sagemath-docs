@@ -43,9 +43,9 @@ show( maxima( tanh(z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-pretty_print( html( '$\\tanh(-oo) = %s$' % tanh(-oo) ) )
-pretty_print( html( '$\\tanh(0) = %s$' % tanh(0) ) )
-pretty_print( html( '$\\tanh(oo) = %s$' % tanh(oo) ) )
+show( tanh(-oo,hold=True), '=', tanh(-oo) )
+show( tanh(0,hold=True), '=', tanh(0) )
+show( tanh(oo,hold=True), '=', tanh(oo) )
 
 </script>
 </div>
