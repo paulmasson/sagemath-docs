@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bessel_K</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> bessel_K( <i>n</i> , <i>z</i> ) </p>
+
+<p>The modified Bessel function of the second kind of order <i>n</i> of <i>z</i> in SageMath. A solution of the differential equation</p>
+
+\[ \frac{d^2 f}{dz^2} + \frac{1}{z} \frac{df}{dz} - \left[ 1 + \frac{n^2}{z^2} \right] f = 0 \]
+
+<p>The second linearly independent solution of this equation for integer order is <a href="bessel_I.html">bessel_I</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun( n=slider(0,10,step_size=1) ):
+
+  show( plot( bessel_K(n,x), x, 0, 5, ymax=3, figsize=[4,2], rgbcolor=(0,.5,1) ) + point([0,0],size=0) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun( n=slider(0,10,step_size=1) ):
+
+  var('n z')
+  # maxima reports an 'unfamiliar singularity'
+  #show( maxima( bessel_K(n,z) ).taylor(z,0,n+7) )
+  show( bessel_K(n,z).series(z,3) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('n')
+show( bessel_K(0,0,hold=True), '=', bessel_K(0,0) )
+show( bessel_K(n,0,hold=True), '=', bessel_K(n,0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="bessel_I.html">bessel_I</a></p>
+
+<p>Function category: <a href="../functions.html#bessel">Bessel functions</a></p>
+
+</body>
