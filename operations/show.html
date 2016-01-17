@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>show</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> show( <i>object</i> [ , <i>object</i> , ... ] ) </p>
+
+<p>Default nicely formatted output in SageMath. Can take multiple arguments of the same type.</p>
+
+<p>To display an unevaluated function append <span style="font-family: monospace; font-weight: bold">,hold=True</span> to the argument</p>
+
+<p>Sample applications:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( sin(2*pi,hold=True), '=', sin(2*pi) )
+
+</script>
+</div>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href="pretty_print.html">pretty_print</a></p>
+
+<p>Operation category: <a href="../operations.html#output">output operations</a></p>
+
+</body>

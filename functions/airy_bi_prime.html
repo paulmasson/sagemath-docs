@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>airy_bi_prime</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -11,16 +11,16 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> ( <i>z</i> ) </p>
+<p class="sagemath"> airy_bi( <i>z</i> ) </p>
 
-<p>The  of <i>z</i> in SageMath.</p>
+<p>The first derivative of the Airy function of the second kind of <i>z</i> in SageMath.</p>
 
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( plot( (x), x, , , figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+show( plot( airy_bi_prime(x), x, -7, 2, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 </script>
 </div>
@@ -31,7 +31,7 @@ show( plot( (x), x, , , figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 <script type="text/x-sage">
 
 var('z')
-show( maxima( (z) ).taylor(z,0,7) )
+show( maxima( airy_bi_prime(z) ).taylor(z,0,5) )
 
 </script>
 </div>
@@ -41,14 +41,14 @@ show( maxima( (z) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-
-show( (,hold=True), '=', () )
+show( airy_bi_prime(0,hold=True), '=', airy_bi_prime(0) )
+show( airy_bi_prime(oo,hold=True), '=', airy_bi_prime(oo) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href=".html"></a></p>
+<p>Related functions: &nbsp; <a href="airy_bi.html">airy_bi</a> &nbsp; <a href="airy_bi_general.html">airy_bi_general</a></p>
 
-<p>Function category: <a href="../functions.html#"> functions</a></p>
+<p>Function category: <a href="../functions.html#airy">Airy functions</a></p>
 
 </body>
