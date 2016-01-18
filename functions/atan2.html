@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>atan2</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> atan2( <i>y</i> , <i>x</i> ) </p>
+
+<p>The inverse tangent in SageMath of the ratio of planar coordinates <i>y</i> and <i>x</i> taking quadrant into account. Alias of <a href="arctan2.html">arctan2</a>.</p>
+
+<p>The function <a href="arctan.html">arctan</a> returns values in the range \( \left( -\frac{\pi}{2} , \frac{\pi}{2} \right) \). By using separate signed arguments, this function returns values in the full range \( ( -\pi , \pi ) \) of the coordinate plane.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun( y=(0,(-5,5)) ):
+
+  show( plot( atan2(y,x), x, -5, 5, figsize=[4,2], rgbcolor=(0,.5,1) ) + point([0,0],size=0) )
+
+</script>
+</div>
+
+<p>Series expansions about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('y x')
+show( maxima( atan2(y,x) ).taylor(y,0,7) )
+show( maxima( atan2(y,x) ).taylor(x,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( atan2(-oo,-oo,hold=True), '=', atan2(-oo,-oo) )
+show( atan2(-oo,0,hold=True), '=', atan2(-oo,0) )
+show( atan2(-oo,oo,hold=True), '=', atan2(-oo,oo) ) # value wrong
+show( atan2(0,oo,hold=True), '=', atan2(0,oo) )
+show( atan2(oo,oo,hold=True), '=', atan2(oo,oo) ) # value wrong
+show( atan2(oo,0,hold=True), '=', atan2(oo,0) )
+show( atan2(oo,-oo,hold=True), '=', atan2(oo,-oo) )
+show( atan2(0,-oo,hold=True), '=', atan2(0,-oo) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="arctan2.html">arctan2</a> &nbsp; <a href="arctan.html">arctan</a></p>
+
+<p>Function category: <a href="../functions.html#circular">circular functions</a></p>
+
+</body>

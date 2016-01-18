@@ -9,6 +9,8 @@ http://jaanga.github.io/demo/pm/get-sage-function-names/get-sage-function-names-
 
 ## Issues
 
+* arctan2 has a couple wrong exact values!
+
 * arccot/acot, arcsec/asec and arccsc/acsc do not evaluate exactly for special values
 
 * Ditto for a slew of hyperbolic functions
