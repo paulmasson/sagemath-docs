@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>piecewise</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> piecewise( [ [ ( <i>begin</i> , <i>end</i> ) , <i>function</i> ] , ... ] , var=<i>z</i> ) </p>
+
+<p>A  piecewise function of <i>z</i> in SageMath defined by <i>function</i> on the interval from <i>begin</i> to <i>end</i>. Consecutive intervals must share an endpoint.</p>
+
+<p>Examples:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'f = piecewise( [ [(0,1),x],[(1,3),2-x],[(3,4),x-4] ], var=x )' )
+
+</script>
+</div>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+f = piecewise( [ [(0,1),x],[(1,3),2-x],[(3,4),x-4] ], var=x )
+show( plot( f, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<br/><br/>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'f = piecewise( [ [(0,1),lambda x:-.6],[(1,2),lambda x:-.2],[(2,3),lambda x:.2],[(3,4),lambda x:.6] ], var=x )' )
+
+</script>
+</div>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+f = piecewise( [ [(0,1),lambda x:-.6],[(1,2),lambda x:-.2],[(2,3),lambda x:.2],[(3,4),lambda x:.6] ], var=x )
+show( plot( f, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href=".html"></a></p>
+
+<p>Function category: <a href="../functions.html#basic">basic functions</a></p>
+
+</body>
+</html>
