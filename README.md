@@ -13,6 +13,6 @@ https://github.com/sagemath/sage/blob/master/src/sage/functions/all.py
 
 * arccot/acot, arcsec/asec and arccsc/acsc do not evaluate exactly for special values
 
-* Ditto for a slew of hyperbolic functions
+* ditto for a slew of hyperbolic functions
 
 * polylog does not evaluate numerically for negative orders
