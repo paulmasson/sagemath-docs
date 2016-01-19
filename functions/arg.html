@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>abs</title>
+<title>arg</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -11,23 +11,26 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> abs( <i>z</i> ) </p>
+<p class="sagemath"> arg( <i>z</i> ) </p>
 
-<p>The absolute value of <i>z</i> in SageMath. Alias of <a href="abs_symbolic.html">abs_symbolic</a>.</p>
+<p>The complex argument of <i>z</i> in SageMath.</p>
 
 <p>Examples:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( 'abs(1)=', abs(1) )
-show( 'abs(-1)=', abs(-1) )
-show( 'abs(x)=', abs(x) )
+show( arg(1,hold=True), '=', arg(1) )
+show( arg(I,hold=True), '=', arg(I) )
+show( arg(-1,hold=True), '=', arg(-1) )
+show( arg(-I,hold=True), '=', arg(-I) )
+show( arg(1+I,hold=True), '=', arg(1+I) )
+show( arg(1-I,hold=True), '=', arg(1-I) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="abs_symbolic.html">abs_symbolic</a> &nbsp; <a href="arg.html">arg</a> &nbsp; <a href="conjugate.html">conjugate</a></p>
+<p>Related functions:&nbsp; <a href="abs.html">abs</a> &nbsp; <a href="conjugate.html">conjugate</a></p>
 
 <p>Function category: <a href="../functions.html#basic">basic functions</a></p>
 
