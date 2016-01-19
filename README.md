@@ -4,7 +4,8 @@ Simple and clear documentation for SageMath functions and operations
 
 Main index page: http://paulmasson.github.io/sagemath-docs/index.html
 
-Complete list of functions: https://github.com/sagemath/sage/blob/master/src/sage/functions/all.py
+Complete list of mathematical functions native to SageMath:  
+https://github.com/sagemath/sage/blob/master/src/sage/functions/all.py
 
 ## Issues
 
