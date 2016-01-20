@@ -41,7 +41,7 @@ def fun( n=slider(0,10,step_size=1) ):
 def fun( n=slider(0,10,step_size=1) ):
 
   var('n z')
-  # maxima report 'unknown singularity'
+  # maxima reports an 'unknown singularity'
   #show( maxima( bessel_Y(n,z) ).taylor(z,0,7) )
   show( bessel_Y(n,z).series(z,3) )
 

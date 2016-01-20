@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>jacobi_am &mdash; SageMath</title>
+<title>jacobi_sn &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -11,11 +11,11 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> jacobi_am( <i>z</i> , <i>m</i> ) </p>
+<p class="sagemath"> jacobi_sn( <i>z</i> , <i>m</i> ) </p>
 
-<p>The Jacobi amplitude of <i>z</i> and parameter <i>m</i> in SageMath. Defined as the inverse of the incomplete elliptic integral of the first kind:</p>
+<p>The Jacobi sn function of <i>z</i> and parameter <i>m</i> in SageMath. Defined as the sine of the Jacobi amplitude:</p>
 
-\[ u = \int_0^\phi \frac{ d \theta }{ \sqrt{ 1 - m \sin^2 \theta } } \qquad \rightarrow \qquad \operatorname{am} u = \phi \]
+\[ \operatorname{sn} u = \sin ( \operatorname{am} u ) \]
 
 <p>Note that all elliptic functions in SageMath use the parameter rather than the elliptic modulus <i>k</i>, which is related to the parameter by \( m = k^2 \).</p>
 
@@ -27,7 +27,7 @@
 @interact
 def fun( m=(.5,(0,1)) ):
 
-  show( plot( jacobi_am(x,m), x, -5, 5, figsize=[4,2], rgbcolor=(0,.5,1) ) )
+  show( plot( jacobi_sn(x,m), x, -5, 5, figsize=[4,2], rgbcolor=(0,.5,1) ) )
 
 </script>
 </div>
@@ -37,10 +37,8 @@ def fun( m=(.5,(0,1)) ):
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-# jacobi_am not recognized by maxima
-
 var('z m')
-show( maxima( arcsin(jacobi_sn(z,m)) ).taylor(z,0,7) )
+show( maxima( jacobi_sn(z,m) ).taylor(z,0,5) )
 
 </script>
 </div>
@@ -51,13 +49,16 @@ show( maxima( arcsin(jacobi_sn(z,m)) ).taylor(z,0,7) )
 <script type="text/x-sage">
 
 var('m')
-show( jacobi_am(0,m,hold=True), '=', jacobi_am(0,m) )
-show( jacobi_am(elliptic_kc(m),m,hold=True), '=', jacobi_am(elliptic_kc(m),m) )
+show( jacobi_sn(0,m,hold=True), '=', jacobi_sn(0,m) )
+show( jacobi_sn(elliptic_kc(m),m,hold=True), '=', jacobi_sn(elliptic_kc(m),m) )
+show( jacobi_sn(2*elliptic_kc(m),m,hold=True), '=', jacobi_sn(2*elliptic_kc(m),m) )
+show( jacobi_sn(3*elliptic_kc(m),m,hold=True), '=', jacobi_sn(3*elliptic_kc(m),m) )
+show( jacobi_sn(4*elliptic_kc(m),m,hold=True), '=', jacobi_sn(4*elliptic_kc(m),m) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="elliptic_f.html">elliptic_f</a> &nbsp; <a href="jacobi_sn.html">jacobi_sn</a> &nbsp; <a href="jacobi_cn.html">jacobi_cn</a> &nbsp; <a href="jacobi_dn.html">jacobi_dn</a></p>
+<p>Related functions: &nbsp; <a href="jacobi_am.html">jacobi_am</a> &nbsp; <a href="jacobi_cn.html">jacobi_cn</a> &nbsp; <a href="jacobi_dn.html">jacobi_dn</a></p>
 
 <p>Function category: <a href="../functions.html#jacobi">Jacobi elliptic functions</a></p>
 

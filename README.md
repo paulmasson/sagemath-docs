@@ -12,10 +12,13 @@ http://jaanga.github.io/demo/pm/get-sage-function-names/get-sage-function-names-
 
 ## Issues
 
-* arctan2 has a couple wrong exact values!
+* arctan2 has a couple wrong exact values
 
 * arccot/acot, arcsec/asec and arccsc/acsc do not evaluate exactly for special values
 
 * ditto for a slew of hyperbolic functions
 
+* ditto for Jacobi elliptic functions
+
 * polylog does not evaluate numerically for negative orders
+
