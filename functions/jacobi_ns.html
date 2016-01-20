@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jacobi_ns &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> jacobi_ns( <i>z</i> , <i>m</i> ) </p>
+
+<p>The Jacobi ns function of <i>z</i> and parameter <i>m</i> in SageMath. The reciprocal of sn:</p>
+
+\[ \operatorname{ns} u = \frac{ 1 }{ \operatorname{sn} u } \]
+
+<p>Note that all Jacobi elliptic functions in SageMath use the parameter rather than the elliptic modulus <i>k</i>, which is related to the parameter by \( m = k^2 \).</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun( m=(.5,(0,1)) ):
+
+  ( show( plot( jacobi_ns(x,m), x, -5, 5, figsize=[4,2], rgbcolor=(0,.5,1),
+		ymin=-5, ymax=5, detect_poles=True ) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z m')
+show( maxima( 1/jacobi_sn(z,m) ).taylor(z,0,3) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('m')
+show( jacobi_ns(0,m,hold=True), '=', jacobi_ns(0,m) )
+show( jacobi_ns(elliptic_kc(m),m,hold=True), '=', jacobi_ns(elliptic_kc(m),m) )
+show( jacobi_ns(2*elliptic_kc(m),m,hold=True), '=', jacobi_ns(2*elliptic_kc(m),m) )
+show( jacobi_ns(3*elliptic_kc(m),m,hold=True), '=', jacobi_ns(3*elliptic_kc(m),m) )
+show( jacobi_ns(4*elliptic_kc(m),m,hold=True), '=', jacobi_ns(4*elliptic_kc(m),m) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="jacobi_sn.html">jacobi_sn</a> &nbsp; <a href="jacobi_nc.html">jacobi_nc</a> &nbsp; <a href="jacobi_nd.html">jacobi_nd</a></p>
+
+<p>Function category: <a href="../functions.html#jacobi">Jacobi elliptic functions</a></p>
+
+</body>
+</html>
