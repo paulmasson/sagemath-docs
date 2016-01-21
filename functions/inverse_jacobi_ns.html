@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>inverse_jacobi_dn &mdash; SageMath</title>
+<title>inverse_jacobi_ns &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -11,9 +11,9 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> inverse_jacobi_dn( <i>z</i> , <i>m</i> ) </p>
+<p class="sagemath"> inverse_jacobi_ns( <i>z</i> , <i>m</i> ) </p>
 
-<p>The inverse Jacobi dn function of <i>z</i> and parameter <i>m</i> in SageMath.</p>
+<p>The inverse Jacobi ns function of <i>z</i> and parameter <i>m</i> in SageMath.</p>
 
 <p>Note that all Jacobi elliptic functions in SageMath use the parameter rather than the elliptic modulus <i>k</i>, which is related to the parameter by \( m = k^2 \).</p>
 
@@ -25,19 +25,21 @@
 @interact
 def fun( m=(.5,(0,1)) ):
 
-  ( show( plot( inverse_jacobi_dn(x,m), x, jacobi_dn(elliptic_kc(m),m), 1,
-			figsize=[4,2], rgbcolor=(0,.5,1) ) + point([0,0],size=0) ) )
+  # spurious imaginary part on negative axis: branch issue?
+  p1 = plot( real(inverse_jacobi_ns(x,m)), x, -5, -1, figsize=[4,2], rgbcolor=(0,.5,1) )
+  p2 = plot( inverse_jacobi_ns(x,m), x, 1, 5, figsize=[4,2], rgbcolor=(0,.5,1) )
+  show( p1 + p2 )
 
 </script>
 </div>
 
-<p>Series expansion about the origin:</p>
+<p>Series expansion about unity:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
 var('z m')
-show( maxima( inverse_jacobi_dn(z,m) ).taylor(z,0,3) )
+show( maxima( inverse_jacobi_ns(z,m) ).taylor(z,1,1) )
 
 </script>
 </div>
@@ -48,15 +50,15 @@ show( maxima( inverse_jacobi_dn(z,m) ).taylor(z,0,3) )
 <script type="text/x-sage">
 
 var('m')
-show( inverse_jacobi_dn(0,m,hold=True), '=', inverse_jacobi_dn(0,m) )
-( show( inverse_jacobi_dn(jacobi_dn(elliptic_kc(m),m),m,hold=True),
-		'=', inverse_jacobi_dn(jacobi_dn(elliptic_kc(m),m),m) ) )
-show( inverse_jacobi_dn(1,m,hold=True), '=', inverse_jacobi_dn(1,m) )
+show( inverse_jacobi_ns(-oo,m,hold=True), '=', inverse_jacobi_ns(-oo,m) )
+show( inverse_jacobi_ns(-1,m,hold=True), '=', inverse_jacobi_ns(-1,m) )
+show( inverse_jacobi_ns(1,m,hold=True), '=', inverse_jacobi_ns(1,m) )
+show( inverse_jacobi_ns(oo,m,hold=True), '=', inverse_jacobi_ns(oo,m) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="jacobi_dn.html">jacobi_dn</a></p>
+<p>Related functions: &nbsp; <a href="jacobi_ns.html">jacobi_ns</a></p>
 
 <p>Function category: <a href="../functions.html#jacobi">Jacobi elliptic functions</a></p>
 
