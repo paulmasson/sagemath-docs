@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>gamma &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> gamma( <i>z</i> ) </p>
+
+<p>The gamma function of <i>z</i> in SageMath.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+( show( plot( gamma(x), x, -5, 5, figsize=[4.5,2], rgbcolor=(0,.5,1),
+			ymin=-5, ymax=5, detect_poles=True ) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z')
+show( maxima( gamma(z) ).taylor(z,0,2) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( gamma(0,hold=True), '=', gamma(0) )
+show( gamma(1/2,hold=True), '=', gamma(1/2) )
+show( gamma(1,hold=True), '=', gamma(1) )
+show( gamma(3/2,hold=True), '=', gamma(3/2) )
+show( gamma(2,hold=True), '=', gamma(2) )
+show( gamma(oo,hold=True), '=', gamma(oo) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="incomplete_gamma.html">incomplete_gamma</a> &nbsp; <a href="psi.html">psi</a> &nbsp; <a href="factorial.html">factorial</a></p>
+
+<p>Function category: <a href="../functions.html#gamma">gamma functions</a></p>
+
+</body>
+</html>
