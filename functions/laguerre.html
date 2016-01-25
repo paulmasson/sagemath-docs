@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>hermite &mdash; SageMath</title>
+<title>laguerre &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -11,15 +11,17 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> hermite( <i>n</i> , <i>z</i> ) </p>
+<p class="sagemath"> laguerre( <i>n</i> , <i>z</i> ) </p>
 
-<p>The Hermite polynomial of <i>z</i> in SageMath. Defined by</p>
+<p>The Laguerre polynomial of <i>z</i> in SageMath. Defined by</p>
 
-\[ H_n(z) = (-1)^n e^{z^2} \frac{ d^n }{ dz^n } e^{-z^2} \]
+\[ L_n(z) = \frac{ 1 }{ n! } e^z \frac{ d^n }{ dz^n } ( z^n e^{-z} ) \]
 
 <p>A solution of the differential equation</p>
 
-\[ \frac{ d^2 f }{ dz^2 } - 2z \frac{ d f }{ dz } + 2n f = 0 \]
+\[ z \frac{ d^2 f }{ dz^2 } + ( 1 - z ) \frac{ d f }{ dz } + n f = 0 \]
+
+<p>Alias of <a href="gen_laguerre.html">gen_laguerre</a>( <i>n</i> , 0 , <i>z</i> ).</p>
 
 <p>Plot on the real axis:</p>
 
@@ -29,7 +31,7 @@
 @interact
 def fun( n=slider(0,10,step_size=1) ):
 
-  show( plot( hermite(n,x), x, -2, 2, figsize=[4,2], rgbcolor=(0,.5,1) ) )
+  show( plot( laguerre(n,x), x, -1, 5, figsize=[4,2], rgbcolor=(0,.5,1) ) )
 
 </script>
 </div>
@@ -43,7 +45,7 @@ def fun( n=slider(0,10,step_size=1) ):
 def fun( n=slider(0,10,step_size=1) ):
 
   var('z')
-  show( maxima( hermite(n,z) ).taylor(z,0,n) )
+  show( maxima( laguerre(n,z) ).taylor(z,0,n) )
 
 </script>
 </div>
@@ -53,18 +55,13 @@ def fun( n=slider(0,10,step_size=1) ):
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-# no hold for this function
-
-show( 'hermite(0,0)=', hermite(0,0) )
-show( 'hermite(1,0)=', hermite(1,0) )
-show( 'hermite(2,0)=', hermite(2,0) )
-show( 'hermite(3,0)=', hermite(3,0) )
-show( 'hermite(4,0)=', hermite(4,0) )
+var('n')
+show( laguerre(n,0,hold=True), '=', laguerre(n,0) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href=".html"></a></p>
+<p>Related functions: &nbsp; <a href="gen_laguerre.html">gen_laguerre</a></p>
 
 <p>Function category: <a href="../functions.html#orthogonal">orthogonal polynomials</a></p>
 

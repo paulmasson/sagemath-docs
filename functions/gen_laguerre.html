@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>gen_laguerre &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> gen_laguerre( <i>n</i> , <i>a</i> , <i>z</i> ) </p>
+
+<p>The generalized or associated Laguerre polynomial of <i>z</i> in SageMath. Defined by</p>
+
+\[ L_n^a(z) = \frac{ 1 }{ n! } z^{-a} e^z \frac{ d^n }{ dz^n } ( z^{n+a} e^{-z} ) \]
+
+<p>A solution of the differential equation</p>
+
+\[ z \frac{ d^2 f }{ dz^2 } + ( a + 1 - z ) \frac{ d f }{ dz } + n f = 0 \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun1( n=slider(0,10,step_size=1) ):
+
+  @interact
+  def fun1( a=(0,(-5,5)) ):
+
+    show( plot( gen_laguerre(n,a,x), x, -1, 5, figsize=[3.3,2], rgbcolor=(0,.5,1) ) + point([0,0],size=0) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun( n=slider(0,10,step_size=1) ):
+
+  var('z a')
+  show( maxima( gen_laguerre(n,a,z) ).taylor(z,0,n) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('n a')
+show( gen_laguerre(n,-1,0,hold=True), '=', gen_laguerre(n,-1,0) )
+show( gen_laguerre(n,0,0,hold=True), '=', gen_laguerre(n,0,0) )
+show( gen_laguerre(n,1,0,hold=True), '=', gen_laguerre(n,1,0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="laguerre.html">laguerre</a></p>
+
+<p>Function category: <a href="../functions.html#orthogonal">orthogonal polynomials</a></p>
+
+</body>
+</html>
