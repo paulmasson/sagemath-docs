@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>factorial &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> factorial( <i>n</i> ) </p>
+
+<p>The factorial of <i>n</i> in SageMath. Defined by</p>
+
+\[ n! = n \cdot (n-1) \cdot (n-2) \cdots 3 \cdot 2 \cdot 1 \]
+
+<p>Alias of <a href="gamma.html">gamma</a> for noninteger arguments.</p>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( factorial(0,hold=True), '=', factorial(0) )
+show( factorial(1,hold=True), '=', factorial(1) )
+show( factorial(2,hold=True), '=', factorial(2) )
+show( factorial(3,hold=True), '=', factorial(3) )
+show( factorial(4,hold=True), '=', factorial(4) )
+show( factorial(5,hold=True), '=', factorial(5) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="gamma.html">gamma</a></p>
+
+<p>Function category: <a href="../functions.html#gamma">gamma functions</a></p>
+
+</body>
+</html>
