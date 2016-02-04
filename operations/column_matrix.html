@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>column_matrix &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> column_matrix( <code>elements</code> ) </p>
+
+<p>The column matrix of <code>elements</code> in SageMath. The transpose of a row matrix of <code>elements</code>.</p>
+
+<p>Examples:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'column_matrix([1,2,3])=', column_matrix([1,2,3]) )
+show( 'column_matrix(range(5))=', column_matrix(range(5)) )
+show( 'column_matrix([i^2 for i in range(5)])=', column_matrix([i^2 for i in range(5)]) )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href="matrix.html">matrix</a></p>
+
+<p>Operation category: <a href="../operations.html#matrix">matrix operations</a></p>
+
+</body>
+</html>
