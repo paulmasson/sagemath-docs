@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>spherical_hankel2 &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> spherical_hankel2( <i>n</i>, <i>z</i> ) </p>
+
+<p>The spherical Hankel function of the second kind of <i>z</i> in SageMath. Defined in terms of spherical Bessel functions by</p>
+
+\[ h_n(z) = j_n(z) - i y_n(z) \]
+
+<p>Plot of the real part on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun( n=slider(0,10,step_size=1) ):
+
+  show( plot( real(spherical_hankel2(n,x)), x, 0, 20, figsize=[4,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Plot of the imaginary part on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun( n=slider(0,10,step_size=1) ):
+
+  show( plot( imag(spherical_hankel2(n,x)), x, 0, 20, figsize=[4,2], rgbcolor=(0,.5,1), ymax=5 ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun( n=slider(0,10,step_size=1) ):
+
+  var('z')
+  show( maxima( spherical_hankel2(n,z) ).taylor(z,0,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'spherical_hankel2(0,0)=', spherical_hankel2(0,0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="spherical_hankel1.html">spherical_hankel1</a> &nbsp; <a href="spherical_bessel_J.html">spherical_bessel_J</a> &nbsp; <a href="spherical_bessel_Y.html">spherical_bessel_Y</a></p>
+
+<p>Function category: <a href="../functions.html#bessel">Bessel functions</a></p>
+
+</body>
+</html>
