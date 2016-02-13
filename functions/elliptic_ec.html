@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>elliptic_ec &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> elliptic_ec( <i>z</i>, <i>m</i> ) </p>
+
+<p>The complete elliptic integral of the second kind of parameter <i>m</i> in SageMath. Defined by</p>
+
+\[ E(m) = \int_0^{ \frac{\pi}{2} } du \sqrt{ 1 - m \sin^2 u }
+        = E \left( \frac{\pi}{2} | m \right) \]
+
+<p>Note that all elliptic integrals in SageMath use the parameter rather than the elliptic modulus <i>k</i>, which is related to the parameter by \( m = k^2 \).</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('m')
+show( plot( elliptic_ec(m), m, 0, 1, figsize=[4.5,2], rgbcolor=(0,.5,1)) + point([0,0],size=0) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('m')
+show( maxima( elliptic_ec(m) ).taylor(m,1e-10,7) )  # error for exact zero!
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( elliptic_ec(0,hold=True), '=', elliptic_ec(0) )
+show( elliptic_ec(1,hold=True), '=', elliptic_ec(1) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="elliptic_e.html">elliptic_e</a> &nbsp; <a href="elliptic_eu.html">elliptic_eu</a></p>
+
+<p>Function category: <a href="../functions.html#elliptic">elliptic integrals</a></p>
+
+</body>
+</html>

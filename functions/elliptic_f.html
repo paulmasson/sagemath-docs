@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>elliptic_f &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> elliptic_f( <i>z</i>, <i>m</i> ) </p>
+
+<p>The incomplete elliptic integral of the first kind of <i>z</i> and parameter <i>m</i> in SageMath. Defined by</p>
+
+\[ F(z|m) = \int_0^z \frac{ du }{ \sqrt{ 1 - m \sin^2 u } } \]
+
+<p>Note that all elliptic integrals in SageMath use the parameter rather than the elliptic modulus <i>k</i>, which is related to the parameter by \( m = k^2 \).</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def fun( m=(.5,(0,1)) ):
+
+  show( plot( elliptic_f(x,m), x, -pi/2, pi/2, figsize=[4,2], rgbcolor=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z m')
+show( maxima( elliptic_f(z,m) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('m')
+show( elliptic_f(-pi/2,m,hold=True), '=', elliptic_f(-pi/2,m) )
+show( elliptic_f(0,m,hold=True), '=', elliptic_f(0,m) )
+show( elliptic_f(pi/2,m,hold=True), '=', elliptic_f(pi/2,m) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="elliptic_kc.html">elliptic_kc</a></p>
+
+<p>Function category: <a href="../functions.html#elliptic">elliptic integrals</a></p>
+
+</body>
+</html>
