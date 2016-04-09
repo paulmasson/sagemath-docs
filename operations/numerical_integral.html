@@ -43,11 +43,11 @@ show( [numerical_integral( f, 0, 1, params=[n,0] ) for n in range(1,4)] )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( 'f(x,b,a) = x + a + b^2' )
-f(x,b,a) = x + a + b^2
+show( 'f(x,a,b) = x + a + b^2' )
+f(x,a,b) = x + a + b^2
 
-show( '[numerical_integral( f, 0, 1, params=[n,0] ) for n in range(1,4)]' )
-show( [numerical_integral( f, 0, 1, params=[n,0] ) for n in range(1,4)] )
+show( '[numerical_integral( f, 0, 1, params=[0,n] ) for n in range(1,4)]' )
+show( [numerical_integral( f, 0, 1, params=[0,n] ) for n in range(1,4)] )
 
 </script>
 </div>
