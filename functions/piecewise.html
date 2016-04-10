@@ -11,16 +11,18 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> piecewise( [ [ ( <code>begin</code> , <code>end</code> ) , <code>function</code> ] , ... ] , var=<i>z</i> ) </p>
+<p class="sagemath"> piecewise( [ [ ( <code>begin</code> , <code>end</code> ) , <code>function</code> ] , ... ] ) </p>
 
 <p>A  piecewise function of <i>z</i> in SageMath defined by <code>function</code> on the interval from <code>begin</code> to <code>end</code>. Consecutive intervals must share an endpoint.</p>
+
+<p>Attempting to specify a partial range when plotting a piecewise function leads to the opaque error message: <code>local variable 'G' referenced before assignment</code></p>
 
 <p>Examples:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( 'f = piecewise( [ [(0,1),x],[(1,3),2-x],[(3,4),x-4] ], var=x )' )
+show( 'f = piecewise( [ [(0,1),x],[(1,3),2-x],[(3,4),x-4] ] )' )
 
 </script>
 </div>
@@ -28,7 +30,7 @@ show( 'f = piecewise( [ [(0,1),x],[(1,3),2-x],[(3,4),x-4] ], var=x )' )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-f = piecewise( [ [(0,1),x],[(1,3),2-x],[(3,4),x-4] ], var=x )
+f = piecewise( [ [(0,1),x],[(1,3),2-x],[(3,4),x-4] ] )
 show( plot( f, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 </script>
@@ -39,7 +41,7 @@ show( plot( f, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( 'f = piecewise( [ [(0,1),lambda x:-.6],[(1,2),lambda x:-.2],[(2,3),lambda x:.2],[(3,4),lambda x:.6] ], var=x )' )
+show( 'f = piecewise( [ [(0,1),lambda x:-.6],[(1,2),lambda x:-.2],[(2,3),lambda x:.2],[(3,4),lambda x:.6] ] )' )
 
 </script>
 </div>
@@ -47,7 +49,7 @@ show( 'f = piecewise( [ [(0,1),lambda x:-.6],[(1,2),lambda x:-.2],[(2,3),lambda 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-f = piecewise( [ [(0,1),lambda x:-.6],[(1,2),lambda x:-.2],[(2,3),lambda x:.2],[(3,4),lambda x:.6] ], var=x )
+f = piecewise( [ [(0,1),lambda x:-.6],[(1,2),lambda x:-.2],[(2,3),lambda x:.2],[(3,4),lambda x:.6] ] )
 show( plot( f, figsize=[4.5,2], rgbcolor=(0,.5,1) ) )
 
 </script>
