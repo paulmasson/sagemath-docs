@@ -13,9 +13,11 @@
 
 <p class="sagemath"> piecewise( [ [ ( <code>begin</code> , <code>end</code> ) , <code>function</code> ] , ... ] ) </p>
 
-<p>A  piecewise function of <i>z</i> in SageMath defined by <code>function</code> on the interval from <code>begin</code> to <code>end</code>. Consecutive intervals must share an endpoint.</p>
+<p>A  piecewise function in SageMath defined by <code>function</code> on the interval from <code>begin</code> to <code>end</code>. Consecutive intervals must share an endpoint.</p>
 
-<p>Attempting to specify a partial range when plotting a piecewise function leads to the opaque error message: <code>local variable 'G' referenced before assignment</code></p>
+<p>Attempting to specify a partial range when plotting a piecewise function leads to the opaque error message <code>local variable 'G' referenced before assignment</code>.</p>
+
+<p>Including a numerical integral directly in <code>piecewise</code> leads to the error message <code>unable to simplify to float approximation</code>. This can be avoided by moving the numerical integral to a Python function and including the name of the function without arguments in <code>piecewise</code>.</p>
 
 <p>Examples:</p>
 
