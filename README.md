@@ -7,7 +7,7 @@ Main index page: http://paulmasson.github.io/sagemath-docs/index.html
 List of mathematical functions native to SageMath:  
 https://github.com/sagemath/sage/blob/master/src/sage/functions/all.py
 
-Utility for parsing files in functions directory courtesy of Theo Armour @jaanga  
+Utility for parsing files in functions directory courtesy of Theo Armour @theo-armour  
 http://jaanga.github.io/demo/pm/get-sage-function-names/get-sage-function-names-r2.html
 
 ## Issues
@@ -25,4 +25,3 @@ http://jaanga.github.io/demo/pm/get-sage-function-names/get-sage-function-names-
 * inverse Jacobi functions have some serious numerical issues: see comments in relevant files
 
 * inverse Jacobi functions do not recognize their own inverses
-
