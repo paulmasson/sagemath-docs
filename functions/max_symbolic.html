@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>max_symbolic &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> max_symbolic( <i>a</i> , <i>b</i> [ , <i>c</i> , <i>d</i> , &hellip; ] ) </p>
+
+<p>The maximum in SageMath of two or more symbolic expressions.</p>
+
+<p>Although this function appears as <code>max</code> under the operation <a href="../operations/show.html"><code>show</code></a> it is not identical to it. The function <code>max</code> is evaluated using Python&rsquo;s built-in function that does not respect symbolic expressions, which leads to unexpected results handling them.</p>
+
+<p>Examples:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+show( 'max_symbolic(x,x^2)=', max_symbolic(x,x^2) )
+show( 'max_symbolic(x,x^2,x^3)=', max_symbolic(x,x^2,x^3) )
+x=3;
+show( 'x=3' )
+show( 'max_symbolic(x,x^2)=', max_symbolic(x,x^2) )
+show( 'max_symbolic(x,x^2,x^3)=', max_symbolic(x,x^2,x^3) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="min_symbolic.html">min_symbolic</a></p>
+
+<p>Function category: <a href="../functions.html#basic">basic functions</a></p>
+
+</body>
+</html>
