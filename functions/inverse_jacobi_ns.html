@@ -26,8 +26,8 @@
 def fun( m=(.5,(0,1)) ):
 
   # spurious imaginary part on negative axis: branch issue?
-  p1 = plot( real(inverse_jacobi_ns(x,m)), x, -5, -1, figsize=[4,2], rgbcolor=(0,.5,1) )
-  p2 = plot( inverse_jacobi_ns(x,m), x, 1, 5, figsize=[4,2], rgbcolor=(0,.5,1) )
+  p1 = plot( real(inverse_jacobi_ns(x,m)), x, -5, -1, figsize=[4,2], color=(0,.5,1) )
+  p2 = plot( inverse_jacobi_ns(x,m), x, 1, 5, figsize=[4,2], color=(0,.5,1) )
   show( p1 + p2 )
 
 </script>
