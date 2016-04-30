@@ -17,6 +17,20 @@
 
 <p>Common options are:</p>
 
+<p style="margin-left: 1in">
+<code>plot_points=<i>integer</i></code><br/>
+<code>xmin=<i>value</i></code><br/>
+<code>xmax=<i>value</i></code><br/>
+<code>ymin=<i>value</i></code><br/>
+<code>ymax=<i>value</i></code><br/>
+<code>detect_poles=True|False</code><br/>
+<code>figsize=[<i>x-value</i>,<i>y-value</i>]</code><br/>
+<code>color=(<i>r-value</i>,<i>g-value</i>,<i>b-value</i>)|"#rgb"|"#rrggbb"|"<i>name</i>"</code><br/>
+<code>hue=<i>h-value</i>|(<i>h-value</i>,<i>s-value</i>,<i>v-value</i>)</code>
+</p>
+
+<p>Two or more plots can be combined by concatenation with a plus (+) sign.</p>
+
 <p>The speed of plotting can be increased by reducing the number of <code>plot_points</code> from its default of 200 to a number appreciably smaller.</p>
 
 <p>Examples:</p>
@@ -24,7 +38,8 @@
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-
+show( "show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], color=(0,.5,1) ) )" )
+show( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], color=(0,.5,1) ) )
 
 </script>
 </div>
