@@ -15,7 +15,28 @@
 
 <p>The square root of <i>z</i> in SageMath.</p>
 
-<p>Examples:</p>
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( sqrt(x), x, 0, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about unity:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z')
+show( maxima( sqrt(z) ).taylor(z,1,4) )
+
+</script>
+</div>
+
+<p>Special values:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
