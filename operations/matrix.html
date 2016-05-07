@@ -11,9 +11,13 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> matrix( <code>elements</code> ) </p>
+<p class="sagemath"> matrix( [ <code>ring</code> , <code>rows</code> , <code>columns</code> , ] <code>elements</code> ) </p>
 
-<p>The matrix of <code>elements</code> in SageMath.</p>
+<p>The matrix of <code>elements</code> in SageMath. A base <a href="../rings.html"><code>ring</code></a> is inferred if not specified.</p>
+
+<p>The optional integers <code>rows</code> and <code>columns</code> are used when <code>elements</code> are not provided as an array. Specifying <code>rows</code> without <code>columns</code> returns a square matrix.</p>
+
+<p>Matrix indices are zero based in SageMath.</p>
 
 <p>Examples:</p>
 
