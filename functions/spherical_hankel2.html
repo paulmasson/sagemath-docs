@@ -23,7 +23,7 @@
 <script type="text/x-sage">
 
 @interact
-def fun( n=slider(0,10,step_size=1) ):
+def _( n=slider(0,10,step_size=1) ):
 
   show( plot( real(spherical_hankel2(n,x)), x, 0, 20, figsize=[4,2], color=(0,.5,1) ) )
 
@@ -36,9 +36,9 @@ def fun( n=slider(0,10,step_size=1) ):
 <script type="text/x-sage">
 
 @interact
-def fun( n=slider(0,10,step_size=1) ):
+def _( n=slider(0,10,step_size=1) ):
 
-  show( plot( imag(spherical_hankel2(n,x)), x, 0, 20, figsize=[4,2], rgbcolor=(0,.5,1), ymax=5 ) )
+  show( plot( imag(spherical_hankel2(n,x)), x, 0, 20, figsize=[4,2], color=(0,.5,1), ymax=5 ) )
 
 </script>
 </div>
@@ -49,7 +49,7 @@ def fun( n=slider(0,10,step_size=1) ):
 <script type="text/x-sage">
 
 @interact
-def fun( n=slider(0,10,step_size=1) ):
+def _( n=slider(0,10,step_size=1) ):
 
   var('z')
   show( maxima( spherical_hankel2(n,z) ).taylor(z,0,6) )

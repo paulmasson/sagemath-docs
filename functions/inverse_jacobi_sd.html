@@ -23,7 +23,7 @@
 <script type="text/x-sage">
 
 @interact
-def fun( m=(.5,(0,1)) ):
+def _( m=(.5,(0,1)) ):
 
   # wrong branch returned numerically
   show( plot( 2*elliptic_kc(m) - inverse_jacobi_sd(x,m), x,

@@ -23,7 +23,7 @@
 <script type="text/x-sage">
 
 @interact
-def fun( n=slider(0,10,step_size=1) ):
+def _( n=slider(0,10,step_size=1) ):
 
   show( plot( spherical_bessel_J(n,x), x, 0, 20, figsize=[4,2], color=(0,.5,1) ) )
 
@@ -36,7 +36,7 @@ def fun( n=slider(0,10,step_size=1) ):
 <script type="text/x-sage">
 
 @interact
-def fun( n=slider(0,10,step_size=1) ):
+def _( n=slider(0,10,step_size=1) ):
 
   var('z')
   show( maxima( spherical_bessel_J(n,z) ).taylor(z,0,n+7) )

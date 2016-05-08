@@ -23,7 +23,7 @@
 <script type="text/x-sage">
 
 @interact
-def fun( m=(.5,(0,1)) ):
+def _( m=(.5,(0,1)) ):
 
   # spurious imaginary part on negative axis: branch issue?
   p1 = plot( real(inverse_jacobi_ns(x,m)), x, -5, -1, figsize=[4,2], color=(0,.5,1) )
