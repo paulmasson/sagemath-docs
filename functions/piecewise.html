@@ -7,7 +7,6 @@
 
 <body>
 
-<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
@@ -18,6 +17,8 @@
 <p>Attempting to specify a partial range when plotting a piecewise function leads to the opaque error message <code>local variable 'G' referenced before assignment</code>.</p>
 
 <p>Including a numerical integral directly in <code>piecewise</code> leads to the error message <code>unable to simplify to float approximation</code>. This can be avoided by moving the numerical integral to a Python function and including the name of the function without arguments in <code>piecewise</code>.</p>
+
+<p><b>NOTE: <code>piecewise</code> appears to have broken severely in Sage 7.2, which is currently running on the public server.</b></p>
 
 <p>Examples:</p>
 
