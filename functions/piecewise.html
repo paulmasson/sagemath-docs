@@ -12,13 +12,13 @@
 
 <p class="sagemath"> piecewise( [ [ ( <code>begin</code> , <code>end</code> ) , <code>function</code> ] , ... ] ) </p>
 
-<p>A  piecewise function in SageMath defined by <code>function</code> on the interval from <code>begin</code> to <code>end</code>. Consecutive intervals should share an endpoint to avoid unexpected errors.</p>
+<p>A piecewise function in SageMath defined in part by <code>function</code> on the domain from <code>begin</code> to <code>end</code>. Consecutive domains should share an endpoint to avoid unexpected errors.</p>
 
-<p>The current version of SageMath makes a distinction between open and closed domains. Open domains are specified with parentheses <code>( )</code>. Closed domains are specified with square brackets <code>[ ]</code>. Attempting to specify a mixed domain <code>( ]</code> or <code>[ )</code> leads to Python syntax errors.</p>
+<p>The current version of SageMath makes a distinction for this function between open and closed domains. Open domains are specified with parentheses <code>( )</code>. Closed domains are specified with square brackets <code>[ ]</code>. Attempting to specify a mixed domain <code>( ]</code> or <code>[ )</code> leads to Python syntax errors.</p>
 
 <p>To ensure a piecewise function consisting of several domains is valid at all points in the complete domain, alternately specify successive domains as open and closed. If the domains are all open then points on the boundaries will not be included, and making all domains closed leads to the error message <code>domains must be pairwise disjoint</code>.</p>
 
-<p>Specifying a partial range when plotting a piecewise function is supported in the current version of SageMath. Previously this lead to the opaque error message <code>local variable 'G' referenced before assignment</code>.</p>
+<p>Specifying a partial domain when plotting a piecewise function is supported in the current version of SageMath. Previously this led to the opaque error message <code>local variable 'G' referenced before assignment</code>.</p>
 
 <p>Including a numerical integral directly in <code>piecewise</code> leads to the error message <code>unable to simplify to float approximation</code>. This can be avoided by moving the numerical integral to a Python function and including the name of the function without arguments in <code>piecewise</code>.</p>
 
