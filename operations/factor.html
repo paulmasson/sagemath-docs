@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>factor &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> factor( <code>expression</code> ) </p>
+
+<p>The factorization in SageMath of the arithmetic or algebraic <code>expression</code>.</p>
+
+<p>For arithmetic input the factorization returns an object that can be accessed by index like a Python list.</p>
+
+<p>Examples:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'factor(44660)' )
+show( factor(44660) )
+
+</script>
+</div>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'list( factor(44660) )' )
+show( list( factor(44660) ) )
+
+</script>
+</div>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'factor(x^4+4*x^3-8*x^2-12*x+15)' )
+show( factor(x^4+4*x^3-8*x^2-12*x+15) )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href=".html"></a></p>
+
+<p>Operation category: <a href="../operations.html#basic">basic operations</a></p>
+
+</body>
+</html>
