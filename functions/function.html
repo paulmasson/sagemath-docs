@@ -43,7 +43,7 @@
 <pre style="margin-left: 1in">
 def numeric(self, x, **kwds):
   var('u')
-  return numerical_integral(u^pi,0,x)[0] 
+  return numerical_integral(u,0,x)[0] 
 
 symbolic = function('symbolic', nargs=1, evalf_func=numeric)
 
@@ -56,7 +56,7 @@ plot( f, 0, 1, figsize=[4.5,2], color=(0,.5,1) )
 
 def numeric(self, x, **kwds):
   var('u')
-  return numerical_integral(u^pi,0,x)[0] 
+  return numerical_integral(u,0,x)[0] 
 
 symbolic = function('symbolic', nargs=1, evalf_func=numeric)
 
