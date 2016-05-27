@@ -22,6 +22,12 @@ a:link, a:visited {
 	
 }
 
+pre {
+
+	 margin-left: 1in
+
+}
+
 .sagemath {
 
 	font-size: large;
