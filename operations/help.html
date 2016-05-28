@@ -24,6 +24,16 @@
 help( sin )
 
 </script>
+<script>
+
+setTimeout( format, 1000 );
+
+function format() {
+  var parent = document.scripts[ document.scripts.length - 1 ].parentNode;
+  parent.querySelector('.sagecell_sessionOutput').style.textAlign = 'left';
+}
+
+</script>
 </div>
 
 <p>Related operations: &nbsp; <a href=".html"></a></p>
