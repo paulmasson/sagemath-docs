@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hypergeometric_U &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> hypergeometric_U( <i>a</i> , <i>b</i> , <i>z</i> ) </p>
+
+<p>The confluent hypergeometric function of the second kind of <i>z</i> in SageMath. The solution to the differential equation</p>
+
+\[ z \frac{d^2 f}{dz^2} + (b-z) \frac{df}{dz} - a z = 0 \]
+
+<p>that satisfies \( U(a,b,z) \sim x^{-a} \) as \( x \rightarrow \infty \).</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( a=(1,(-5,5)), b=(1,(-5,5)) ):
+
+  # workaround for error message:
+  # Cannot evaluate symbolic expression to a numeric value
+
+  def f(x):
+    return hypergeometric_U(a,b,x)
+
+  if f(.00001) < -10:
+    ymin = -10
+  else:
+    ymin = None
+
+  if f(.00001) > 10:
+    ymax = 10
+  else:
+    ymax = None
+
+  show( plot( f, x, .00001, 4, figsize=[4,2], color=(0,.5,1), ymin=ymin, ymax=ymax )
+          + point( [0,0], size=0 ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'This function is currently purely numeric' )
+
+#var('a b z')
+#show( maxima( hypergeometric_U(a,b,z) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'hypergeometric_U(1,1,1)=', hypergeometric_U(1,1,1) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="hypergeometric.html">hypergeometric</a></p>
+
+<p>Function category: <a href="../functions.html#hypergeometric">hypergeometric functions</a></p>
+
+</body>
+</html>

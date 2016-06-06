@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hypergeometric &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> hypergeometric( [ <i>a</i><sub>1</sub> , ... ] , [ <i>b</i><sub>1</sub> , ... ] , <i>z</i> ) </p>
+
+<p>The generalized hypergeometric function of <i>z</i> in SageMath. Defined by</p>
+
+\[  \,_p F _q \left( \begin{matrix} a_1 , \ldots , a_p \\ b_1 , \dots , b_q \end{matrix} ; z \right)
+     = \sum_{k=0}^\infty \frac{ (a_1)_k \cdots (a_p)_k }{ (b_1)_k \cdots (b_p)_k } \frac{ z^k }{ k! } \]
+
+<p>with the rising factorial</p>
+
+\[  (a)_n = a(a+1) \cdots (a+k-1) = \frac{ \Gamma(a+k) }{ \Gamma(a) }  \]
+
+<p>The two sets of parameters must be given as lists.</p>
+
+<p>Plots on the real axis:</p>
+
+<pre>
+real( hypergeometric([a,b],[c],x) )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( a=(1,(-5,5)), b=(0,(-5,5)), c=(1,(-5,5)) ):
+
+  limit = 30
+
+  if real( hypergeometric([a,b],[c],1-.001) ) < -limit \
+       or real( hypergeometric([a,b],[c],1+.001) ) < -limit:
+    ymin = -limit
+  else:
+    ymin = None
+
+  if real( hypergeometric([a,b],[c],1-.001) ) > limit \
+       or real( hypergeometric([a,b],[c],1+.001) ) > limit:
+    ymax = limit
+  else:
+    ymax = None
+
+  show( plot( real( hypergeometric([a,b],[c],x) ), x, -5, 5,
+                figsize=[4,2], color=(0,.5,1),
+                ymin=ymin, ymax=ymax, detect_poles=True )
+        + point([0,0],size=0) )
+
+</script>
+</div>
+
+<pre>
+imag( hypergeometric([a,b],[c],x) )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( a=(1,(-5,5)), b=(0,(-5,5)), c=(1,(-5,5)) ):
+
+  limit = 30
+
+  if imag( hypergeometric([a,b],[c],1-.001) ) < -limit \
+       or imag( hypergeometric([a,b],[c],1+.001) ) < -limit:
+    ymin = -limit
+  else:
+    ymin = None
+
+  if imag( hypergeometric([a,b],[c],1-.001) ) > limit \
+       or imag( hypergeometric([a,b],[c],1+.001) ) > limit:
+    ymax = limit
+  else:
+    ymax = None
+
+  show( plot( imag( hypergeometric([a,b],[c],x) ), x, -5, 5,
+                figsize=[4,2], color=(0,.5,1),
+                ymin=ymin, ymax=ymax, detect_poles=True )
+        + point([0,0],size=0) )
+
+</script>
+</div>
+
+<p>Series expansions about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('a b z')
+show( hypergeometric([a],[b],z,hold=True), '=', maxima( hypergeometric([a],[b],z) ).taylor(z,0,5) )
+
+</script>
+</div>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('a b c z')
+show( hypergeometric([a,b],[c],z,hold=True), '=', maxima( hypergeometric([a,b],[c],z) ).taylor(z,0,5) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('a b c z')
+show( hypergeometric([a,b],[c],0,hold=True), '=', hypergeometric([a,b],[c],0) )
+show( hypergeometric([a,b],[c],1,hold=True), '=', hypergeometric([a,b],[c],1) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="hypergeometric_U.html">hypergeometric_U</a></p>
+
+<p>Function category: <a href="../functions.html#hypergeometric">hypergeometric functions</a></p>
+
+</body>
+</html>
