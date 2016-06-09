@@ -26,8 +26,8 @@
 @interact
 def _( a=(1,(-5,5)), b=(1,(-5,5)) ):
 
-  # workaround for error message:
-  # Cannot evaluate symbolic expression to a numeric value
+  # workaround for intended TypeError
+  # See http://trac.sagemath.org/ticket/163
 
   def f(x):
     return hypergeometric_U(a,b,x)
@@ -73,7 +73,8 @@ show( 'hypergeometric_U(1,1,1)=', hypergeometric_U(1,1,1) )
 
 <p>Related functions: &nbsp; <a href="hypergeometric.html">hypergeometric</a></p>
 
-<p>Function category: <a href="../functions.html#hypergeometric">hypergeometric functions</a></p>
+<p>Function category: <a href="../functions.html#hypergeometric">hypergeometric functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
 
 </body>
 </html>
