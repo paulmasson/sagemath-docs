@@ -20,14 +20,14 @@
 
 \[ E_1 (x) = - \mathrm{Ei}(-x) \]
 
-<p>Alias of <a href="exp_integral_e">exp_integral_e</a>( 1 , <i>z</i> ).</p>
+<p>Alias of <a href="exp_integral_e.html">exp_integral_e</a>( 1 , <i>z</i> ).</p>
 
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( plot( exp_integral_e1(x), x, 0, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+show( plot( exp_integral_e1(x), x, 0, 3, figsize=[4.5,2], color=(0,.5,1) ) )
 
 </script>
 </div>
@@ -38,7 +38,7 @@ show( plot( exp_integral_e1(x), x, 0, 5, figsize=[4.5,2], color=(0,.5,1) ) )
 <script type="text/x-sage">
 
 var('z')
-# maxima reports an 'unfamiliar singularity' at zero
+# Maxima reports an 'unfamiliar singularity' at zero
 show( maxima( exp_integral_e1(z) ).taylor(z,1,7) )
 
 </script>

@@ -40,7 +40,7 @@ def _( n=slider(0,10,step_size=1) ):
 def _( n=slider(0,10,step_size=1) ):
 
   var('n z')
-  # maxima reports an 'unknown singularity'
+  # Maxima reports an 'unfamiliar singularity'
   #show( maxima( bessel_Y(n,z) ).taylor(z,0,7) )
   show( bessel_Y(n,z).series(z,3) )
 

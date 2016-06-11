@@ -41,7 +41,7 @@ show( plot( exp_integral_ei(x), x, 0, 5, figsize=[4.5,2], color=(0,.5,1) ) )
 # remove when no longer needed
 from sage.functions.exp_integral import exp_integral_ei
 
-# maxima reports an 'unfamiliar singularity' at zero
+# Maxima reports an 'unfamiliar singularity' at zero
 
 var('z')
 root = find_root( exp_integral_ei(z),.2,.5)
