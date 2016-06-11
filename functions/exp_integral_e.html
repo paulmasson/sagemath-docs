@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>exp_integral_e &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> exp_integral_e( <i>n</i> , <i>z</i> ) </p>
+
+<p>The generalized exponential integral <i>E<sub>n</sub></i> of <i>z</i> in SageMath. Defined by</p>
+
+\[ E_n = \int_1^\infty dt \: \frac{ e^{ -zt } }{ t^n } \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _(n=slider(1,10,step_size=1)):
+
+  show( plot( exp_integral_e(n,x), x, 0, 3, figsize=[4,2], color=(0,.5,1) )
+        + point([0,0],size=0) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _(n=slider(5,10,step_size=1)):
+
+  var('z')
+  # Maxima reports an 'unfamiliar singularity'
+  #show( maxima( exp_integral_e(n,z) ).taylor(z,0,7) )
+
+  # error 'division by zero' for n<5
+  show( exp_integral_e(n,z).series(z,5) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( exp_integral_e(1,0,hold=True), '=', exp_integral_e(1,0) )
+show( exp_integral_e(2,0,hold=True), '=', exp_integral_e(2,0) )
+show( exp_integral_e(3,0,hold=True), '=', exp_integral_e(3,0) )
+show( exp_integral_e(4,0,hold=True), '=', exp_integral_e(4,0) )
+show( exp_integral_e(5,0,hold=True), '=', exp_integral_e(5,0) )
+
+var('n')
+show( exp_integral_e(n,0,hold=True), '=', exp_integral_e(n,0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="exp_integral_e1.html">exp_integral_e1</a></p>
+
+<p>Function category: <a href="../functions.html#exponential">exponential integrals</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>

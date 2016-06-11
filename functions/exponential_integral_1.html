@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>exponential_integral_1 &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> exponential_integral_1( <i>z</i> ) </p>
+
+<p>The numerical exponential integral <i>E</i><sub>1</sub> of <i>z</i> in SageMath. Defined by</p>
+
+\[ E_1 (z) = \int_z^\infty du \: \frac{ e^{ -u } }{ u } \]
+
+<p>Numerical alternative to <a href="exp_integral_e1">exp_integral_e1</a> that uses the <code>PARI</code> library rather than <code>mpmath</code>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( lambda x: exponential_integral_1(x), x, 0, 3, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about unity:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'This function is purely numeric' )
+
+#var('z')
+#show( maxima( exponential_integral_1(z) ).taylor(z,1,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'exponential_integral_1(0)=', exponential_integral_1(0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="exp_integral_e1.html">exp_integral_e1</a></p>
+
+<p>Function category: <a href="../functions.html#exponential">exponential integrals</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
