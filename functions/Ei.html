@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ei &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> Ei( <i>z</i> ) </p>
+
+<p>The exponential integral Ei of <i>z</i> in SageMath. Alias of <a href="exp_integral_ei.html">exp_integral_ei</a>. Defined by</p>
+
+\[ \mathrm{Ei}(z) = - \int_{-z}^\infty dz \frac{ e^{-z} }{ z } \]
+
+<p>Relation to <a href="exp_integral_e1">exp_integral_e1</a> for <i>x</i>&nbsp;&gt;&nbsp;0&nbsp;:</p>
+
+\[ \mathrm{Ei}(-x) = - E_1 (x) \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( Ei(x), x, 0, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about root:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+# maxima reports an 'unfamiliar singularity' at zero
+
+var('z')
+root = find_root( Ei(z),.2,.5)
+show( maxima( Ei(z) ).taylor(z,root,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( Ei(0,hold=True), '=', Ei(0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="exp_integral_ei.html">exp_integral_ei</a> &nbsp; <a href="exp_integral_e1.html">exp_integral_e1</a> &nbsp; <a href="exp_integral_e.html">exp_integral_e</a></p>
+
+<p>Function category: <a href="../functions.html#exponential">exponential integrals</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
