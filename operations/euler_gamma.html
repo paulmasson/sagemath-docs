@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>pi &mdash; SageMath</title>
+<title>euler_gamma &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -10,22 +10,24 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> pi </p>
+<p class="sagemath"> euler_gamma </p>
 
-<p>The mathematical constant &pi; in SageMath. The ratio of the circumference of a circle to its diameter.</p>
+<p>The Euler-Mascheroni constant in SageMath. Defined by</p>
+
+\[ \gamma = \lim_{ n \to \infty } \left( \sum_{ k=1 }^n \frac{ 1 }{ k } - \ln n \right) \]
 
 <p>Examples:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( 'pi=', pi )
-show( 'n(pi)=', n(pi) )
+show( 'euler_gamma=', euler_gamma )
+show( 'n(euler_gamma)=', n(euler_gamma) )
 
 </script>
 </div>
 
-<p>Related operations: &nbsp; <a href="e.html">e</a> &nbsp; <a href="euler_gamma.html">euler_gamma</a></p>
+<p>Related operations: &nbsp; <a href="e.html">e</a> &nbsp; <a href="pi.html">pi</a></p>
 
 <p>Operation category: <a href="../operations.html#"basic>basic operations</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>

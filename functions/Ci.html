@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ci &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> Ci( <i>z</i> ) </p>
+
+<p>The cosine integral of <i>z</i> in SageMath. Alias of <a href="cos_integral.html">cos_integral</a>. Defined by</p>
+
+\[ \mathrm{Ci} (z) = \gamma + \ln(z) + \int_0^z du \: \frac{ \cos(u) - 1 }{ u }  \]
+
+<p>where &gamma; is <a href="../operations/euler_gamma.html">euler_gamma</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( Ci(x), x, 0, 10, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about first root:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+# Maxima reports an 'unfamiliar singularity' at zero
+
+var('z')
+root = find_root( Ci(z), .5, .7 )
+show( maxima( Ci(z) ).taylor(z,root,7) )
+
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( Ci(0,hold=True), '=', Ci(0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="cos_integral.html">cos_integral</a></p>
+
+<p>Function category: <a href="../functions.html#exponential">exponential integrals</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>

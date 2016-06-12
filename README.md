@@ -24,6 +24,6 @@ http://jaanga.github.io/demo/pm/get-sage-function-names/get-sage-function-names-
 
 * inverse Jacobi functions do not recognize their own inverses
 
-* 'unfamilar singuarlity' in Maxima expansions for bessel_K, bessel_Y, Ei = exp_integral_ei, exp_integral_e1, exp_integral_e
+* 'unfamilar singuarlity' in Maxima expansions for bessel_K, bessel_Y, Ei = exp_integral_ei, exp_integral_e1, exp_integral_e, cos_integral, cosh_integral
 
 * 'division by zero' in SageMath `series` for exp_integral_e with order less than five

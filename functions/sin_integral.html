@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sin_integral &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> sin_integral( <i>z</i> ) </p>
+
+<p>The sine integral of <i>z</i> in SageMath. Alias of <a href="Si.html">Si</a>. Defined by</p>
+
+\[ \mathrm{Si} (z) = \int_0^z du \: \frac{ \sin(u) }{ u }  \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( sin_integral(x), x, -10, 10, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z')
+show( maxima( sin_integral(z) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( sin_integral(1,hold=True), '=', sin_integral(1) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="Si.html">Si</a></p>
+
+<p>Function category: <a href="../functions.html#exponential">exponential integrals</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>

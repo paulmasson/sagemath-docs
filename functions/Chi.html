@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chi &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> Chi( <i>z</i> ) </p>
+
+<p>The hyperbolic cosine integral of <i>z</i> in SageMath. Alias of <a href="cosh_integral.html">cosh_integral</a>. Defined by</p>
+
+\[ \mathrm{Ci} (z) = \gamma + \ln(z) + \int_0^z du \: \frac{ \cosh(u) - 1 }{ u }  \]
+
+<p>where &gamma; is <a href="../operations/euler_gamma.html">euler_gamma</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( Chi(x), x, 0, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about root:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+# Maxima reports an 'unfamiliar singularity' at zero
+
+var('z')
+root = find_root( cos_integral(z), .5, .7 )
+show( maxima( Chi(z) ).taylor(z,root,7) )
+
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( Chi(0,hold=True), '=', Chi(0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="cosh_integral.html">cosh_integral</a></p>
+
+<p>Function category: <a href="../functions.html#exponential">exponential integrals</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
