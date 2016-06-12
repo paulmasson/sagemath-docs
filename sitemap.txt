@@ -1,5 +1,10 @@
 http://paulmasson.github.io/sagemath-docs/functions.html
+http://paulmasson.github.io/sagemath-docs/functions/Chi.html
+http://paulmasson.github.io/sagemath-docs/functions/Ci.html
 http://paulmasson.github.io/sagemath-docs/functions/Ei.html
+http://paulmasson.github.io/sagemath-docs/functions/Li2.html
+http://paulmasson.github.io/sagemath-docs/functions/Shi.html
+http://paulmasson.github.io/sagemath-docs/functions/Si.html
 http://paulmasson.github.io/sagemath-docs/functions/abs.html
 http://paulmasson.github.io/sagemath-docs/functions/abs_symbolic.html
 http://paulmasson.github.io/sagemath-docs/functions/acos.html
@@ -40,7 +45,9 @@ http://paulmasson.github.io/sagemath-docs/functions/bessel_Y.html
 http://paulmasson.github.io/sagemath-docs/functions/ceil.html
 http://paulmasson.github.io/sagemath-docs/functions/conjugate.html
 http://paulmasson.github.io/sagemath-docs/functions/cos.html
+http://paulmasson.github.io/sagemath-docs/functions/cos_integral.html
 http://paulmasson.github.io/sagemath-docs/functions/cosh.html
+http://paulmasson.github.io/sagemath-docs/functions/cosh_integral.html
 http://paulmasson.github.io/sagemath-docs/functions/cot.html
 http://paulmasson.github.io/sagemath-docs/functions/coth.html
 http://paulmasson.github.io/sagemath-docs/functions/csc.html
@@ -97,8 +104,11 @@ http://paulmasson.github.io/sagemath-docs/functions/jacobi_sn.html
 http://paulmasson.github.io/sagemath-docs/functions/kronecker_delta.html
 http://paulmasson.github.io/sagemath-docs/functions/laguerre.html
 http://paulmasson.github.io/sagemath-docs/functions/lambert_w.html
+http://paulmasson.github.io/sagemath-docs/functions/li.html
 http://paulmasson.github.io/sagemath-docs/functions/ln.html
 http://paulmasson.github.io/sagemath-docs/functions/log.html
+http://paulmasson.github.io/sagemath-docs/functions/log_integral.html
+http://paulmasson.github.io/sagemath-docs/functions/log_integral_offset.html
 http://paulmasson.github.io/sagemath-docs/functions/max_symbolic.html
 http://paulmasson.github.io/sagemath-docs/functions/min_symbolic.html
 http://paulmasson.github.io/sagemath-docs/functions/piecewise.html
@@ -110,7 +120,9 @@ http://paulmasson.github.io/sagemath-docs/functions/sech.html
 http://paulmasson.github.io/sagemath-docs/functions/sgn.html
 http://paulmasson.github.io/sagemath-docs/functions/sign.html
 http://paulmasson.github.io/sagemath-docs/functions/sin.html
+http://paulmasson.github.io/sagemath-docs/functions/sin_integral.html
 http://paulmasson.github.io/sagemath-docs/functions/sinh.html
+http://paulmasson.github.io/sagemath-docs/functions/sinh_integral.html
 http://paulmasson.github.io/sagemath-docs/functions/spherical_bessel_J.html
 http://paulmasson.github.io/sagemath-docs/functions/spherical_bessel_Y.html
 http://paulmasson.github.io/sagemath-docs/functions/spherical_hankel1.html
@@ -123,6 +135,7 @@ http://paulmasson.github.io/sagemath-docs/operations.html
 http://paulmasson.github.io/sagemath-docs/operations/column_matrix.html
 http://paulmasson.github.io/sagemath-docs/operations/diff.html
 http://paulmasson.github.io/sagemath-docs/operations/e.html
+http://paulmasson.github.io/sagemath-docs/operations/euler_gamma.html
 http://paulmasson.github.io/sagemath-docs/operations/factor.html
 http://paulmasson.github.io/sagemath-docs/operations/fast_callable.html
 http://paulmasson.github.io/sagemath-docs/operations/help.html
