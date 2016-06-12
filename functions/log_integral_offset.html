@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>log_integral_offset &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> log_integral_offset( <i>z</i> ) </p>
+
+<p>The offset logarithmic integral of <i>z</i> in SageMath. Alias of <a href="Li2.html">Li</a>. Defined by</p>
+
+\[ \mathrm{Li} (z) = \int_2^z \frac{ dt }{ \ln(t) } = \mathrm{li} (z) - \mathrm{li} (2) \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( log_integral_offset(x), x, 0, 10, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z')
+show( maxima( log_integral_offset(z) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( log_integral_offset(1,hold=True), '=', log_integral_offset(1) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="Li2.html">Li</a></p>
+
+<p>Function category: <a href="../functions.html#exponential">exponential integrals</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
