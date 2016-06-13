@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>unit_step &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> unit_step( <i>x</i> ) </p>
+
+<p>The unit step function in SageMath. Defined by</p>
+
+\[ u(x) = \begin{cases} \begin{align} 0 \ , \ x < 0 \\ 1 \ , \ x \ge 0 \end{align} \end{cases} \]
+
+<p>Differs from <a href="heaviside.html">heaviside</a> in behavior at the origin.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( unit_step(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( unit_step(-oo,hold=True), '=', unit_step(-oo) )
+show( unit_step(0,hold=True), '=', unit_step(0) )
+show( unit_step(oo,hold=True), '=', unit_step(oo) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="heaviside.html">heaviside</a></p>
+
+<p>Function category: <a href="../functions.html#generalized">generalized functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>

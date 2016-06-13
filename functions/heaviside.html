@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>heaviside &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> heaviside( <i>x</i> ) </p>
+
+<p>The Heaviside step function in SageMath. Defined by</p>
+
+\[ H(x) = \begin{cases} \begin{align} 0 \ , \ x < 0 \\ 1 \ , \ x > 0 \end{align} \end{cases} \]
+
+<p>Differs from <a href="unit_step.html">unit_step</a> in behavior at the origin.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( heaviside(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( heaviside(-oo,hold=True), '=', heaviside(-oo) )
+show( heaviside(0,hold=True), '=', heaviside(0) )
+show( heaviside(oo,hold=True), '=', heaviside(oo) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="unit_step.html">unit_step</a></p>
+
+<p>Function category: <a href="../functions.html#generalized">generalized functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
