@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dirac_delta &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> dirac_delta( <i>x</i> ) </p>
+
+<p>The Dirac delta function in SageMath. Defined by</p>
+
+\[ \delta(x) = \frac{ 1 }{ 2\pi } \int_{-\infty}^\infty dk \: e^{ ikx } \]
+
+<p>with the properties</p>
+
+\[ \delta(x) = \begin{cases} \begin{align} 0 \ , \ x \ne 0 \\
+                                           \infty \ , \ x = 0 \end{align} \end{cases}
+    \quad \quad \quad \quad \quad
+    \int_{-\infty}^\infty dx \: \delta(x) = 1 \]
+
+<p>Related to <a href="heaviside.html">heaviside</a> by</p>
+
+\[ \frac{ d }{ dx } H(x) = \delta(x) \]
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( dirac_delta(-oo,hold=True), '=', dirac_delta(-oo) )
+show( dirac_delta(0,hold=True), '=', dirac_delta(0) )
+show( dirac_delta(oo,hold=True), '=', dirac_delta(oo) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="heaviside.html">heaviside</a> &nbsp; <a href="spike_function.html">spike_function</a></p>
+
+<p>Function category: <a href="../functions.html#generalized">generalized functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>

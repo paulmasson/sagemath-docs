@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>spike_function &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> spike_function( [ ( <i>x</i> , <i>height</i> ) , ... ] , <i>approx</i> ) </p>
+
+<p>The function  in SageMath of spikes at individual <i>x</i> with <i>height</i>. The optional <i>approx</i> argument determines the approximation to a true spike.</p>
+
+<p>Plot on the real axis:</p>
+
+<pre>
+show( plot( spike_function( [ (1,1), (2,2), (3,3) ], .1 ),
+
+                            figsize=[4.5,2], color=(0,.5,1) ) )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( spike_function( [ (1,1), (2,2), (3,3) ], .1 ),
+                              figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<br/><pre>
+show( plot( spike_function( [ (1,1), (2,2), (3,3) ], .01 ),
+
+                            figsize=[4.5,2], color=(0,.5,1) ) )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( spike_function( [ (1,1), (2,2), (3,3) ], .01 ),
+                              figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<br/><pre>
+show( plot( spike_function( [ (1,1), (2,2), (3,3) ] ),
+
+                            figsize=[4.5,2], color=(0,.5,1) ) )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( spike_function( [ (1,1), (2,2), (3,3) ] ),
+                              figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="dirac_delta.html">dirac_delta</a></p>
+
+<p>Function category: <a href="../functions.html#generalized">generalized functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
