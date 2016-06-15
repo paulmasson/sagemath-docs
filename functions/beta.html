@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>beta &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> beta( <i>z</i> , <i>w</i> ) </p>
+
+<p>The beta function of <i>z</i> and <i>w</i> in SageMath. Defined by</p>
+
+\[ \operatorname{B} (z,w) = \int_0^1 dt \; t^{z-1} (1-t)^{w-1} \]
+
+<p>Relation to <a href="gamma.html">gamma</a>:</p>
+
+\[ \operatorname{B} (z,w) = \frac{ \Gamma(z) \Gamma(w) }{ \Gamma(z+w) } \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( y=(0,(-5,5)) ):
+
+  # beta() currently doesn't evaluate for negative arguments
+  # http://trac.sagemath.org/ticket/12521
+  # using gamma function equivalent until ticket closed
+
+  # show( plot( beta(x,y), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
+  #                       ymin=-20, ymax=20, detect_poles=True ) )
+
+  show( 'Function currently unavailable for plotting' )
+
+</script>
+</div>
+
+<p>Series expansions about unity:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z w')
+# Maxima reports an 'unfamiliar singularity' at zero
+show( maxima( beta(z,w) ).taylor(z,1,3) )
+show( maxima( beta(z,w) ).taylor(w,1,3) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( beta(1/2,1/2,hold=True), '=', beta(1/2,1/2) )
+show( beta(1,1,hold=True), '=', beta(1,1) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="binomial.html">binomial</a> &nbsp; <a href="gamma.html">gamma</a></p>
+
+<p>Function category: <a href="../functions.html#gamma">gamma functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>

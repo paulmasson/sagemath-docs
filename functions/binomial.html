@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>binomial &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> binomal( <i>n</i> , <i>k</i> ) </p>
+
+<p>The binomial coefficient in SageMath. Defined for integer arguments by</p>
+
+\[ \binom{ n }{ k } = \frac{ n! }{ (n-k)! \: k! }\]
+
+<p>and for one noninteger argument by</p>
+
+\[ \binom{ x }{ k } = \frac{ x(x-1) \cdots (x-k+1) }{ k! }\]
+
+<p>Examples:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( binomial(2,1,hold=True), '=', binomial(2,1) )
+show( binomial(3,2,hold=True), '=', binomial(3,2) )
+show( binomial(4,2,hold=True), '=', binomial(4,2) )
+show( binomial(5,2,hold=True), '=', binomial(5,2) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="gamma.html">gamma</a></p>
+
+<p>Function category: <a href="../functions.html#gamma">gamma functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
