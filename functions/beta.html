@@ -26,16 +26,15 @@
 <script type="text/x-sage">
 
 @interact
-def _( y=(0,(-5,5)) ):
+def _( y=(1,(-5,5)) ):
 
   # beta() currently doesn't evaluate for negative arguments
   # http://trac.sagemath.org/ticket/12521
-  # using gamma function equivalent until ticket closed
+  # using gamma function equivalent until fixed
 
-  # show( plot( beta(x,y), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
-  #                       ymin=-20, ymax=20, detect_poles=True ) )
-
-  show( 'Function currently unavailable for plotting' )
+   show( plot( real( exp( log_gamma(x) + log_gamma(y) - log_gamma(x+y) ) ),
+                          x, -5, 5, figsize=[4,2], color=(0,.5,1),
+                         ymin=-10, ymax=10, detect_poles=True ) )
 
 </script>
 </div>

@@ -12,7 +12,35 @@
 
 <p class="sagemath"> pretty_print( <code>object</code> [ , <code>object</code> , ... ] ) </p>
 
-<p>Alias of <a href="show.html">show</a> in SageMath.</p>
+<p>Nicely formatted output in SageMath. Accepts multiple arguments of the same type. Alias of <a href="show.html">show</a>.</p>
+
+<p>To display an unevaluated function append <code>,hold=True</code> to the argument</p>
+
+<p>Examples:</p>
+
+<pre>
+pretty_print( sin(2*pi,hold=True), '=', sin(2*pi) )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+pretty_print( sin(2*pi,hold=True), '=', sin(2*pi) )
+
+</script>
+</div>
+
+<pre>
+pretty_print( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], color=(0,.5,1) ) )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+pretty_print( plot( sin(x), x, 0, 4*pi, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
 
 <p>Related operations: &nbsp; <a href="show.html">show</a></p>
 
