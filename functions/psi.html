@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>gamma &mdash; SageMath</title>
+<title>psi &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -10,18 +10,21 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> gamma( <i>z</i> ) </p>
+<p class="sagemath"> psi( [ <code>times</code> , ] <i>z</i> ) </p>
 
-<p>The gamma function of <i>z</i> in SageMath. Defined by</p>
+<p>The digamma function of <i>z</i> in SageMath. Defined by</p>
 
-\[  \Gamma(z) = \int_0^\infty dt \; t^{z-1} e^{-t} \]
+\[  \psi(z) = \frac{ d }{ dz } \ln \Gamma(z)
+            =  \frac{ \Gamma(z)' }{ \Gamma(z) } \]
+
+<p>The optional <code>times</code> argument is used for multiple derivatives.</p>
 
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( plot( gamma(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
+show( plot( psi(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
 			ymin=-5, ymax=5, detect_poles=True ) )
 
 </script>
@@ -33,7 +36,7 @@ show( plot( gamma(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
 <script type="text/x-sage">
 
 var('z')
-show( maxima( gamma(z) ).taylor(z,0,2) )
+show( maxima( psi(z) ).taylor(z,0,3) )
 
 </script>
 </div>
@@ -43,17 +46,17 @@ show( maxima( gamma(z) ).taylor(z,0,2) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( gamma(0,hold=True), '=', gamma(0) )
-show( gamma(1/2,hold=True), '=', gamma(1/2) )
-show( gamma(1,hold=True), '=', gamma(1) )
-show( gamma(3/2,hold=True), '=', gamma(3/2) )
-show( gamma(2,hold=True), '=', gamma(2) )
-show( gamma(oo,hold=True), '=', gamma(oo) )
+show( psi(0,hold=True), '=', -oo ) # psi(0) )
+show( psi(1/2,hold=True), '=', psi(1/2) )
+show( psi(1,hold=True), '=', psi(1) )
+show( psi(3/2,hold=True), '=', psi(3/2) )
+show( psi(2,hold=True), '=', psi(2) )
+show( psi(oo,hold=True), '=', psi(oo) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="incomplete_gamma.html">incomplete_gamma</a> &nbsp; <a href="psi.html">psi</a> &nbsp; <a href="factorial.html">factorial</a></p>
+<p>Related functions: &nbsp; <a href="gamma.html">gamma</a></p>
 
 <p>Function category: <a href="../functions.html#gamma">gamma functions</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>

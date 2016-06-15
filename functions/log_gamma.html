@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>gamma &mdash; SageMath</title>
+<title>log_gamma &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -10,18 +10,16 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> gamma( <i>z</i> ) </p>
+<p class="sagemath"> log_gamma( <i>z</i> ) </p>
 
-<p>The gamma function of <i>z</i> in SageMath. Defined by</p>
-
-\[  \Gamma(z) = \int_0^\infty dt \; t^{z-1} e^{-t} \]
+<p>The natural logarithm of the gamma function of <i>z</i> in SageMath.</p>
 
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( plot( gamma(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
+show( plot( log_gamma(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
 			ymin=-5, ymax=5, detect_poles=True ) )
 
 </script>
@@ -33,7 +31,9 @@ show( plot( gamma(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
 <script type="text/x-sage">
 
 var('z')
-show( maxima( gamma(z) ).taylor(z,0,2) )
+# Maxima reports an 'unfamiliar singularity'
+#show( maxima( log_gamma(z) ).taylor(z,0,2) )
+show( log_gamma(z).series(z,3) )
 
 </script>
 </div>
@@ -43,17 +43,17 @@ show( maxima( gamma(z) ).taylor(z,0,2) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( gamma(0,hold=True), '=', gamma(0) )
-show( gamma(1/2,hold=True), '=', gamma(1/2) )
-show( gamma(1,hold=True), '=', gamma(1) )
-show( gamma(3/2,hold=True), '=', gamma(3/2) )
-show( gamma(2,hold=True), '=', gamma(2) )
-show( gamma(oo,hold=True), '=', gamma(oo) )
+show( log_gamma(0,hold=True), '=', log_gamma(0) )
+show( log_gamma(1/2,hold=True), '=', log_gamma(1/2) )
+show( log_gamma(1,hold=True), '=', log_gamma(1) )
+show( log_gamma(3/2,hold=True), '=', log_gamma(3/2) )
+show( log_gamma(2,hold=True), '=', log_gamma(2) )
+show( log_gamma(oo,hold=True), '=', log_gamma(oo) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="incomplete_gamma.html">incomplete_gamma</a> &nbsp; <a href="psi.html">psi</a> &nbsp; <a href="factorial.html">factorial</a></p>
+<p>Related functions: &nbsp; <a href="gamma.html">gamma</a></p>
 
 <p>Function category: <a href="../functions.html#gamma">gamma functions</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>

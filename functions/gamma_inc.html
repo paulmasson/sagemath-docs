@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>gamma_inc &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> gamma_inc( <i>a</i> , <i>z</i> ) </p>
+
+<p>The incomplete gamma function of <i>z</i> in SageMath. Alias of <a href="incomplete_gamma.html">incomplete_gamma</a>. Defined by</p>
+
+\[  \Gamma(a,z) = \int_z^\infty dt \; t^{a-1} e^{-t} \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( a=(0,(-5,5)) ):
+
+  show( plot( gamma_inc(a,x), x, 0, 5, figsize=[4,2], color=(0,.5,1),
+                              ymin=0, ymax=5 )
+        + point([0,0],size=0) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('a z')
+show( maxima( gamma_inc(a,z) ).taylor(z,0,5) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('a')
+show( gamma_inc(a,0,hold=True), '=', gamma_inc(a,0) )
+show( gamma_inc(a,oo,hold=True), '=', gamma_inc(a,oo) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="gamma.html">gamma</a> &nbsp; <a href="incomplete_gamma.html">incomplete_gamma</a></p>
+
+<p>Function category: <a href="../functions.html#gamma">gamma functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
