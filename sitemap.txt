@@ -62,6 +62,7 @@ http://paulmasson.github.io/sagemath-docs/functions/elliptic_eu.html
 http://paulmasson.github.io/sagemath-docs/functions/elliptic_f.html
 http://paulmasson.github.io/sagemath-docs/functions/elliptic_kc.html
 http://paulmasson.github.io/sagemath-docs/functions/exp.html
+http://paulmasson.github.io/sagemath-docs/functions/exp_polar.html
 http://paulmasson.github.io/sagemath-docs/functions/exp_integral_e.html
 http://paulmasson.github.io/sagemath-docs/functions/exp_integral_e1.html
 http://paulmasson.github.io/sagemath-docs/functions/exp_integral_ei.html
@@ -160,4 +161,5 @@ http://paulmasson.github.io/sagemath-docs/operations/pi.html
 http://paulmasson.github.io/sagemath-docs/operations/plot.html
 http://paulmasson.github.io/sagemath-docs/operations/pretty_print.html
 http://paulmasson.github.io/sagemath-docs/operations/show.html
+http://paulmasson.github.io/sagemath-docs/operations/stieltjes.html
 http://paulmasson.github.io/sagemath-docs/rings.html
