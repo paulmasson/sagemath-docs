@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>stieltjes &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> stieltjes( <i>n</i> ) </p>
+
+<p>The Stieltjes constant of index <i>n</i> in SageMath. Defined by</p>
+
+\[ \gamma_n = \lim_{ m \to \infty } \left( \sum_{ k=1 }^m \frac{ \ln^n k }{ k }
+                                           - \frac{ \ln^{n+1} m }{ n+1 } \right) \]
+
+<p>Examples:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( stieltjes(0,hold=True), '=', stieltjes(0) )
+show( '' )
+show( 'n(stieltjes(0))=', n(stieltjes(0)) )
+show( 'n(stieltjes(1))=', n(stieltjes(1)) )
+show( 'n(stieltjes(2))=', n(stieltjes(2)) )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href="../functions/zeta.html">zeta</a></p>
+
+<p>Operation category: <a href="../operations.html#constants">mathematical constants</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
