@@ -12,14 +12,14 @@
 
 <p class="sagemath"> exp( <i>z</i> ) </p>
 
-<p>The exponential of <i>z</i> in SageMath.</p>
+<p>The multivalued exponential of <i>z</i> in SageMath. Equivalent to <a href="exp.html">exp</a> for \( -\pi \lt \arg z \lt \pi \). Retains the accurate multivalued argument outside this range.</p>
 
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( plot( exp(x), x, -2, 2, figsize=[4.5,2], color=(0,.5,1) ) )
+show( plot( exp_polar(x), x, -2, 2, figsize=[4.5,2], color=(0,.5,1) ) )
 
 </script>
 </div>
@@ -30,7 +30,7 @@ show( plot( exp(x), x, -2, 2, figsize=[4.5,2], color=(0,.5,1) ) )
 <script type="text/x-sage">
 
 var('z')
-show( maxima( exp(z) ).taylor(z,0,6) )
+show( maxima( exp_polar(z) ).taylor(z,0,6) )
 
 </script>
 </div>
@@ -40,14 +40,16 @@ show( maxima( exp(z) ).taylor(z,0,6) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( exp(-oo,hold=True), '=', exp(-oo) )
-show( exp(0,hold=True), '=', exp(0) )
-show( exp(oo,hold=True), '=', exp(oo) )
+show( exp_polar(-2*pi,hold=True), '=', exp_polar(-2*pi) )
+show( exp_polar(-pi,hold=True), '=', exp_polar(-pi) )
+show( exp_polar(0,hold=True), '=', exp_polar(0) )
+show( exp_polar(pi,hold=True), '=', exp_polar(pi) )
+show( exp_polar(2*pi,hold=True), '=', exp_polar(2*pi) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="exp_polar.html">exp_polar</a> &nbsp; <a href="ln.html">ln</a> &nbsp; <a href="log.html">log</a></p>
+<p>Related functions: &nbsp; <a href="exp.html">exp</a></p>
 
 <p>Function category: <a href="../functions.html#logarithmic">logarithmic functions</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
