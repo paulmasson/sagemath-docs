@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>zetaderiv &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> zetaderiv( <i>n</i> , <i>z</i> ) </p>
+
+<p>The <i>n</i>th-order derivative of the Riemann zeta function of <i>z</i> in SageMath. Defined by</p>
+
+\[ \zeta^{(k)} (z) = (-1)^n \sum_{k=2}^\infty \frac{ \ln^n k }{ k^z } \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(1,10,step_size=1) ):
+
+  show( plot( zetaderiv(n,x), x, -5, 5, figsize=[4,2], color=(0,.5,1),
+                     ymin=-10, ymax=10, detect_poles=True ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('n z')
+show( maxima( zetaderiv(n,z) ).taylor(z,0,5) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( zetaderiv(1,0,hold=True), '=', zetaderiv(1,0) )
+show( zetaderiv(2,0,hold=True), '=', zetaderiv(2,0) )
+show( zetaderiv(3,0,hold=True), '=', zetaderiv(3,0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="zeta.html">zeta</a></p>
+
+<p>Function category: <a href="../functions.html#zeta">zeta functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
