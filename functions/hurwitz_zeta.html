@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hurwitz_zeta &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> hurwitz_zeta( <i>z</i> , <i>a</i> ) </p>
+
+<p>The Hurwitz zeta function of <i>z</i> in SageMath. Defined by</p>
+
+\[ \zeta (z,a) = \sum_{k=0}^\infty \frac{ 1 }{ (k+a)^z } \]
+
+<p>Related to <a href="zeta.html">zeta</a> by \( \zeta (z,1) = \zeta (z) \).</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( a=(1,(0,10)) ):
+
+  show( plot( hurwitz_zeta(x,a), x, -5, 5, figsize=[4,2], color=(0,.5,1),
+                     ymin=-10, ymax=10, detect_poles=True ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z a')
+show( maxima( hurwitz_zeta(z,a) ).taylor(z,0,5) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( hurwitz_zeta(0,1,hold=True), '=', hurwitz_zeta(0,1) )
+show( hurwitz_zeta(1,1,hold=True), '=', hurwitz_zeta(1,1) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="zeta.html">zeta</a></p>
+
+<p>Function category: <a href="../functions.html#zeta">zeta functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
