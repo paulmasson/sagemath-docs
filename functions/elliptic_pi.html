@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>elliptic_e &mdash; SageMath</title>
+<title>elliptic_pi &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -10,11 +10,12 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> elliptic_e( <i>z</i> , <i>m</i> ) </p>
+<p class="sagemath"> elliptic_pi( <mi>n</i> , <i>z</i> , <i>m</i> ) </p>
 
-<p>The incomplete elliptic integral of the second kind of <i>z</i> and parameter <i>m</i> in SageMath. Defined by</p>
+<p>The incomplete elliptic integral of the third kind of <i>z</i>, characteristic <i>n</i> and parameter <i>m</i> in SageMath. Defined by</p>
 
-\[ E(z|m) = \int_0^z du \sqrt{ 1 - m \sin^2 u } \]
+\[ \Pi(n;z|m) = \int_0^z \frac{ du }
+                              { ( 1 - n \sin^2 u ) \sqrt{ 1 - m \sin^2 u } } \]
 
 <p>Note that all elliptic integrals in SageMath use the parameter rather than the elliptic modulus <i>k</i>, which is related to the parameter by \( m = k^2 \).</p>
 
@@ -24,9 +25,9 @@
 <script type="text/x-sage">
 
 @interact
-def _( m=(.5,(0,1)) ):
+def _( n=(0,(-5,5)), m=(.5,(0,1)) ):
 
-  show( plot( elliptic_e(x,m), x, -pi/2, pi/2, figsize=[4,2], color=(0,.5,1) ) )
+  show( plot( elliptic_pi(n,x,m), x, -pi/2, pi/2, figsize=[4,2], color=(0,.5,1) ) )
 
 </script>
 </div>
@@ -36,8 +37,8 @@ def _( m=(.5,(0,1)) ):
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-var('z m')
-show( maxima( elliptic_e(z,m) ).taylor(z,0,7) )
+var('n z m')
+show( maxima( elliptic_pi(n,z,m) ).taylor(z,0,7) )
 
 </script>
 </div>
@@ -47,15 +48,15 @@ show( maxima( elliptic_e(z,m) ).taylor(z,0,7) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-var('m')
-show( elliptic_e(-pi/2,m,hold=True), '=', elliptic_e(-pi/2,m) )
-show( elliptic_e(0,m,hold=True), '=', elliptic_e(0,m) )
-show( elliptic_e(pi/2,m,hold=True), '=', elliptic_e(pi/2,m) )
+var('n m')
+show( elliptic_pi(n,-pi/2,m,hold=True), '=', elliptic_pi(n,-pi/2,m) )
+show( elliptic_pi(n,0,m,hold=True), '=', elliptic_pi(n,0,m) )
+show( elliptic_pi(n,pi/2,m,hold=True), '=', elliptic_pi(n,pi/2,m) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="elliptic_ec.html">elliptic_ec</a> &nbsp; <a href="elliptic_eu.html">elliptic_eu</a> &nbsp; <a href="elliptic_f.html">elliptic_f</a> &nbsp; <a href="elliptic_pi.html">elliptic_pi</a></p>
+<p>Related functions: &nbsp; <a href="elliptic_f.html">elliptic_f</a> &nbsp; <a href="elliptic_e.html">elliptic_e</a></p>
 
 <p>Function category: <a href="../functions.html#elliptic">elliptic integrals</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
