@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>erf &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> erf( <i>z</i> ) </p>
+
+<p>The error function of <i>z</i> in SageMath. Defined by</p>
+
+\[ \operatorname{erf} (z)  = \frac{ 2 }{ \sqrt{\pi} } \int_0^z dt \; e^{-t^2} \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( erf(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z')
+show( maxima( erf(z) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( erf(-oo,hold=True), '=', erf(-oo) )
+show( erf(0,hold=True), '=', erf(0) )
+show( erf(oo,hold=True), '=', erf(oo) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="error_fcn.html">error_fcn</a></p>
+
+<p>Function category: <a href="../functions.html#gamma">gamma functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
