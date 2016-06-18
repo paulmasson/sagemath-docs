@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dickman_rho &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> dickman_rho( <i>z</i> ) </p>
+
+<p>The Dickman function of <i>z</i> in SageMath. The solution to the differential equation</p>
+
+\[ x \rho' (x) + \rho (x-1) = 0 \]
+
+<p>with initial conditions \( \rho (x) = 1 \) for \( 0 \le x \le 1 \).</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( dickman_rho(x), x, 0, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Semilog plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot_semilogy( dickman_rho(x), x, 0, 5, figsize=[4.5,2], color=(0,.5,1) )
+      + point( [0,0], size=0 ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z')
+#show( maxima( dickman_rho(z) ).taylor(z,1,4) )
+show( dickman_rho(z).series(z,1) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( dickman_rho(1,hold=True), '=', dickman_rho(1) )
+show( dickman_rho(2,hold=True), '=', dickman_rho(2) )
+show( dickman_rho(3,hold=True), '=', dickman_rho(3) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href=".html"></a></p>
+
+<p>Function category: <a href="../functions.html#"> functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
