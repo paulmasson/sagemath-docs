@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>struve_H &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> struve_H( <i>n</i> , <i>z</i> ) </p>
+
+<p>The Struve function of <i>z</i> in SageMath. A solution of the nonhomogeneous differential equation</p>
+
+\[ \frac{d^2 f}{dz^2} + \frac{1}{z} \frac{df}{dz} + \left[ 1 - \frac{n^2}{z^2} \right] f
+    = \frac{ \left( \frac{ z }{ 2 } \right)^{n-1} }
+           { \sqrt{\pi} \: \Gamma \left( n + \frac{ 1 }{ 2 } \right) } \]
+
+<p>The second linearly independent solution of this equation is currently not implemented.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  show( plot( struve_H(n,x), x, 0, 20, figsize=[4,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+# expansion for arbitrary order not pretty
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  var('n z')
+  # Maxima reports an 'unfamiliar singularity'
+  show( maxima( struve_H(n,z) ).taylor(z,1/100000,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('n')
+show( struve_H(0,0,hold=True), '=', struve_H(0,0) )
+show( struve_H(n,0,hold=True), '=', struve_H(n,0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="struve_L.html">struve_L</a></p>
+
+<p>Function category: <a href="../functions.html#bessel">Bessel functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
