@@ -49,6 +49,7 @@ def _( n=slider(0,10,step_size=1) ):
 
   var('n z')
   # Maxima reports an 'unfamiliar singularity'
+  # 'division by zero' in SageMath series
   show( maxima( struve_L(n,z) ).taylor(z,1/100000,7) )
 
 </script>

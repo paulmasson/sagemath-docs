@@ -34,4 +34,4 @@ http://jaanga.github.io/demo/pm/get-sage-function-names/get-sage-function-names-
 
 * digamma function does not evaluate exactly at origin
 
-* Struve series expansions need work
+* Struve series expansions need work. Also 'division by zero' in SageMath `series`.
