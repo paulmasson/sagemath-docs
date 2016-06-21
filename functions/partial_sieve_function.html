@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>partial_sieve_function &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> partial_sieve_function( <i>x</i> , <i>n</i> ) </p>
+
+<p>The partial sieve function of <i>x</i> in SageMath. The number of positive integers less than or equal to <i>x</i> that are not divisible by the first <i>n</i> primes. Alias of <a href="legendre_phi.html">legendre_phi</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(1,20,step_size=1) ):
+
+  show( plot( lambda x: partial_sieve_function(x,n), x, 0, 100, figsize=[4,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'partial_sieve_function(1,1)=', partial_sieve_function(1,1) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="legendre_phi.html">legendre_phi</a> &nbsp; <a href="prime_pi.html">prime_pi</a></p>
+
+<p>Function category: <a href="../functions.html#miscellaneous">miscellaneous functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
