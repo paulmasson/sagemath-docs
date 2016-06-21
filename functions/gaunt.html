@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>gaunt &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> gaunt( <i>j</i><sub>1</sub> , <i>j</i><sub>2</sub> , <i>j</i><sub>3</sub> , <i>m</i><sub>1</sub> , <i>m</i><sub>2</sub> , <i>m</i><sub>3</sub> ) </p>
+
+<p>The Gaunt coefficient in SageMath. Defined by</p>
+
+\[ Y( j_1,j_2,j_3,m_1,m_2,m_3 ) = \int_0^{2\pi} d\phi \int_0^\pi \sin\theta \: d\theta
+                                  \; Y_{j_1}^{m_1} ( \theta, \phi )
+                                  \; Y_{j_2}^{m_2} ( \theta, \phi )
+                                  \; Y_{j_3}^{m_3} ( \theta, \phi ) \]
+
+<br/><p>Explicit values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( j1=slider(0,10,step_size=1), j2=slider(0,10,step_size=1),
+       j3=slider(0,10,step_size=1) ):
+
+  @interact
+  def _( m1=slider(-j1,j1,step_size=1,default=0),
+         m2=slider(-j2,j2,step_size=1,default=0),
+         m3=slider(-j3,j3,step_size=1,default=0) ):
+
+    show( 'gaunt(', j1, ',', j2, ',', j3, ',', m1, ',', m2, ',', m3,
+          ')=', gaunt(j1,j2,j3,m1,m2,m3) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="spherical_harmonic.html">spherical_harmonic</a></p>
+
+<p>Function category: <a href="../functions.html#miscellaneous">miscellaneous functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>

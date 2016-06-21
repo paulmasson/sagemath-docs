@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>wigner_6j &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<style>
+	.sagecell_sliderContainer { max-width: 3.25in !important }
+</style>
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> wigner_6j( <i>j</i><sub>1</sub> , <i>j</i><sub>2</sub> , <i>j</i><sub>3</sub> , <i>j</i><sub>4</sub> , <i>j</i><sub>5</sub> , <i>j</i><sub>6</sub> ) </p>
+
+<p>The Wigner 6-<i>j</i> symbol in SageMath. Related to <a href="racah.html">racah</a> by</p>
+
+\[ \begin{Bmatrix} j_1 & j_2 & j_3 \\ j_4 & j_5 & j_6 \end{Bmatrix}
+    = (-1)^{j_1+j_2+j_4+j_5} W( j_1 j_2 j_5 j_4 ; j_3 j_6 ) \]
+
+<p>Explicit values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( j1=slider(0,10,step_size=1/2), j2=slider(0,10,step_size=1/2),
+       j3=slider(0,10,step_size=1/2), j4=slider(0,10,step_size=1/2),
+       j5=slider(0,10,step_size=1/2), j6=slider(0,10,step_size=1/2) ):
+
+  show( 'wigner_6j(', j1, ',', j2, ',', j3, ',', j4, ',', j5, ',', j6,
+          ')=', wigner_6j(j1,j2,j3,j4,j5,j6) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="racah.html">racah</a> &nbsp; <a href="wigner_3j.html">wigner_3j</a></p>
+
+<p>Function category: <a href="../functions.html#miscellaneous">miscellaneous functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
