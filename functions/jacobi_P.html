@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>gen_legendre_P &mdash; SageMath</title>
+<title>jacobi_P &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
+<style>
+	.sagecell_sliderContainer { max-width: 3.25in !important }
+</style>
 </head>
 
 <body>
@@ -10,18 +13,17 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> gen_legendre_P( <i>n</i> , <i>m</i> , <i>z</i> ) </p>
+<p class="sagemath"> jacobi_P( <i>n</i> , <i>a</i> , <i>b</i> , <i>z</i> ) </p>
 
-<p>The generalized or associated Legendre polynomial of <i>z</i> in SageMath. Defined by</p>
+<p>The Jacobi polynomial of <i>z</i> in SageMath. Defined by</p>
 
-\[ P_n^m (z) = \frac{ (-1)^m }{ 2^n n! } (1-z^2)^{m/2} \frac{ d^{n+m} }{ dz^{n+m} } ( z^2-1 )^n \]
+\[ P_n^{(a,b)} (z) = \frac{ (-1)^n }{ 2^n n! } (1-z)^{-a} (1+z)^{-b}
+                     \frac{ d^n }{ dz^n } (1-z)^{a+n} (1+z)^{b+n} \]
 
 <p>A solution of the differential equation</p>
 
-\[ ( 1-z^2 ) \frac{ d^2 f }{ dz^2 } -2z \frac{ d f }{ dz }
-   + \left[ n(n+1) - \frac{ m^2 }{ 1-z^2 } \right] f = 0 \]
-
-<p>The second linearly independent solution of this equation is <a href="gen_legendre_Q.html">gen_legendre_Q</a>.</p>
+\[ ( 1-z^2 ) \frac{ d^2 f }{ dz^2 } + ( b-a - (a+b+2)z ) \frac{ d f }{ dz }
+   + n(n+a+b+1) f = 0 \]
 
 <p>Plot on the real axis:</p>
 
@@ -32,9 +34,9 @@
 def _( n=slider(0,10,step_size=1) ):
 
   @interact
-  def _( m=slider(-n,n,default=0,step_size=1) ):
+  def _( a=slider(0,10,step_size=1), b=slider(0,10,step_size=1) ):
 
-    show( plot( gen_legendre_P(n,m,x), x, -1, 1, figsize=[3.3,2], color=(0,.5,1) ) )
+    show( plot( jacobi_P(n,a,b,x), x, -1, 1, figsize=[3.3,2], color=(0,.5,1) ) )
 
 </script>
 </div>
@@ -48,10 +50,10 @@ def _( n=slider(0,10,step_size=1) ):
 def _( n=slider(0,10,step_size=1) ):
 
   @interact
-  def _( m=slider(-n,n,default=0,step_size=1) ):
+  def _( a=slider(0,10,step_size=1), b=slider(0,10,step_size=1) ):
 
     var('z')
-    show( maxima( gen_legendre_P(n,m,z) ).taylor(z,0,7) )
+    show( maxima( jacobi_P(n,a,b,z) ).taylor(z,0,n) )
 
 </script>
 </div>
@@ -61,12 +63,12 @@ def _( n=slider(0,10,step_size=1) ):
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( 'gen_legendre_P(0,0,0)=', gen_legendre_P(0,0,0) )
+show( 'jacobi_P(0,0,0,0)=', jacobi_P(0,0,0,0) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="gen_legendre_Q.html">gen_legendre_Q</a></p>
+<p>Related functions: &nbsp; <a href="gegenbauer.html">gegenbauer</a></p>
 
 <p>Function category: <a href="../functions.html#orthogonal">orthogonal polynomials</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>

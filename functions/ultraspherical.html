@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ultraspherical &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<style>
+	.sagecell_sliderContainer { max-width: 3.25in !important }
+</style>
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> ultraspherical( <i>n</i> , <i>a</i> , <i>b</i> , <i>z</i> ) </p>
+
+<p>The ultraspherical or Gegenbauer polynomial of <i>z</i> in SageMath. Defined in terms of <a href="jacobi_P.html">jacobi_P</a> by</p>
+
+\[ C_n^{(a)} (z) = \frac{ \Gamma(n+2a) }{ \Gamma(2a) }
+                   \frac{ \Gamma(a+\frac{1}{2}) }{ \Gamma(n+a+\frac{1}{2}) } 
+                   P_n^{(a-\frac{1}{2},a-\frac{1}{2})} (z) \]
+
+<p>A solution of the differential equation</p>
+
+\[ ( 1-z^2 ) \frac{ d^2 f }{ dz^2 } - (2a+1)z \frac{ d f }{ dz } + n(2a+n) f = 0 \]
+
+<p>Alias of <a href="gegenbauer.html">gegenbauer</a>.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  @interact
+  def _( a=slider(1,10,step_size=1) ):
+
+    # workaround for error
+    f(x) = ultraspherical(n,a,x)
+    value = abs(f(.9))
+
+    if value > 10:
+      ymin = -value/10
+      ymax = value/10
+    else:
+      ymin = None
+      ymax = None
+
+    show( plot( ultraspherical(n,a,x), x, -1, 1, ymin=ymin, ymax=ymax,
+                        figsize=[3.3,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  @interact
+  def _( a=slider(1,10,step_size=1) ):
+
+    var('z')
+    show( maxima( ultraspherical(n,a,z) ).taylor(z,0,n) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( ultraspherical(0,1,0,hold=True), '=', ultraspherical(0,1,0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="gegenbauer.html">gegenbauer</a> &nbsp; <a href="jacobi_P.html">jacobi_P</a></p>
+
+<p>Function category: <a href="../functions.html#orthogonal">orthogonal polynomials</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
