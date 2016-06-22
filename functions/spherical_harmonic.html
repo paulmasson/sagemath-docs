@@ -16,7 +16,17 @@
 
 <p class="sagemath"> spherical_harmonic( <i>n</i> , <i>m</i> , &theta; , &phi; ) </p>
 
-<p>The spherical harmonic \( Y_n^m (\theta,\phi) \) in SageMath.</p>
+<p>The spherical harmonic \( Y_n^m (\theta,\phi) \) in SageMath. A solution of the partial differential equation</p>
+
+\[ \frac{ 1 }{ \sin \theta } \frac{ \partial }{ \partial \theta }
+     \left( \sin \theta \frac{ \partial f }{ \partial \theta } \right)
+   + \frac{ 1 }{ \sin^2 \theta } \frac{ \partial^2 f }{ \partial \phi^2 }
+   + l(l+1) f = 0 \]
+
+<p>Related to <a href="gen_legendre_P.html">gen_legendre_P</a> by</p>
+
+\[ Y_n^m (\theta,\phi) = (-1)^m \sqrt{ \frac{ 2l+1 }{ 4\pi } \frac{ (l-m)! }{ (l+m)! } }
+                                e^{ im\phi } P_l^m (\cos\theta) \]
 
 <p>Explicit forms:</p>
 
@@ -77,7 +87,7 @@ def _( n=slider(0,10,step_size=1) ):
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="gaunt.html">gaunt</a></p>
+<p>Related functions: &nbsp; <a href="gen_legendre_P.html">gen_legendre_P</a> &nbsp; <a href="gaunt.html">gaunt</a></p>
 
 <p>Function category: <a href="../functions.html#"> functions</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>legendre_Q &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> legendre_Q( <i>n</i> , <i>z</i> ) </p>
+
+<p>The Legendre function of the second kind of <i>z</i> in SageMath. A solution of the differential equation</p>
+
+\[ ( 1-z^2 ) \frac{ d^2 f }{ dz^2 } -2z \frac{ d f }{ dz } + n(n+1) f = 0 \]
+
+<p>The second linearly independent solution of this equation is <a href="legendre_P.html">legendre_P</a>.</p>
+
+<p>Equivalent to <a href="gen_legendre_Q.html">gen_legendre_Q</a>( <i>n</i> , 0 , <i>z</i> ).</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  show( plot( legendre_Q(n,x), x, -1, 1, ymin=-1, ymax=1, figsize=[4,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  var('z')
+  show( maxima( legendre_Q(n,z) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'legendre_Q(0,0)=', legendre_Q(0,0) )
+show( 'legendre_Q(1,0)=', legendre_Q(1,0) )
+show( 'legendre_Q(2,0)=', legendre_Q(2,0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="legendre_P.html">legendre_P</a> &nbsp; <a href="gen_legendre_Q.html">gen_legendre_Q</a></p>
+
+<p>Function category: <a href="../functions.html#orthogonal">orthogonal polynomials</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>

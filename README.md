@@ -24,6 +24,8 @@ http://jaanga.github.io/demo/pm/get-sage-function-names/get-sage-function-names-
 
 * polylog does not evaluate numerically for negative orders
 
+* numerically wrong values for gen_legendre_P for m=odd=-n
+
 * inverse Jacobi functions have some serious numerical issues: see comments in relevant files
 
 * inverse Jacobi functions do not recognize their own inverses
