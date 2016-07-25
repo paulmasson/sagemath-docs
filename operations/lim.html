@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>limit &mdash; SageMath</title>
+<title>lim &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -10,11 +10,11 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> limit( <code>function</code>, <code>variable</code> = <code>value</code> ) </p>
+<p class="sagemath"> lim( <code>function</code>, <code>variable</code> = <code>value</code> ) </p>
 
 <p>The symbolic limit in SageMath of <code>function</code> as the independent <code>variable</code> approaches <code>value</code>.</p>
 
-<p>Alias of <a href="lim.html">lim</a>.</p>
+<p>Alias of <a href="limit.html">limit</a>.</p>
 
 <p>Examples:</p>
 
@@ -22,13 +22,13 @@
 <script type="text/x-sage">
 
 var('u')
-show( 'limit(', (1+u)^(1/u), ', u=0 )=', limit( (1+u)^(1/u), u=0 ) )
-show( 'limit(', (1+1/u)^u, ', u=oo )=', limit( (1+1/u)^u, u=oo ) )
+show( 'lim(', (1+u)^(1/u), ', u=0 )=', lim( (1+u)^(1/u), u=0 ) )
+show( 'lim(', (1+1/u)^u, ', u=oo )=', lim( (1+1/u)^u, u=oo ) )
 
 </script>
 </div>
 
-<p>Related operations: &nbsp; <a href="lim.html">lim</a> &nbsp; <a href="diff.html">diff</a></p>
+<p>Related operations: &nbsp; <a href="limit.html">limit</a> &nbsp; <a href="diff.html">diff</a></p>
 
 <p>Operation category: <a href="../operations.html#calculus">calculus operations</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
