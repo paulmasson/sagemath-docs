@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hankel2 &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> hankel2( <i>n</i> , <i>z</i> ) </p>
+
+<p>The Hankel function of the second kind of <i>z</i> in SageMath. Defined in terms of Bessel functions by</p>
+
+\[ H_n(z) = J_n(z) - i Y_n(z) \]
+
+<p>Plot of the real part on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  show( plot( real(hankel2(n,x)), x, 0, 20, figsize=[4,2], color=(0,.5,1) ) )
+
+</script>
+</div>
+
+<p>Plot of the imaginary part on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  show( plot( imag(hankel2(n,x)), x, 0, 20, figsize=[4,2], color=(0,.5,1), ymax=5 ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  var('z')
+  show( maxima( hankel2(n,z) ).taylor(z,0,6) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'hankel2(0,0)=', hankel2(0,0) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="hankel1.html">hankel1</a> &nbsp; <a href="bessel_J.html">bessel_J</a> &nbsp; <a href="bessel_Y.html">bessel_Y</a></p>
+
+<p>Function category: <a href="../functions.html#bessel">Bessel functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
