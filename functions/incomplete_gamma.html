@@ -12,47 +12,7 @@
 
 <p class="sagemath"> incomplete_gamma( <i>a</i> , <i>z</i> ) </p>
 
-<p>The incomplete gamma function of <i>z</i> in SageMath. Alias of <a href="gamma_inc.html">gamma_inc</a>. Defined by</p>
-
-\[  \Gamma(a,z) = \int_z^\infty dt \; t^{a-1} e^{-t} \]
-
-<p>Plot on the real axis:</p>
-
-<div class="sagemathcell">
-<script type="text/x-sage">
-
-@interact
-def _( a=(0,(-5,5)) ):
-
-  show( plot( gamma_inc(a,x), x, 0, 5, figsize=[4,2], color=(0,.5,1),
-                              ymin=0, ymax=5 )
-        + point([0,0],size=0) )
-
-</script>
-</div>
-
-<p>Series expansion about the origin:</p>
-
-<div class="sagemathcell">
-<script type="text/x-sage">
-
-var('a z')
-show( maxima( incomplete_gamma(a,z) ).taylor(z,0,5) )
-
-</script>
-</div>
-
-<p>Special values:</p>
-
-<div class="sagemathcell">
-<script type="text/x-sage">
-
-var('a')
-show( incomplete_gamma(a,0,hold=True), '=', incomplete_gamma(a,0) )
-show( incomplete_gamma(a,oo,hold=True), '=', incomplete_gamma(a,oo) )
-
-</script>
-</div>
+<p>Deprecated alias of <a href="gamma_inc.html">gamma_inc</a>. To be removed in a future version of SageMath</p>
 
 <p>Related functions: &nbsp; <a href="gamma.html">gamma</a> &nbsp; <a href="gamma_inc.html">gamma_inc</a></p>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>gamma_inc &mdash; SageMath</title>
+<title>gamma_inc_lower &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -10,11 +10,11 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> gamma_inc( <i>a</i> , <i>z</i> ) </p>
+<p class="sagemath"> gamma_inc_lower( <i>a</i> , <i>z</i> ) </p>
 
-<p>The incomplete gamma function of <i>z</i> in SageMath. Defined by</p>
+<p>The lower incomplete gamma function of <i>z</i> in SageMath. Defined by</p>
 
-\[  \Gamma(a,z) = \int_z^\infty dt \; t^{a-1} e^{-t} \]
+\[  \gamma(a,z) = \int_0^z dt \; t^{a-1} e^{-t} \]
 
 <p>Plot on the real axis:</p>
 
@@ -22,9 +22,9 @@
 <script type="text/x-sage">
 
 @interact
-def _( a=(0,(0,5)) ):
+def _( a=(0,(0.1,5)) ):
 
-  show( plot( gamma_inc(a,x), x, 0, 5, figsize=[4,2], color=(0,.5,1) )
+  show( plot( gamma_inc_lower(a,x), x, 0, 5, figsize=[4,2], color=(0,.5,1) )
         + point([0,0],size=0) )
 
 </script>
@@ -36,7 +36,7 @@ def _( a=(0,(0,5)) ):
 <script type="text/x-sage">
 
 var('a z')
-show( maxima( gamma_inc(a,z) ).taylor(z,0,5) )
+show( maxima( gamma_inc_lower(a,z) ).taylor(z,0,5) )
 
 </script>
 </div>
@@ -47,13 +47,13 @@ show( maxima( gamma_inc(a,z) ).taylor(z,0,5) )
 <script type="text/x-sage">
 
 var('a')
-show( gamma_inc(a,0,hold=True), '=', gamma_inc(a,0) )
-show( gamma_inc(a,oo,hold=True), '=', gamma_inc(a,oo) )
+show( gamma_inc_lower(a,0,hold=True), '=', gamma_inc_lower(a,0) )
+show( gamma_inc_lower(a,oo,hold=True), '=', gamma_inc_lower(a,oo) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="gamma.html">gamma</a></p>
+<p>Related functions: &nbsp; <a href="gamma.html">gamma</a> &nbsp; <a href="gamma_inc.html">gamma_inc</a></p>
 
 <p>Function category: <a href="../functions.html#gamma">gamma functions</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>

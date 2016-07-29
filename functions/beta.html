@@ -30,7 +30,7 @@ def _( y=(1,(-5,5)) ):
 
   # beta() currently doesn't evaluate for negative arguments
   # http://trac.sagemath.org/ticket/12521
-  # using gamma function equivalent until fixed
+  # using gamma function equivalent until fixed in SageMath 7.4
 
    show( plot( real( exp( log_gamma(x) + log_gamma(y) - log_gamma(x+y) ) ),
                           x, -5, 5, figsize=[4,2], color=(0,.5,1),
