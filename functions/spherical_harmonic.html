@@ -14,9 +14,9 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> spherical_harmonic( <i>n</i> , <i>m</i> , &theta; , &phi; ) </p>
+<p class="sagemath"> spherical_harmonic( <i>l</i> , <i>m</i> , &theta; , &phi; ) </p>
 
-<p>The spherical harmonic \( Y_n^m (\theta,\phi) \) in SageMath. A solution of the partial differential equation</p>
+<p>The spherical harmonic \( Y_l^m (\theta,\phi) \) in SageMath. A solution of the partial differential equation</p>
 
 \[ \frac{ 1 }{ \sin \theta } \frac{ \partial }{ \partial \theta }
      \left( \sin \theta \frac{ \partial f }{ \partial \theta } \right)
@@ -25,7 +25,7 @@
 
 <p>Related to <a href="gen_legendre_P.html">gen_legendre_P</a> by</p>
 
-\[ Y_n^m (\theta,\phi) = (-1)^m \sqrt{ \frac{ 2l+1 }{ 4\pi } \frac{ (l-m)! }{ (l+m)! } }
+\[ Y_l^m (\theta,\phi) = (-1)^m \sqrt{ \frac{ 2l+1 }{ 4\pi } \frac{ (l-m)! }{ (l+m)! } }
                                 e^{ im\phi } P_l^m (\cos\theta) \]
 
 <p>Explicit form:</p>
@@ -34,13 +34,13 @@
 <script type="text/x-sage">
 
 @interact
-def _( n=slider(0,10,step_size=1) ):
+def _( l=slider(0,10,step_size=1) ):
 
   @interact
-  def _( m=slider(-n,n,step_size=1,default=0) ):
+  def _( m=slider(-l,l,step_size=1,default=0) ):
 
     var('theta phi')
-    show( spherical_harmonic(n,m,theta,phi,hold=True), '=', spherical_harmonic(n,m,theta,phi) )
+    show( spherical_harmonic(l,m,theta,phi,hold=True), '=', spherical_harmonic(l,m,theta,phi) )
 
 </script>
 </div>
@@ -51,13 +51,13 @@ def _( n=slider(0,10,step_size=1) ):
 <script type="text/x-sage">
 
 @interact
-def _( n=slider(0,10,step_size=1) ):
+def _( l=slider(0,10,step_size=1) ):
 
   @interact
-  def _( m=slider(-n,n,step_size=1,default=0) ):
+  def _( m=slider(-l,l,step_size=1,default=0) ):
 
     var('theta phi')
-    threejs( spherical_plot3d( real( spherical_harmonic(n,m,theta,phi) ),
+    threejs( spherical_plot3d( real( spherical_harmonic(l,m,theta,phi) ),
                        (theta,0,pi), (phi,0,2*pi), color=(0,.5,1) ) )
 
 </script>
@@ -69,10 +69,10 @@ def _( n=slider(0,10,step_size=1) ):
 <script type="text/x-sage">
 
 @interact
-def _( n=slider(0,10,step_size=1) ):
+def _( l=slider(0,10,step_size=1) ):
 
   @interact
-  def _( m=slider(-n,n,step_size=1,default=0) ):
+  def _( m=slider(-l,l,step_size=1,default=0) ):
 
     if m == 0:
 
@@ -81,7 +81,7 @@ def _( n=slider(0,10,step_size=1) ):
     else:
 
       var('theta phi')
-      threejs( spherical_plot3d( imag( spherical_harmonic(n,m,theta,phi) ),
+      threejs( spherical_plot3d( imag( spherical_harmonic(l,m,theta,phi) ),
                        (theta,0,pi), (phi,0,2*pi), color=(0,.5,1) ) )
 
 </script>
