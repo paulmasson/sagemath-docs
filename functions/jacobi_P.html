@@ -25,6 +25,23 @@
 \[ ( 1-z^2 ) \frac{ d^2 f }{ dz^2 } + ( b-a - (a+b+2)z ) \frac{ d f }{ dz }
    + n(n+a+b+1) f = 0 \]
 
+<p>Explicit form:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  @interact
+  def _( a=slider(0,10,step_size=1), b=slider(0,10,step_size=1) ):
+
+    var('z')
+    show( 'jacobi_P(n,a,b,z)=', jacobi_P(n,a,b,z) )
+
+</script>
+</div>
+
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">

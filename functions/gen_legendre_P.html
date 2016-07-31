@@ -3,6 +3,9 @@
 <head>
 <title>gen_legendre_P &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
+<style>
+	.sagecell_sliderContainer { max-width: 3.25in !important }
+</style>
 </head>
 
 <body>
@@ -23,6 +26,23 @@
 
 <p>The second linearly independent solution of this equation is <a href="gen_legendre_Q.html">gen_legendre_Q</a>.</p>
 
+<p>Explicit form:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  @interact
+  def _( m=slider(-n,n,default=0,step_size=1) ):
+
+    var('z')
+    show( 'gen_legendre_P(n,m,z)=', gen_legendre_P(n,m,z) )
+
+</script>
+</div>
+
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">
@@ -35,23 +55,6 @@ def _( n=slider(0,10,step_size=1) ):
   def _( m=slider(-n,n,default=0,step_size=1) ):
 
     show( plot( gen_legendre_P(n,m,x), x, -1, 1, figsize=[3.3,2], color=(0,.5,1) ) )
-
-</script>
-</div>
-
-<p>Series expansion about the origin:</p>
-
-<div class="sagemathcell">
-<script type="text/x-sage">
-
-@interact
-def _( n=slider(0,10,step_size=1) ):
-
-  @interact
-  def _( m=slider(-n,n,default=0,step_size=1) ):
-
-    var('z')
-    show( maxima( gen_legendre_P(n,m,z) ).taylor(z,0,7) )
 
 </script>
 </div>

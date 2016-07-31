@@ -20,6 +20,20 @@
 
 <p>Equivalent to <a href="gen_legendre_Q.html">gen_legendre_Q</a>( <i>n</i> , 0 , <i>z</i> ).</p>
 
+<p>Explicit form:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  var('z')
+  show( 'legendre_Q(n,z)=', legendre_Q(n,z) )
+
+</script>
+</div>
+
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">

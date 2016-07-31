@@ -16,6 +16,20 @@
 
 \[ ( 1-z^2 ) \frac{ d^2 f }{ dz^2 } -z \frac{ d f }{ dz } + n^2 f = 0 \]
 
+<p>Explicit form:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( n=slider(0,10,step_size=1) ):
+
+  var('z')
+  show( chebyshev_T(n,z,hold=True), '=', chebyshev_T(n,z) )
+
+</script>
+</div>
+
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">
@@ -25,20 +39,6 @@
 def _( n=slider(0,10,step_size=1) ):
 
   show( plot( chebyshev_T(n,x), x, -1, 1, ymin=-1, ymax=1, figsize=[4,2], color=(0,.5,1) ) )
-
-</script>
-</div>
-
-<p>Series expansion about the origin:</p>
-
-<div class="sagemathcell">
-<script type="text/x-sage">
-
-@interact
-def _( n=slider(0,10,step_size=1) ):
-
-  var('z')
-  show( maxima( chebyshev_T(n,z) ).taylor(z,0,n) )
 
 </script>
 </div>
