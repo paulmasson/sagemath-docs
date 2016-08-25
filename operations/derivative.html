@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>derivative &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> derivative( <code>function</code> , <code>variable</code> [ , <code>times</code> ] ) </p>
+
+<p>The symbolic derivative in SageMath of <code>function</code> with respect to <code>variable</code>.  Alias of <a href="diff.html">diff</a>.</p>
+
+<p>The optional <code>times</code> argument is used for multiple derivatives.</p>
+
+<p>Examples:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'derivative( x^3, x )=', derivative( x^3, x ) )
+show( 'derivative( x^3, x, 2 )=', derivative( x^3, x, 2 ) )
+show( 'derivative( x^3, x, 3 )=', derivative( x^3, x, 3 ) )
+
+</script>
+</div>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( 'derivative( sin(x), x )=', derivative( sin(x), x ) )
+show( 'derivative( sin(x), x, 2 )=', derivative( sin(x), x, 2 ) )
+show( 'derivative( sin(x), x, 3 )=', derivative( sin(x), x, 3 ) )
+show( 'derivative( sin(x), x, 4 )=', derivative( sin(x), x, 4 ) )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href="diff.html">diff</a> &nbsp; <a href="limit.html">limit</a></p>
+
+<p>Operation category: <a href="../operations.html#calculus">calculus operations</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
