@@ -14,13 +14,23 @@
 
 <p>The natural logarithm of the gamma function of <i>z</i> in SageMath.</p>
 
-<p>Plot on the real axis:</p>
+<p>Plot of the real part on the real axis:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( plot( log_gamma(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
+show( plot( real(log_gamma(x)), x, -5, 5, figsize=[4.5,2], color=(0,.5,1),
 			ymin=-5, ymax=5, detect_poles=True ) )
+
+</script>
+</div>
+
+<p>Plot of the imaginary part on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( imag(log_gamma(x)), x, -5, 5, figsize=[4.5,2], color=(0,.5,1) ) )
 
 </script>
 </div>
