@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>solve &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> solve( <code>equation</code>, <code>variable</code> [ , <code>options</code> ] ) </p>
+
+<p>The solution in SageMath of <code>equation</code> for <code>variable</code>. Multiple equations and multiple variables can be supplied as lists.</p>
+
+<p>Equations in SageMath need to be defined with a double equals symbol <code>==</code> to distinguish them from keyword arguments.</p>
+
+<p>Available options are:</p>
+
+<p style="margin-left: 1in">
+<code>multiplicities=True|False</code><br/>
+<code>solution_dict=True|False</code><br/>
+<code>explicit_solutions=True|False</code><br/>
+<code>to_poly_solve=True|False|'force'</code>
+</p>
+
+<p>Setting <code>to_poly_solve='force'</code> can uncover additional solutions.</p>
+
+<p>Examples:</p>
+
+<pre>
+solve( cot(x)==0, x )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( solve( cot(x)==0, x ) )
+
+</script>
+</div>
+
+<pre>
+solve( cot(x)==0, x, to_poly_solve=True )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( solve( cot(x)==0, x, to_poly_solve=True ) )
+
+</script>
+</div>
+
+<pre>
+solve( cot(x)==0, x, to_poly_solve='force' )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( solve( cot(x)==0, x, to_poly_solve='force' ) )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href="find_root.html">find_root</a></p>
+
+<p>Operation category: <a href="../operations.html#solution">Solution operations</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
