@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>desolve_rk4 &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> desolve_rk4( <code>equation</code>, <code>variable</code>, <code>ics=[<i>initial_conditions</i>]</code> [ , <code>options</code> ] ) </p>
+
+<p>The numerical solution in SageMath of the first-order differential <code>equation</code> for dependent <code>variable</code>. The argument <code>equation</code> can be either the right-hand side of an equation or a complete symbolic equation. The dependent variable must be declared as a <code><a href="../functions/function.html">function</a></code> of the independent variable for a symbolic equation.</p>
+
+<p>Equations in SageMath need to be defined with double equals symbols <code>==</code> to avoid syntax errors.</p>
+
+<p>Initial conditions are given for the independent variable and the dependent variable, in that order.</p>
+
+<p>Available options are:</p>
+
+<p style="margin-left: 1in">
+<code>ivar=<i>independent_variable</i></code><br/>
+<code>end_points=<i>value</i>|[<i>values</i>]</code><br/>
+<code>step=<i>value</i></code><br/>
+<code>output='list'|'plot'|'slope_field'</code>
+</p>
+
+<p>The independent variable must be specified if the equation contains more than one independent variable or if the independent variable does not appear explicitly.</p>
+
+<p>Examples:</p>
+
+<pre>
+y = function('y')(x)
+desolve_rk4( diff(y,x) == x, y, ics=[0,1] )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+y = function('y')(x)
+show( desolve_rk4( diff(y,x) == x, y, ics=[0,1] ) )
+
+</script>
+</div>
+
+<pre>
+var('y')
+desolve_rk4( x, y, ics=[0,1] )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('y')
+show( desolve_rk4( x, y, ics=[0,1] ) )
+
+</script>
+</div>
+
+<pre>
+var('y')
+desolve_rk4( x, y, ics=[0,1], output='plot' )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('y')
+show( desolve_rk4( x, y, ics=[0,1], output='plot' ), figsize=[4,3] )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href="desolve.html">desolve</a></p>
+
+<p>Operation category: <a href="../operations.html#solution">Solution operations</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>

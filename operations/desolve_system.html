@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>desolve_system &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> desolve_system( [ <code>equations</code> ], [ <code>variables</code> ], [ , <code>options</code> ] ) </p>
+
+<p>The solution in SageMath of differential <code>equations</code> for dependent <code>variables</code>. The dependent variables must be declared as <code><a href="../functions/function.html">function</a>s</code> of the independent variable.</p>
+
+<p>Equations in SageMath need to be defined with double equals symbols <code>==</code> to avoid syntax errors.</p>
+
+<p>Available options are:</p>
+
+<p style="margin-left: 1in">
+<code>ics=[<i>initial_conditions</i>]</code><br/>
+<code>ivar=<i>independent_variable</i></code>
+</p>
+
+<p>Initial conditions are given for the independent variable, the dependent variable and all required derivatives of the dependent variable, in that order.</p>
+
+<p>The independent variable must be specified if the equations contain more than one independent variable.</p>
+
+<p>Examples:</p>
+
+<pre>
+y = function('y')(x)
+z = function('z')(x)
+desolve_system( [ diff(y,x,2) == 0, diff(z,x,2) == 0 ], [y,z] )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+y = function('y')(x)
+z = function('z')(x)
+show( desolve_system( [ diff(y,x,2) == 0, diff(z,x,2) == 0 ], [y,z] ) )
+
+</script>
+</div>
+
+<pre>
+y = function('y')(x)
+z = function('z')(x)
+desolve_system( [ diff(y,x,2) + z == 0, diff(z,x,2) + y == 0 ], [y,z] )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+y = function('y')(x)
+z = function('z')(x)
+show( desolve_system( [ diff(y,x,2) + z == 0, diff(z,x,2) + y == 0 ], [y,z] ) )
+
+</script>
+</div>
+
+<pre>
+y = function('y')(x)
+z = function('z')(x)
+desolve_system( [ diff(y,x,2) + z == 0, diff(z,x,2) + y == 0 ],
+                    [y,z,diff(y,x),diff(z,x)], ics=[0,1,2,3,4] ) )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+y = function('y')(x)
+z = function('z')(x)
+show( desolve_system( [ diff(y,x,2) + z == 0, diff(z,x,2) + y == 0 ],
+                          [y,z,diff(y,x),diff(z,x)], ics=[0,1,2,3,4] ) )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href="desolve_system_rk4.html">desolve_system_rk4</a></p>
+
+<p>Operation category: <a href="../operations.html#solution">Solution operations</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
