@@ -3,11 +3,6 @@
 <head>
 <title>SageMath Rings</title>
 <link rel="stylesheet" type="text/css" href="style.css">
-<style>
-	body { max-width: 5in }
-	p { margin-left: 1in }
-	td { min-width: 1in }
-</style>
 </head>
 
 <body>
@@ -15,17 +10,24 @@
 <h1>Basic Rings in SageMath</h1>
 
 <br/><table style="margin-left: 1in">
-<tr><td>ZZ</td><td>integers
-<tr><td>QQ</td><td>rationals</td></tr>
-<tr><td>RR</td><td>reals</td></tr>
-<tr><td>CC</td><td>complexes</td></tr>
-<tr><td>&nbsp;</td><td></td></tr>
-<tr><td>RDF</td><td>machine reals</td></tr>
-<tr><td>CDF</td><td>machine complexes</td></tr>
-<tr><td>SR</td><td>symbolics</td></tr>
-<tr><td></td><td></td></tr>
-<tr><td></td><td></td></tr>
+<tr><td style="width: 1in"><u>Name</u></td>
+  <td style="width: 2in"><u>Long Alias</u></td>
+  <td><u>Description</u></td</tr>
+<tr><td colspan="3">&nbsp;</td></tr>
+<tr><td>ZZ</td><td>IntegerRing()</td><td>Integers</td></tr>
+<tr><td>QQ</td><td>RationalField()</td><td>Rational numbers</td></tr>
+<tr><td>RR</td><td>RealField()</td><td>Real numbers</td></tr>
+<tr><td>CC</td><td>ComplexField()</td><td>Complex numbers</td></tr>
+<tr><td colspan="3">&nbsp;</td></tr>
+<tr><td>AA</td><td>AlgebraicRealField()</td><td>Algebraic real numbers</td></tr>
+<tr><td>QQbar</td><td>AlgebraicField()</td><td>Algebraic complex numbers</td></tr>
+<tr><td>SR</td><td>SymbolicRing()</td><td>Symbolic expressions</td></tr>
+<tr><td colspan="3">&nbsp;</td></tr>
+<tr><td>RDF</td><td>RealDoubleField()</td><td>Machine real numbers</td></tr>
+<tr><td>CDF</td><td>ComplexDoubleField()</td><td>Machine complex numbers</td></tr>
 </table>
+
+<br/><p>See this <a href="https://ask.sagemath.org/question/9950/what-are-the-different-real-numbers-in-sage/">Ask question</a> for additional information.</p>
 
 <p><a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
 
