@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ceil &mdash; SageMath</title>
+<title>frac &mdash; SageMath</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
@@ -10,16 +10,16 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> ceil( <i>x</i> ) </p>
+<p class="sagemath"> frac( <i>x</i> ) </p>
 
-<p>The smallest integer greater than or equal to <i>x</i> in SageMath. Not defined for complex numbers.</p>
+<p>The fractional part of <i>x</i> in SageMath. Not defined for complex numbers.</p>
 
 <p>Plot on the real axis:</p>
 
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( plot( ceil(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+show( plot( frac(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1) ) )
 
 </script>
 </div>
@@ -29,14 +29,14 @@ show( plot( ceil(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1) ) )
 <div class="sagemathcell">
 <script type="text/x-sage">
 
-show( 'ceil(2)=', ceil(2) )
-show( 'ceil(2.4)=', ceil(2.4) )
-show( 'ceil(2.9)=', ceil(2.9) )
+show( 'frac(2)=', frac(2) )
+show( 'frac(2.4)=', frac(2.4) )
+show( 'frac(3.2)=', frac(3.2) )
 
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="floor.html">floor</a> &nbsp; <a href="frac.html">frac</a></p>
+<p>Related functions: &nbsp; <a href="floor.html">floor</a> &nbsp; <a href="ceil.html">ceil</a></p>
 
 <p>Function category: <a href="../functions.html#basic">basic functions</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>

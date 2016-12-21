@@ -12,7 +12,17 @@
 
 <p class="sagemath"> floor( <i>x</i> ) </p>
 
-<p>The greatest integer less than or equal to <i>x</i> in SageMath.</p>
+<p>The greatest integer less than or equal to <i>x</i> in SageMath. Not defined for complex numbers.</p>
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( plot( floor(x), x, -5, 5, figsize=[4.5,2], color=(0,.5,1) ) )
+
+</script>
+</div>
 
 <p>Examples:</p>
 
@@ -26,7 +36,7 @@ show( 'floor(3.2)=', floor(3.2) )
 </script>
 </div>
 
-<p>Related functions: &nbsp; <a href="ceil.html">ceil</a></p>
+<p>Related functions: &nbsp; <a href="ceil.html">ceil</a> &nbsp; <a href="frac.html">frac</a></p>
 
 <p>Function category: <a href="../functions.html#basic">basic functions</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
