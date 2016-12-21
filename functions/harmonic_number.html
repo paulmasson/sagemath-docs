@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>harmonic_number &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> harmonic_number( <i>n</i>, <i>m</i> ) </p>
+
+<p>The generalized harmonic number function in SageMath. Defined by</p>
+
+\[ H_{n,m} = \sum_{k=1}^n \frac{1}{k^m} \]
+
+<p>When called with one argument, the second defaults to unity and the function returns the harmonic numbers</p>
+
+\[ H_n = \sum_{k=1}^n \frac{1}{k} \]
+
+<p>Plot on the real axis:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+@interact
+def _( m=(1,10,1) ):
+
+  show( plot( harmonic_number(x,m), x, -5, 5, figsize=[4,2], color=(0,.5,1),
+                                       ymin=-5, ymax=5 ) )
+
+</script>
+</div>
+
+<p>Series expansion about the origin:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var('z m')
+show( maxima( harmonic_number(z,m) ).taylor(z,0,7) )
+
+</script>
+</div>
+
+<p>Special values:</p>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( harmonic_number(1/2,hold=True), '=', harmonic_number(1/2) )
+show( harmonic_number(1/3,hold=True), '=', harmonic_number(1/3) )
+show( harmonic_number(1/4,hold=True), '=', harmonic_number(1/4) )
+
+</script>
+</div>
+
+<p>Related functions: &nbsp; <a href="log.html">log</a></p>
+
+<p>Function category: <a href="../functions.html#"> functions</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
