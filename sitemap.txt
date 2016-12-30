@@ -190,6 +190,7 @@ http://paulmasson.github.io/sagemath-docs/operations/e.html
 http://paulmasson.github.io/sagemath-docs/operations/euler_gamma.html
 http://paulmasson.github.io/sagemath-docs/operations/factor.html
 http://paulmasson.github.io/sagemath-docs/operations/fast_callable.html
+http://paulmasson.github.io/sagemath-docs/operations/find_root.html
 http://paulmasson.github.io/sagemath-docs/operations/help.html
 http://paulmasson.github.io/sagemath-docs/operations/i.html
 http://paulmasson.github.io/sagemath-docs/operations/identity_matrix.html
