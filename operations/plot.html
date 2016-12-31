@@ -32,6 +32,15 @@
 
 <p>The speed of plotting can be increased by reducing the number of <code>plot_points</code> from its default of 200 to a number appreciably smaller.</p>
 
+<p>Ticks on plot axes are controlled with the options of the forms</p>
+
+<p style="margin-left: 1in">
+<code>ticks=<i>value</i>|[<i>value</i>,<i>value</i>]|[[<i>values</i>],[<i>values</i>]]</code><br/>
+<code>tick_formatter=<i>value</i>|[<i>value</i>,<i>value</i>]|[[<i>values</i>],[<i>values</i>]]</code>
+</p>
+
+<p>A single value for ticks sets them at multiples of the value, while a list sets them at explicit values. When using strings to format ticks, the list structures of the two options must be identical. In the context of ticks, the value <code>None</code> means default behavior.</p>
+
 <p>Examples:</p>
 
 <pre>
