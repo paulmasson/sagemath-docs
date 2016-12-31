@@ -39,7 +39,9 @@
 <code>tick_formatter=<i>value</i>|[<i>value</i>,<i>value</i>]|[[<i>values</i>],[<i>values</i>]]</code>
 </p>
 
-<p>A single value for ticks sets them at multiples of the value, while a list sets them at explicit values. When using strings to format ticks, the list structures of the two options must be identical. In the context of ticks, the value <code>None</code> means default behavior.</p>
+<p>A single value for ticks sets them at multiples of the value, while a list sets them at explicit values. When using strings to format ticks, the list structures of the two options must be identical.</p>
+
+<p>In the context of ticks, the value <code>None</code> always means default behavior, as opposed to no ticks. To remove ticks completely, set a single tick outside of the range of the plot.</p>
 
 <p>Examples:</p>
 
