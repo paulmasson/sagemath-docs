@@ -179,6 +179,7 @@ http://paulmasson.github.io/sagemath-docs/functions/zeta_symmetric.html
 http://paulmasson.github.io/sagemath-docs/functions/zetaderiv.html
 http://paulmasson.github.io/sagemath-docs/index.html
 http://paulmasson.github.io/sagemath-docs/operations.html
+http://paulmasson.github.io/sagemath-docs/operations/animate.html
 http://paulmasson.github.io/sagemath-docs/operations/column_matrix.html
 http://paulmasson.github.io/sagemath-docs/operations/derivative.html
 http://paulmasson.github.io/sagemath-docs/operations/desolve.html

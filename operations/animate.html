@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>animate &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> animate( <code>frames</code> ) </p>
+
+<p>The animation in SageMath of the list <code>frames</code> of graphic objects.</p>
+
+<p>Animation speed and looping are controlled via the custom <code>show</code> method with the options</p>
+
+<table style="margin-left: 1in">
+<tr><td style="width: 2in; vertical-align: top">
+<code>delay=<i>value</i></code>
+</td><td style="width: 3in">
+Delay between frames in hundredths of a second, default 20
+</td></tr><tr><td>&nbsp;</td><td>
+</td></tr><tr><td style="vertical-align: top">
+<code>iterations=<i>integer</i></code>
+</td><td>
+Number of interations, default zero for infinity
+</td></tr></table><br/>
+
+<p>Examples:</p>
+
+<pre>
+show( animate( [ plot( cos(x-t), x, 0, 2*pi,
+                       figsize=[4.5,2], color=(0,.5,1) )
+               for t in sxrange(0,2*pi,.2) ] ) )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+show( animate( [ plot( cos(x-t), x, 0, 2*pi, figsize=[4.5,2], color=(0,.5,1) )
+               for t in sxrange(0,2*pi,.2) ] ) )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href="plot.html">plot</a></p>
+
+<p>Operation category: <a href="../operations.html#output">output operations</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
