@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>assume &mdash; SageMath</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script src="../setup.js"></script>
+
+<p class="sagemath"> assume( <code>statement</code> ) </p>
+
+<p>An assumption in SageMath used in certain evaluations, mainly by Maxima but also Pynac.</p>
+
+<p>Acceptable features used by Maxima:</p>
+
+<table><tr><td><pre>
+integer
+noninteger
+even
+odd
+rational
+irrational
+real
+imaginary
+complex
+</pre></td><td><pre>
+analytic
+increasing
+decreasing
+oddfun
+evenfun
+posfun
+constant
+commutative
+lassociative
+rassociative
+symmetric
+antisymmetric
+integervalued
+</pre></td></tr></table>
+
+<p>Examples:</p>
+
+<pre>
+var( 'n' )
+assume( n != -1 )
+integrate( x^n, x )
+</pre>
+
+<div class="sagemathcell">
+<script type="text/x-sage">
+
+var( 'n' )
+assume( n != -1 )
+integrate( x^n, x )
+
+</script>
+</div>
+
+<p>Related operations: &nbsp; <a href="integrate.html">integrate</a> &nbsp; <a href="solve.html">solve</a></p>
+
+<p>Operation category: <a href="../operations.html#"> operations</a>
+<a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
+
+</body>
+</html>
