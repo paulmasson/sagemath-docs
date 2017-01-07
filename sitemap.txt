@@ -180,6 +180,7 @@ http://paulmasson.github.io/sagemath-docs/functions/zetaderiv.html
 http://paulmasson.github.io/sagemath-docs/index.html
 http://paulmasson.github.io/sagemath-docs/operations.html
 http://paulmasson.github.io/sagemath-docs/operations/animate.html
+http://paulmasson.github.io/sagemath-docs/operations/assume.html
 http://paulmasson.github.io/sagemath-docs/operations/column_matrix.html
 http://paulmasson.github.io/sagemath-docs/operations/derivative.html
 http://paulmasson.github.io/sagemath-docs/operations/desolve.html
@@ -199,6 +200,7 @@ http://paulmasson.github.io/sagemath-docs/operations/integral.html
 http://paulmasson.github.io/sagemath-docs/operations/integrate.html
 http://paulmasson.github.io/sagemath-docs/operations/lim.html
 http://paulmasson.github.io/sagemath-docs/operations/limit.html
+http://paulmasson.github.io/sagemath-docs/operations/list_plot.html
 http://paulmasson.github.io/sagemath-docs/operations/matrix.html
 http://paulmasson.github.io/sagemath-docs/operations/n.html
 http://paulmasson.github.io/sagemath-docs/operations/numerical_approx.html
