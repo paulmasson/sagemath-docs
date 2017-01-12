@@ -12,8 +12,6 @@ http://jaanga.github.io/demo/pm/get-sage-function-names/get-sage-function-names-
 
 ## Issues
 
-* get beta function plotting!
-
 * binomial doesn't automatically generalize
 
 * arccot/acot, arcsec/asec and arccsc/acsc do not evaluate exactly for special values
