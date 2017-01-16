@@ -2,20 +2,32 @@ sagecell.makeSagecell( {
 
 	inputLocation: '.sagemathcell',
 	autoeval: true,
-	hide: ['editor','evalButton','permalink']
+	hide: ['editor','evalButton','permalink'],
+	callback: resizeIframes
 
 } );
 
-var check = requestAnimationFrame( accept );
-setTimeout( function() { cancelAnimationFrame( check ); }, 5000 );
+function resizeIframes() {
+
+    if ( /(iPad|iPhone|iPod)/g.test( navigator.userAgent ) ) {
+
+        var scenes = document.getElementsByTagName( 'iframe' );
+
+        for ( var i=0 ; i < scenes.length ; i++ ) {
+
+            scenes[i].style.width = getComputedStyle( scenes[i] ).width;
+            scenes[i].style.height = getComputedStyle( scenes[i] ).height;
+            scenes[i].setAttribute( 'scrolling', 'no' );
+
+        }
+    }
+
+}
+
 
 function accept() {
 
-	check = requestAnimationFrame( accept );
-
 	var buttons = document.getElementsByClassName( 'ui-dialog-buttonset' );
-	if ( buttons.length > 0 ) {
-		buttons[0].firstChild.click();
-		cancelAnimationFrame( check );
-	}
+	if ( buttons.length > 0 ) buttons[0].firstChild.click();
+
 }
