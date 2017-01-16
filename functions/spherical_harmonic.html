@@ -47,7 +47,7 @@ def _( l=slider(0,10,step_size=1) ):
 
 <p>Visualization of the real part:</p>
 
-<div class="sagemathcell">
+<div class="sagemathcell" style="width: 7in; height: 7.25in">
 <script type="text/x-sage">
 
 @interact
@@ -57,15 +57,17 @@ def _( l=slider(0,10,step_size=1) ):
   def _( m=slider(-l,l,step_size=1,default=0) ):
 
     var('theta phi')
-    threejs( spherical_plot3d( real( spherical_harmonic(l,m,theta,phi) ),
-                       (theta,0,pi), (phi,0,2*pi), color=(0,.5,1) ) )
+    show( spherical_plot3d( real( spherical_harmonic(l,m,theta,phi) ),
+                              (theta,0,pi), (phi,0,2*pi),
+                              color=(0,.5,1), plot_points=50,
+                              frame=false, viewer='threejs' ) )
 
 </script>
 </div>
 
 <p>Visualization of the imaginary part:</p>
 
-<div class="sagemathcell">
+<div class="sagemathcell" style="width: 7in; height: 7.25in">
 <script type="text/x-sage">
 
 @interact
@@ -81,8 +83,10 @@ def _( l=slider(0,10,step_size=1) ):
     else:
 
       var('theta phi')
-      threejs( spherical_plot3d( imag( spherical_harmonic(l,m,theta,phi) ),
-                       (theta,0,pi), (phi,0,2*pi), color=(0,.5,1) ) )
+      show( spherical_plot3d( imag( spherical_harmonic(l,m,theta,phi) ),
+                                (theta,0,pi), (phi,0,2*pi),
+                                color=(0,.5,1), plot_points=50,
+                                frame=false, viewer='threejs' ) )
 
 </script>
 </div>
