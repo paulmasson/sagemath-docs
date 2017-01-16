@@ -18,7 +18,7 @@ console.log('found '+scenes.length+' scenes');
             scenes[i].style.width = getComputedStyle( scenes[i] ).width;
             scenes[i].style.height = getComputedStyle( scenes[i] ).height;
             scenes[i].setAttribute( 'scrolling', 'no' );
-consoloe.log('scene '+i+' width/height is '+scenes[i].style.width+'/'+scenes[i].style.height);
+console.log('scene '+i+' width/height is '+scenes[i].style.width+'/'+scenes[i].style.height);
         }
     }
 
