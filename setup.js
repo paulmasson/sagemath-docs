@@ -12,13 +12,13 @@ function resizeIframes() {
     if ( /(iPad|iPhone|iPod)/g.test( navigator.userAgent ) ) {
 
         var scenes = document.getElementsByTagName( 'iframe' );
-
+console.log('found '+scenes.length+' scenes');
         for ( var i=0 ; i < scenes.length ; i++ ) {
 
             scenes[i].style.width = getComputedStyle( scenes[i] ).width;
             scenes[i].style.height = getComputedStyle( scenes[i] ).height;
             scenes[i].setAttribute( 'scrolling', 'no' );
-
+consoloe.log('scene '+i+' width/height is '+scenes[i].style.width+'/'+scenes[i].style.height);
         }
     }
 
