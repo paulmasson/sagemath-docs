@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="../style.css">
 <style>
 	.sagecell_sliderContainer { max-width: 3.25in !important }
-	canvas { max-width: 3in; object-fit: cover }
 </style>
 </head>
 
@@ -45,7 +44,8 @@ def _( l=slider(0,10,step_size=1) ):
 </script>
 </div>
 
-<p>Visualization of the real part:</p>
+<p>Visualization of the real part:
+<button onclick="resetIframes()" style="float: right">reset</button></p>
 
 <div class="sagemathcell" style="width: 7in; height: 7.25in">
 <script type="text/x-sage">
@@ -65,7 +65,8 @@ def _( l=slider(0,10,step_size=1) ):
 </script>
 </div>
 
-<p>Visualization of the imaginary part:</p>
+<p>Visualization of the imaginary part:
+<button onclick="resetIframes()" style="float: right">reset</button></p>
 
 <div class="sagemathcell" style="width: 7in; height: 7.25in">
 <script type="text/x-sage">

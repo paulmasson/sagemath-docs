@@ -6,7 +6,7 @@ sagecell.makeSagecell( {
 
 } );
 
-function resizeIframes() {
+function resetIframes() {
 
     if ( /(iPad|iPhone|iPod)/g.test( navigator.userAgent ) ) {
 
