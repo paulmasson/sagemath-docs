@@ -14,10 +14,7 @@ function resetIframes() {
 
         for ( var i=0 ; i < scenes.length ; i++ ) {
 
-//            scenes[i].style.width = getComputedStyle( scenes[i] ).width;
-//            scenes[i].style.height = getComputedStyle( scenes[i] ).height;
     	    scenes[i].srcdoc = scenes[i].srcdoc;
-//            scenes[i].setAttribute( 'scrolling', 'no' );
 
         }
     }
