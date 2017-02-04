@@ -18,6 +18,8 @@
 
 <p>The function to be integrated must return real values, not complex values.</p>
 
+<p>For complicated integrals SciPy&rsquo;s <a href="https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.integrate.quad.html"><code>quad</code></a> is significantly faster. It needs to be imported from <code>scipy.integrate</code>. The argument corresponding to <code>params</code> is named <code>args</code> and works the same way.</p>
+
 <p>Examples:</p>
 
 <pre>
