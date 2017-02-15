@@ -10,9 +10,9 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> piecewise( [ [ ( <code>begin</code> , <code>end</code> ) , <code>function</code> ] , ... ] ) </p>
+<p class="sagemath"> piecewise( [ [ ( <code>begin</code> , <code>end</code> ) , <code>function</code> ] , ... ] , var=<i>variable</i> ) </p>
 
-<p>A piecewise function in SageMath defined in part by <code>function</code> on the domain from <code>begin</code> to <code>end</code>. Consecutive domains should share an endpoint to avoid unexpected errors.</p>
+<p>A piecewise function in SageMath defined in part by <code>function</code> on the domain from <code>begin</code> to <code>end</code>. Consecutive domains should share an endpoint to avoid unexpected errors. The optional <code>var</code> keyword argument specifies which single symbolic variable is the argument of the complete function.</p>
 
 <p>The argument <code>function</code> for each domain must be the name of a symbolic function, not a numeric function. Symbolic functions are constructed from numeric functions using <a href="function.html">function</a>. Symbolic functions entail significant overhead that can make <code>piecewise</code> unsuitable for purely numeric calculations.</p>
 
