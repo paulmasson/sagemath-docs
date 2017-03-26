@@ -10,11 +10,10 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script src="../setup.js"></script>
 
-<p class="sagemath"> desolve_system_rk4( [ <code>equations</code> ], [ <code>variables</code> ], <code>ics=[<i>initial_conditions</i>]</code><br/> <span style="display: inline-block; width: 2in"></span> [ , <code>options</code> ] ) </p>
+<p class="sagemath"> desolve_system_rk4( [ <code>equations</code> ], [ <code>variables</code> ], <code>ics=[<i>initial_conditions</i>]</code>
+<br/> <span style="display: inline-block; width: 2in"></span> [ , <code>options</code> ] ) </p>
 
 <p>The numerical solution in SageMath of the system of first-order differential <code>equations</code> for dependent <code>variables</code>. The argument <code>equations</code> must consist of the right-hand sides of the equations of the system.</p>
-
-<p>Equations in SageMath need to be defined with double equal (<code>==</code>) signs to avoid syntax errors.</p>
 
 <p>Initial conditions are given for the independent variable and each dependent variable, in that order.</p>
 
@@ -58,7 +57,7 @@ show( desolve_system_rk4( [ z, -y ], [ y, z ], ics=[0,1,1], ivar=x ) )
 </script>
 </div>
 
-<p>Related operations: &nbsp; <a href="desolve_system.html">desolve_system</a></p>
+<p>Related operations: &nbsp; <a href="desolve_system.html">desolve_system</a> <a href="desolve_odeint.html">desolve_odeint</a></p>
 
 <p>Operation category: <a href="../operations.html#solution">solution operations</a>
 <a href="http://paulmasson.github.io/sagemath-docs/" style="float: right">sagemath-docs</a></p>
