@@ -58,7 +58,7 @@ def _( l=slider(0,10,step_size=1) ):
 
     var('theta phi')
     show( spherical_plot3d( real( spherical_harmonic(l,m,theta,phi) ),
-                              (theta,0,pi), (phi,0,2*pi),
+                              (theta,0.000001,pi), (phi,0,2*pi),       # remove fudge after 22688 fixed
                               color=(0,.5,1), plot_points=50,
                               frame=false, viewer='threejs' ) )
 
@@ -85,7 +85,7 @@ def _( l=slider(0,10,step_size=1) ):
 
       var('theta phi')
       show( spherical_plot3d( imag( spherical_harmonic(l,m,theta,phi) ),
-                                (theta,0,pi), (phi,0,2*pi),
+                                (theta,0.000001,pi), (phi,0,2*pi),       # remove fudge after 22688 fixed
                                 color=(0,.5,1), plot_points=50,
                                 frame=false, viewer='threejs' ) )
 
