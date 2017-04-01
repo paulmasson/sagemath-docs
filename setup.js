@@ -6,21 +6,6 @@ sagecell.makeSagecell( {
 
 } );
 
-function resetIframes() {
-
-    if ( /(iPad|iPhone|iPod)/g.test( navigator.userAgent ) ) {
-
-        var scenes = document.getElementsByTagName( 'iframe' );
-
-        for ( var i=0 ; i < scenes.length ; i++ ) {
-
-    	    scenes[i].srcdoc = scenes[i].srcdoc;
-
-        }
-    }
-
-}
-
 
 function accept() {
 
