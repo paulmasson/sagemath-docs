@@ -44,7 +44,7 @@ def _( l=slider(0,10,step_size=1) ):
 </script>
 </div>
 
-<p>Visualization of the real part:</p>
+<p>Absolute value of the real part:</p>
 
 <div class="sagemathcell" style="width: 7in">
 <script type="text/x-sage">
@@ -56,15 +56,15 @@ def _( l=slider(0,10,step_size=1) ):
   def _( m=slider(-l,l,step_size=1,default=0) ):
 
     var('theta phi')
-    show( spherical_plot3d( real( spherical_harmonic(l,m,theta,phi) ),
-                              (theta,0.000001,pi), (phi,0,2*pi),       # remove fudge after 22688 fixed
+    show( spherical_plot3d( abs( real( spherical_harmonic(l,m,theta,phi) ) ),
+                              (phi,0,2*pi), (theta,0,pi),
                               color=(0,.5,1), plot_points=50,
                               frame=false, viewer='threejs' ) )
 
 </script>
 </div>
 
-<p>Visualization of the imaginary part:</p>
+<p>Absolute value of the imaginary part:</p>
 
 <div class="sagemathcell" style="width: 7in">
 <script type="text/x-sage">
@@ -82,8 +82,8 @@ def _( l=slider(0,10,step_size=1) ):
     else:
 
       var('theta phi')
-      show( spherical_plot3d( imag( spherical_harmonic(l,m,theta,phi) ),
-                                (theta,0.000001,pi), (phi,0,2*pi),       # remove fudge after 22688 fixed
+      show( spherical_plot3d( abs( imag( spherical_harmonic(l,m,theta,phi) ) ),
+                                (phi,0,2*pi), (theta,0.000001,pi),
                                 color=(0,.5,1), plot_points=50,
                                 frame=false, viewer='threejs' ) )
 
